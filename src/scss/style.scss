@@ -1,0 +1,30 @@
+//Подключаео шрифти з файлу 'fonts.scss'
+@import "fonts";
+
+$colorDarkGray: #6f6f6f;
+$colorLightGray: #f5f5f5;
+$colorBlue: #4170b4;
+$colorOrange: #f7931e;
+//$colorLightOrange: #fbb03b;
+$colorWhite: #fff;
+//$colorPurple: #b26eaa;
+//$colorTest: lightblue;
+
+$fontFamily: "Montserrat", sans-serif;
+// calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
+$adaptiveFZ: calc(12px + (18 - 12) * ((100vw - 770px) / (1600 - 770)));
+$fz: 20px;
+
+//обнуляємо стилі браузеру
+@import "_null";
+
+//Підключаємо стилі шапки сайту
+@import "_header";
+//Підключаємо стилі меню бургер
+//@import "_burger";
+//Підключаємо стилі footer
+//@import "_footer";
+
+body {
+   font-family: Montserrat;
+}
