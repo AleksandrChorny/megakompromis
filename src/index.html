@@ -7,7 +7,17 @@
 <body>
    @@include('html/heder.html',{})
    <main>
+      <h3>Підключення зображення jpeg</h3>
       <img src="@img/cover.jpg" alt="">
+
+      <h3>Підключення зображення SVG</h3>
+      <svg class="_call_click">
+         <use xlink:href="@img/icons/icons.svg#call"></use>
+      </svg>
+
+      <h3>Підключення зображення SVG як img</h3>
+      <img src="@img/icons/icons.svg#call" class="svg-call-dims" alt="call" />
+
    </main>
    <!--@@include('html/footer.html',{})-->
    <script src="js/app.min.js"></script>
