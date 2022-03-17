@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/paige.min.css">
+   <link rel="stylesheet" href="css/content.min.css">
+   <!-- Вставляем в тайтл передаваемое значение title -->
+   <title>Главная</title>
+</head>
+
+<body>
+   <header class="heder">
+   <h3>Інструкція по використанню GULP</h3>
+   <br>
+   <ul>
+      <li>1. Скачати шрифти проекту в папку src/fonts</li>
+      <li>2. Скачати SVG іконки в папку src/svgicons</li>
+      <li>3. Призначити змінні для кольорів проекту в файлі src/scss/_global.scss</li>
+      <li>4. Призначити змінні для шрифтів проекту в файлі src/scss/_global.scss</li>
+      <li>5. Призначити, якщо потрібно, додаткові змінні в файлі src/scss/_global.scss</li>
+      <li>6. Якщо потрібно підключаємо бургер меню та основну меню</li>
+      <li>7. Додаємо CSS властивості що стосуються усіх сторінок в файл src/scss/paige.scss</li>
+      <li>8. Додаємо CSS властивості що стосуються індивідуального контенту сторінки в файл src/scss/content.scss</li>
+      <li>9. Перезапустити GULP = npm run dev</li>
+   </ul>
+   <br>
+</header>
+   <main>
+      <h3>Підключення зображення jpeg</h3>
+      <img src="img/cover.jpg" alt="">
+
+      <h3>Підключення зображення SVG</h3>
+      <svg class="_call_click">
+         <use xlink:href="img/icons/icons.svg#call"></use>
+      </svg>
+
+      <h3>Підключення зображення SVG як img</h3>
+      <img src="img/icons/icons.svg#call" class="svg-call-dims" alt="call" />
+
+   </main>
+   
+   <script src="js/app.min.js"></script>
+</body>
+
+</html>
