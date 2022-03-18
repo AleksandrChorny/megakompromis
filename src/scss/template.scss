@@ -9,11 +9,13 @@
 
 //! Внести потрібні налаштування в body якщо це потрібно
 body {
-   font-family: Montserrat;
+   font-family: $fontFamily;
+   font-size: $adaptiveFZ;
+   font-weight: 400;
    //background-color: red;
 }
 
 //Підключаємо стилі сторніки сайту
 @import "_header";
-//@import "_navigation";
+@import "_navigation";
 @import "_footer";
