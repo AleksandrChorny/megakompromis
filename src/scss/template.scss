@@ -1,0 +1,19 @@
+//обнуляємо стилі браузеру
+@import "_null";
+
+//Підключаю шрифти з файлу 'dist/fonts.scss'
+@import "fonts";
+
+//Подключаю налащтування 'dist/_global.scss'
+@import "_global";
+
+//! Внести потрібні налаштування в body якщо це потрібно
+body {
+   font-family: Montserrat;
+   //background-color: red;
+}
+
+//Підключаємо стилі сторніки сайту
+@import "_header";
+//@import "_navigation";
+@import "_footer";

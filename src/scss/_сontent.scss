@@ -1,0 +1,32 @@
+.content {
+   background-color: $colorContent;
+   text-align: center;
+   h3 {
+      font-weight: 700;
+      line-height: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+   }
+
+   ul {
+      font-size: 18px;
+      text-align: left;
+   }
+
+   p {
+      font-size: 18px;
+      text-align: left;
+   }
+}
+
+.call {
+   width: 60px;
+   height: 60px;
+   fill: rgb(0, 217, 255);
+}
+
+.svg-call-dims {
+   width: 200px;
+}

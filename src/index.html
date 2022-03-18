@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html',{
-"title": "Главная"
+"title": "Главная",
+"templateCSS": '"css/template.min.css"',
+"contentCSS": '"css/сontentMain.min.css"'
 })
 
 <body>
-   <h1>Інструкція по використанню GULP</h1>
-   <br>
-   <p>На цьому етапі у Вас має бути завантажений та інстальований GULP. В цій збірці вся розробка ведеться в теці 'src'
-      а gulp автоматично створив теку dist з результатом проекту.</p>
-   <p>В робочих файлах Ви можете подивитсь яким чином потрібно підключати та де розташовувати різні частини проекту. За
-      бажанням всі файли в теці 'src' можна видалити та створити нові, або відредагувату згідно вашого проекту.</p>
-   <p>Файли js бажано залишити, вони роблять корисну справу</p>
-   <p>За інструкцією нижче надана деяка інформація для швидкої та комфортної роботи над проектом</p>
-   <p>Користуйтесь gulp із задоволенням та працюйте натхненно та з комфортом</p>
-
    @@include('html/header.html',{})
-   <main>
-      <h3>Підключення зображення jpeg</h3>
-      <img src="@img/cover.jpg" alt="">
-
-      <h3>Підключення зображення SVG</h3>
-      <svg class="_call_click">
-         <use xlink:href="@img/icons/icons.svg#call"></use>
-      </svg>
-
-      <h3>Підключення зображення SVG як img</h3>
-      <img src="@img/icons/icons.svg#call" class="svg-call-dims" alt="call" />
-
-   </main>
-   <!--@@include('html/footer.html',{})-->
+   @@include('html/content.html',{})
+   @@include('html/footer.html',{})
    <script src="js/app.min.js"></script>
 </body>
 
