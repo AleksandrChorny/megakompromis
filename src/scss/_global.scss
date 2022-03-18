@@ -20,6 +20,11 @@ $fz: 20px;
    img {
       height: 60px;
       margin: 4px;
+      transition: all 0.5s;
+      &:hover {
+         height: 64px;
+         margin: 0;
+      }
    }
 }
 
