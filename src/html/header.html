@@ -84,43 +84,40 @@
       <button class="button heder__button">Связаться с нами</button>
    </div>
    <div class="separating-container header__separating-container_3">
-      <div class="social-btn viber">
-         <a href="">
+      <div class="header__social-btn social-btn viber">
+         <a href="#">
             <svg>
                <use xlink:href="@img/icons/icons.svg#viber"></use>
             </svg>
-            <div class="viber-text">
-               <p>viber</p>
-            </div>
+            <p>viber</p>
          </a>
       </div>
-      <div class="social-btn telegram">
+      <div class="header__social-btn social-btn telegram">
          <a href="">
             <svg>
                <use xlink:href="@img/icons/icons.svg#telegram"></use>
             </svg>
-            <div class="telegram-text">
-               <p>telegram</p>
-            </div>
+            <p>telegram</p>
          </a>
       </div>
-      <div class="social-btn call">
+      <div class="contacts call">
          <svg class="_call_click">
             <use xlink:href="@img/icons/icons.svg#call"></use>
          </svg>
-         <div class="numbers social-btn__numbers">
+         <div class="contacts__items calll">
             <p>+38 044 333 42 15</p>
             <p>+38 050 436 35 26</p>
             <p>+38 067 124 32 06</p>
          </div>
       </div>
-      <div class="social-btn e-mail">
+      <div class="contacts e-mail">
          <svg class="_e-mail_click">
             <use xlink:href="@img/icons/icons.svg#e-mail"></use>
          </svg>
-         <div class="mail">
+         <div class="contacts__items mail">
             <p>info@megakompromis.com.ua</p>
          </div>
       </div>
+      @@include('burger.html',{})
    </div>
 </header>
