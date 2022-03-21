@@ -45,10 +45,10 @@
    &__content {
       //display: none;
       position: absolute;
-      width: 50%;
+      width: 60%;
       height: 100%;
       top: 0;
-      left: 10%;
+      left: 0;
       overflow: hidden;
       background: rgba(0, 0, 0, 0.4);
 
@@ -85,7 +85,7 @@
 
          //height: 120px;
          //height: 20%;
-         text-align: center;
+         text-align: left;
          //vertical-align: middle;
          color: $colorLightGray;
          font-size: 200%;
@@ -101,12 +101,12 @@
          //background: #d4d4d4;
          //mix-blend-mode: screen;
 
-         font-weight: 700;
+         font-weight: 400;
          font-size: $adaptiveFZ;
          line-height: 150%;
          color: $colorLightGray;
 
-         padding: 5%;
+         padding: 3%;
 
          transition: all 0.5s;
          //color: $colorBlue;
