@@ -1,0 +1,115 @@
+.tile-pages {
+   width: 100%;
+   overflow: hidden;
+   &__separating-container {
+      background-color: $colorLightGray;
+      color: $colorBlue;
+      margin-bottom: 2px;
+   }
+   &__items {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 calc(8px + (120 - 8) * ((100vw - 1200px) / (1440 - 1200)));
+      gap: 4px;
+   }
+
+   &__item {
+      width: 49%;
+      position: relative;
+      //background-color: green;
+
+      &:hover {
+         h2 {
+            font-size: 220%;
+            color: $colorLightOrange;
+         }
+         ul {
+            color: $colorLightOrange;
+         }
+         img {
+            //width: 101%;
+            filter: blur(2px);
+         }
+      }
+
+      img {
+         width: 100%;
+         transition: all 0.5s;
+         //filter: blur(3px);
+      }
+   }
+
+   &__content {
+      //display: none;
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 10%;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.4);
+
+      //background-attachment: fixed;
+      //background-color: rgb(255, 49, 49, 0.5);
+      //mix-blend-mode: screen;
+      //filter: blur(3px);
+
+      //&::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   background: rgba(0, 0, 0, 0.4);
+      //   background: url(../img/tile-pages/print-pen.jpg);
+      //   background-size: cover;
+      //   background-position: 20% 0;
+
+      //   //mix-blend-mode: screen;
+      //   filter: blur(3px);
+      //}
+      //filter: blur(3px);
+      h2 {
+         width: 100%;
+         height: 30%;
+         text-decoration: none;
+
+         //background: #d4d4d4;
+         //mix-blend-mode: screen;
+
+         //filter: blur(3px);
+
+         //height: 120px;
+         //height: 20%;
+         text-align: center;
+         //vertical-align: middle;
+         color: $colorLightGray;
+         font-size: 200%;
+         padding: 5%;
+
+         transition: all 0.5s;
+         //background-color: rgb(130, 189, 54);
+      }
+      ul {
+         width: 100%;
+         height: 80%;
+
+         //background: #d4d4d4;
+         //mix-blend-mode: screen;
+
+         font-weight: 700;
+         font-size: $adaptiveFZ;
+         line-height: 150%;
+         color: $colorLightGray;
+
+         padding: 5%;
+
+         transition: all 0.5s;
+         //color: $colorBlue;
+      }
+   }
+}
