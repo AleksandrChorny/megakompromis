@@ -19,8 +19,9 @@
    &__item {
       width: 49%;
       position: relative;
-      //background-color: green;
-
+      @media (max-width: 426px) {
+         width: 99%;
+      }
       &:hover {
          .tile-pages__content {
             width: 100%;
@@ -37,7 +38,6 @@
             filter: blur(3px);
          }
       }
-
       img {
          width: 100%;
          transition: all 0.5s;
@@ -46,7 +46,6 @@
    }
 
    &__content {
-      //display: none;
       position: absolute;
       width: 60%;
       height: 100%;
@@ -55,65 +54,36 @@
       overflow: hidden;
       background: rgba(1, 26, 63, 0.4);
       transition: all 0.5s;
-
-      //background-attachment: fixed;
-      //background-color: rgb(255, 49, 49, 0.5);
-      //mix-blend-mode: screen;
-      //filter: blur(3px);
-
-      //&::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   background: rgba(0, 0, 0, 0.4);
-      //   background: url(../img/tile-pages/print-pen.jpg);
-      //   background-size: cover;
-      //   background-position: 20% 0;
-
-      //   //mix-blend-mode: screen;
-      //   filter: blur(3px);
-      //}
-      //filter: blur(3px);
       h2 {
          width: 100%;
          height: 30%;
          text-decoration: none;
 
-         //background: #d4d4d4;
-         //mix-blend-mode: screen;
-
-         //filter: blur(3px);
-
-         //height: 120px;
-         //height: 20%;
          text-align: left;
-         //vertical-align: middle;
          color: $colorLightGray;
          font-size: 200%;
          padding: 5%;
 
          transition: all 0.5s;
-         //background-color: rgb(130, 189, 54);
       }
       ul {
          width: 100%;
          height: 80%;
 
-         //background: #d4d4d4;
-         //mix-blend-mode: screen;
-
          font-weight: 400;
          font-size: $adaptiveFZ;
+         @media (max-width: 769px) {
+            font-size: calc(10px + (14 - 10) * ((100vw - 426px) / (769 - 426)));
+         }
+         @media (max-width: 426px) {
+            font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (426 - 320)));
+         }
          line-height: 150%;
          color: $colorLightGray;
 
          padding: 3%;
 
          transition: all 0.5s;
-         //color: $colorBlue;
       }
    }
 }

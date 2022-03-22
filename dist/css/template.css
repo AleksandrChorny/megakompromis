@@ -678,6 +678,11 @@ body {
 .separating-container a:hover {
   color: #f7931e;
 }
+@media (max-width: 769px) {
+  .separating-container {
+    font-size: calc(12px + 8 * (100vw - 320px) / 449);
+  }
+}
 
 .social-btn a {
   display: flex;

@@ -54,6 +54,11 @@
   width: 49%;
   position: relative;
 }
+@media (max-width: 426px) {
+  .tile-pages__item {
+    width: 99%;
+  }
+}
 .tile-pages__item:hover .tile-pages__content {
   width: 100%;
 }
@@ -100,4 +105,14 @@
   color: #f5f5f5;
   padding: 3%;
   transition: all 0.5s;
+}
+@media (max-width: 769px) {
+  .tile-pages__content ul {
+    font-size: calc(10px + 4 * (100vw - 426px) / 343);
+  }
+}
+@media (max-width: 426px) {
+  .tile-pages__content ul {
+    font-size: calc(12px + 2 * (100vw - 320px) / 106);
+  }
 }
