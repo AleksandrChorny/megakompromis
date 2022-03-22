@@ -54,6 +54,9 @@
   width: 49%;
   position: relative;
 }
+.tile-pages__item:hover .tile-pages__content {
+  width: 100%;
+}
 .tile-pages__item:hover h2 {
   font-size: 220%;
   color: #fbb03b;
@@ -62,7 +65,7 @@
   color: #fbb03b;
 }
 .tile-pages__item:hover img {
-  filter: blur(2px);
+  filter: blur(3px);
 }
 .tile-pages__item img {
   width: 100%;
@@ -75,7 +78,8 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(1, 26, 63, 0.4);
+  transition: all 0.5s;
 }
 .tile-pages__content h2 {
   width: 100%;
