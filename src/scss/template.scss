@@ -13,6 +13,9 @@ body {
    font-family: $fontFamily;
    font-size: $adaptiveFZ;
    font-weight: 400;
+   &._lock {
+      overflow: hidden;
+   }
    //background-color: red;
 }
 

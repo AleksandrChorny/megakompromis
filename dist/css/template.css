@@ -260,401 +260,8 @@ body {
   font-size: calc(12px + 6 * (100vw - 770px) / 830);
   font-weight: 400;
 }
-
-.heder {
-  width: 100%;
-  position: relative;
-  z-index: 601;
-  font-size: 20px;
-  font-weight: 700;
-}
-.heder__conteiner_1 {
-  min-height: 37px;
-  height: auto;
-  background-color: #6f6f6f;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: end;
-  overflow-x: hidden;
-  padding: 0 calc(8px + 112 * (100vw - 1200px) / 240);
-}
-@media (max-width: 1200px) {
-  .heder__conteiner_1 {
-    padding: 0 8px;
-  }
-}
-@media (max-width: 768px) {
-  .heder__conteiner_1 {
-    justify-content: space-between;
-  }
-}
-.heder__conteiner_1 div {
-  padding-right: 25px;
-}
-.heder__conteiner_1 *:last-child {
-  padding: 0;
-}
-.heder__conteiner_1 .language {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.heder__conteiner_1 a {
-  display: block;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-}
-.heder__conteiner_1 a:hover {
-  color: #f7931e;
-}
-.heder__conteiner_1 span {
-  display: inline-block;
-  width: 3px;
-  height: 30px;
-  margin: 0 10px;
-  background-color: #fff;
-}
-.heder__conteiner_2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow-x: hidden;
-  background-color: #fff;
-  display: flex;
-  align-items: cnter;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .heder__conteiner_2 {
-    justify-content: center;
-  }
-}
-.heder__conteiner_3 {
-  height: 47px;
-  background-color: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  overflow-x: hidden;
-}
-.heder__conteiner_3.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-.heder__conteiner_3.fixed::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 47px;
-  background-color: #f5f5f5;
-  z-index: -30;
-}
-.heder__conteiner_3 svg {
-  width: 35px;
-  height: 35px;
-  margin-right: calc(0px + 15 * (100vw - 770px) / 830);
-  fill: #4170b4;
-  transition: all 0.5s;
-}
-@media (max-width: 768px) {
-  .heder__conteiner_3 svg {
-    margin-right: 0;
-  }
-}
-.heder__conteiner_3 .call,
-.heder__conteiner_3 .e-mail,
-.heder__conteiner_3 .viber,
-.heder__conteiner_3 .telegram {
-  display: flex;
-  align-items: centre;
-}
-.heder__conteiner_3 .call a,
-.heder__conteiner_3 .e-mail a,
-.heder__conteiner_3 .viber a,
-.heder__conteiner_3 .telegram a {
-  display: flex;
-  align-items: centre;
-  color: inherit;
-  transition: all 0.5s;
-}
-.heder__conteiner_3 .call a:hover,
-.heder__conteiner_3 .e-mail a:hover,
-.heder__conteiner_3 .viber a:hover,
-.heder__conteiner_3 .telegram a:hover {
-  color: #f7931e;
-}
-.heder__conteiner_3 .call a:hover svg,
-.heder__conteiner_3 .e-mail a:hover svg,
-.heder__conteiner_3 .viber a:hover svg,
-.heder__conteiner_3 .telegram a:hover svg {
-  fill: #f7931e;
-}
-.heder__conteiner_3 .call .numbers p:after,
-.heder__conteiner_3 .e-mail .numbers p:after,
-.heder__conteiner_3 .viber .numbers p:after,
-.heder__conteiner_3 .telegram .numbers p:after {
-  content: "";
-  width: 3px;
-  height: 40px;
-  display: block;
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(0, -50%);
-  margin-left: calc(0px + 15 * (100vw - 320px) / 1280);
-}
-.heder__conteiner_3 .call .numbers,
-.heder__conteiner_3 .call .mail,
-.heder__conteiner_3 .call .viber-text,
-.heder__conteiner_3 .call .telegram-text,
-.heder__conteiner_3 .e-mail .numbers,
-.heder__conteiner_3 .e-mail .mail,
-.heder__conteiner_3 .e-mail .viber-text,
-.heder__conteiner_3 .e-mail .telegram-text,
-.heder__conteiner_3 .viber .numbers,
-.heder__conteiner_3 .viber .mail,
-.heder__conteiner_3 .viber .viber-text,
-.heder__conteiner_3 .viber .telegram-text,
-.heder__conteiner_3 .telegram .numbers,
-.heder__conteiner_3 .telegram .mail,
-.heder__conteiner_3 .telegram .viber-text,
-.heder__conteiner_3 .telegram .telegram-text {
-  display: flex;
-  align-items: centre;
-  color: inherit;
-}
-@media (max-width: 768px) {
-  .heder__conteiner_3 .call .numbers,
-.heder__conteiner_3 .call .mail,
-.heder__conteiner_3 .call .viber-text,
-.heder__conteiner_3 .call .telegram-text,
-.heder__conteiner_3 .e-mail .numbers,
-.heder__conteiner_3 .e-mail .mail,
-.heder__conteiner_3 .e-mail .viber-text,
-.heder__conteiner_3 .e-mail .telegram-text,
-.heder__conteiner_3 .viber .numbers,
-.heder__conteiner_3 .viber .mail,
-.heder__conteiner_3 .viber .viber-text,
-.heder__conteiner_3 .viber .telegram-text,
-.heder__conteiner_3 .telegram .numbers,
-.heder__conteiner_3 .telegram .mail,
-.heder__conteiner_3 .telegram .viber-text,
-.heder__conteiner_3 .telegram .telegram-text {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    left: 0;
-    background-color: rgba(111, 111, 111, 0.95);
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    z-index: -50;
-    transition: all 0.7s;
-  }
-  .heder__conteiner_3 .call .numbers._active,
-.heder__conteiner_3 .call .mail._active,
-.heder__conteiner_3 .call .viber-text._active,
-.heder__conteiner_3 .call .telegram-text._active,
-.heder__conteiner_3 .e-mail .numbers._active,
-.heder__conteiner_3 .e-mail .mail._active,
-.heder__conteiner_3 .e-mail .viber-text._active,
-.heder__conteiner_3 .e-mail .telegram-text._active,
-.heder__conteiner_3 .viber .numbers._active,
-.heder__conteiner_3 .viber .mail._active,
-.heder__conteiner_3 .viber .viber-text._active,
-.heder__conteiner_3 .viber .telegram-text._active,
-.heder__conteiner_3 .telegram .numbers._active,
-.heder__conteiner_3 .telegram .mail._active,
-.heder__conteiner_3 .telegram .viber-text._active,
-.heder__conteiner_3 .telegram .telegram-text._active {
-    top: 0;
-    left: 0;
-    transition: all 0.7s;
-    overflow: auto;
-  }
-}
-.heder__conteiner_3 .call .numbers p,
-.heder__conteiner_3 .call .mail p,
-.heder__conteiner_3 .call .viber-text p,
-.heder__conteiner_3 .call .telegram-text p,
-.heder__conteiner_3 .e-mail .numbers p,
-.heder__conteiner_3 .e-mail .mail p,
-.heder__conteiner_3 .e-mail .viber-text p,
-.heder__conteiner_3 .e-mail .telegram-text p,
-.heder__conteiner_3 .viber .numbers p,
-.heder__conteiner_3 .viber .mail p,
-.heder__conteiner_3 .viber .viber-text p,
-.heder__conteiner_3 .viber .telegram-text p,
-.heder__conteiner_3 .telegram .numbers p,
-.heder__conteiner_3 .telegram .mail p,
-.heder__conteiner_3 .telegram .viber-text p,
-.heder__conteiner_3 .telegram .telegram-text p {
-  white-space: nowrap;
-  position: relative;
-  font-size: calc(12px + 6 * (100vw - 770px) / 830);
-  margin: auto;
-  margin-right: calc(0px + 30 * (100vw - 320px) / 1280);
-}
-@media (max-width: 768px) {
-  .heder__conteiner_3 .call .numbers p,
-.heder__conteiner_3 .call .mail p,
-.heder__conteiner_3 .call .viber-text p,
-.heder__conteiner_3 .call .telegram-text p,
-.heder__conteiner_3 .e-mail .numbers p,
-.heder__conteiner_3 .e-mail .mail p,
-.heder__conteiner_3 .e-mail .viber-text p,
-.heder__conteiner_3 .e-mail .telegram-text p,
-.heder__conteiner_3 .viber .numbers p,
-.heder__conteiner_3 .viber .mail p,
-.heder__conteiner_3 .viber .viber-text p,
-.heder__conteiner_3 .viber .telegram-text p,
-.heder__conteiner_3 .telegram .numbers p,
-.heder__conteiner_3 .telegram .mail p,
-.heder__conteiner_3 .telegram .viber-text p,
-.heder__conteiner_3 .telegram .telegram-text p {
-    color: #fff;
-    font-weight: 700;
-    margin: 0 auto;
-    font-size: 24px;
-  }
-}
-@media (max-width: 500px) {
-  .heder__conteiner_3 .call .numbers p,
-.heder__conteiner_3 .call .mail p,
-.heder__conteiner_3 .call .viber-text p,
-.heder__conteiner_3 .call .telegram-text p,
-.heder__conteiner_3 .e-mail .numbers p,
-.heder__conteiner_3 .e-mail .mail p,
-.heder__conteiner_3 .e-mail .viber-text p,
-.heder__conteiner_3 .e-mail .telegram-text p,
-.heder__conteiner_3 .viber .numbers p,
-.heder__conteiner_3 .viber .mail p,
-.heder__conteiner_3 .viber .viber-text p,
-.heder__conteiner_3 .viber .telegram-text p,
-.heder__conteiner_3 .telegram .numbers p,
-.heder__conteiner_3 .telegram .mail p,
-.heder__conteiner_3 .telegram .viber-text p,
-.heder__conteiner_3 .telegram .telegram-text p {
-    color: #fff;
-    font-weight: 700;
-    margin: 0 auto;
-    font-size: 38px;
-  }
-}
-@media (min-width: 768px) {
-  .heder__conteiner_3 .call .numbers *:last-child,
-.heder__conteiner_3 .call .mail *:last-child,
-.heder__conteiner_3 .call .viber-text *:last-child,
-.heder__conteiner_3 .call .telegram-text *:last-child,
-.heder__conteiner_3 .e-mail .numbers *:last-child,
-.heder__conteiner_3 .e-mail .mail *:last-child,
-.heder__conteiner_3 .e-mail .viber-text *:last-child,
-.heder__conteiner_3 .e-mail .telegram-text *:last-child,
-.heder__conteiner_3 .viber .numbers *:last-child,
-.heder__conteiner_3 .viber .mail *:last-child,
-.heder__conteiner_3 .viber .viber-text *:last-child,
-.heder__conteiner_3 .viber .telegram-text *:last-child,
-.heder__conteiner_3 .telegram .numbers *:last-child,
-.heder__conteiner_3 .telegram .mail *:last-child,
-.heder__conteiner_3 .telegram .viber-text *:last-child,
-.heder__conteiner_3 .telegram .telegram-text *:last-child {
-    margin: auto;
-  }
-  .heder__conteiner_3 .call .numbers *:last-child:after,
-.heder__conteiner_3 .call .mail *:last-child:after,
-.heder__conteiner_3 .call .viber-text *:last-child:after,
-.heder__conteiner_3 .call .telegram-text *:last-child:after,
-.heder__conteiner_3 .e-mail .numbers *:last-child:after,
-.heder__conteiner_3 .e-mail .mail *:last-child:after,
-.heder__conteiner_3 .e-mail .viber-text *:last-child:after,
-.heder__conteiner_3 .e-mail .telegram-text *:last-child:after,
-.heder__conteiner_3 .viber .numbers *:last-child:after,
-.heder__conteiner_3 .viber .mail *:last-child:after,
-.heder__conteiner_3 .viber .viber-text *:last-child:after,
-.heder__conteiner_3 .viber .telegram-text *:last-child:after,
-.heder__conteiner_3 .telegram .numbers *:last-child:after,
-.heder__conteiner_3 .telegram .mail *:last-child:after,
-.heder__conteiner_3 .telegram .viber-text *:last-child:after,
-.heder__conteiner_3 .telegram .telegram-text *:last-child:after {
-    display: none;
-  }
-}
-.heder__conteiner_3 .burger-menu {
-  width: 40px;
-  height: 40px;
-  background-color: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  display: none;
-}
-@media (max-width: 768px) {
-  .heder__conteiner_3 .burger-menu {
-    display: flex;
-  }
-}
-.heder__conteiner_3 .burger-menu .burger-menu__line {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 70%;
-  height: 4px;
-  background-color: #4170b4;
-  transition: all 0.3s;
-}
-.heder__conteiner_3 .burger-menu .burger-menu__line::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #4170b4;
-}
-.heder__conteiner_3 .burger-menu .burger-menu__line::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #4170b4;
-}
-.heder__conteiner_3 .burger-menu .burger-menu__line._close {
-  content: "";
-  position: absolute;
-  transform: rotate(-45deg);
-  width: 70%;
-  height: 4px;
-  background-color: #4170b4;
-  transition: all 0.3s;
-}
-.heder__conteiner_3 .burger-menu .burger-menu__line._close::before {
-  content: "";
-  position: absolute;
-  transform: rotate(90deg);
-  top: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #4170b4;
-}
-.heder__conteiner_3 .burger-menu .burger-menu__line._close::after {
-  content: "";
-  display: none;
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 4px;
-  background-color: #4170b4;
+body._lock {
+  overflow: hidden;
 }
 
 .separating-container {
@@ -752,22 +359,49 @@ body {
   transform: translate(0, -50%);
   margin-left: calc(0px + 15 * (100vw - 320px) / 1280);
 }
-@media (max-width: 768px) {
-  .contacts__items p {
+@media (min-width: 769px) {
+  .contacts__items *:last-child {
+    margin: auto;
+  }
+  .contacts__items *:last-child:after {
     display: none;
   }
 }
-.contacts__items *:last-child {
-  margin: auto;
-}
-.contacts__items *:last-child:after {
-  display: none;
+@media (max-width: 768px) {
+  .contacts__items {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: rgba(111, 111, 111, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+    transition: all 0.7s;
+  }
+  .contacts__items p {
+    color: #fff;
+    line-height: 200%;
+    font-size: calc(18px + 14 * (100vw - 320px) / 448);
+  }
+  .contacts__items p::after {
+    display: none;
+  }
+  .contacts__items._active {
+    top: 0;
+    left: 0;
+    transition: all 0.7s;
+    overflow: auto;
+  }
 }
 
 .header {
   width: 100%;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 .header__social-btn a:hover {
   color: #f7931e;
@@ -834,23 +468,23 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 2;
 }
 .header__separating-container_3.fixed::before {
   content: "";
   position: absolute;
   top: 0;
   width: 100%;
-  height: 47px;
+  height: 44px;
   background-color: #f5f5f5;
-  z-index: -30;
+  z-index: -1;
 }
 
 .main-menu {
   width: 100%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  z-index: 600;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .main-menu {
@@ -1164,7 +798,7 @@ body {
 @media (min-width: 769px) {
   .main-menu.fixed {
     position: fixed;
-    top: 47px;
+    top: 44px;
     animation: fixedNavigate 0.7s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -1228,7 +862,7 @@ body {
 @media (min-width: 1200px) {
   .main-menu.fixed {
     position: fixed;
-    top: 47px;
+    top: 44px;
     animation: fixedNavigate 0.7s;
   }
   .main-menu.fixed .main-menu__items {
@@ -1243,10 +877,10 @@ body {
 
 @keyframes fixedNavigate {
   from {
-    top: -47px;
+    top: -44px;
   }
   to {
-    top: 47px;
+    top: 44px;
   }
 }
 @keyframes replaseFixed {
@@ -1277,12 +911,4 @@ body {
     height: 100%;
     top: 100%;
   }
-}
-.footer {
-  height: 350px;
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
 }
