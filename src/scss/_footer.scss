@@ -1,2 +1,26 @@
 .footer {
 }
+
+.container {
+   width: 50%;
+   position: relative;
+   z-index: -1;
+   img {
+      width: 100%;
+      //width: 0;
+   }
+   h1 {
+      position: absolute;
+      font-weight: 900;
+      text-align: right;
+      //vertical-align: middle;
+      width: 50%;
+      height: 100%;
+      font-size: 120px;
+      background: #d4d4d4;
+      backdrop-filter: blur(3px);
+      mix-blend-mode: screen;
+      top: 0;
+      left: 0;
+   }
+}

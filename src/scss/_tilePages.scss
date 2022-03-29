@@ -34,7 +34,6 @@
             color: $colorLightOrange;
          }
          img {
-            //width: 101%;
             filter: blur(3px);
          }
       }
@@ -53,6 +52,7 @@
       left: 0;
       overflow: hidden;
       background: rgba(1, 26, 63, 0.4);
+      backdrop-filter: blur(3px);
       transition: all 0.5s;
       h2 {
          width: 100%;
@@ -60,8 +60,9 @@
          text-decoration: none;
 
          text-align: left;
-         color: $colorLightGray;
-         font-size: 200%;
+         //color: $colorLightGray;
+         //mix-blend-mode: screen;
+         font-size: 2em;
          padding: 5%;
 
          transition: all 0.5s;

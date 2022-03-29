@@ -912,3 +912,24 @@ body._lock {
     top: 100%;
   }
 }
+.container {
+  width: 50%;
+  position: relative;
+  z-index: -1;
+}
+.container img {
+  width: 100%;
+}
+.container h1 {
+  position: absolute;
+  font-weight: 900;
+  text-align: right;
+  width: 50%;
+  height: 100%;
+  font-size: 120px;
+  background: #d4d4d4;
+  backdrop-filter: blur(3px);
+  mix-blend-mode: screen;
+  top: 0;
+  left: 0;
+}

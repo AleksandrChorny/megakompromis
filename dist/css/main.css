@@ -84,6 +84,7 @@
   left: 0;
   overflow: hidden;
   background: rgba(1, 26, 63, 0.4);
+  backdrop-filter: blur(3px);
   transition: all 0.5s;
 }
 .tile-pages__content h2 {
@@ -91,8 +92,7 @@
   height: 30%;
   text-decoration: none;
   text-align: left;
-  color: #f5f5f5;
-  font-size: 200%;
+  font-size: 2em;
   padding: 5%;
   transition: all 0.5s;
 }
