@@ -1,3 +1,8 @@
+.purple {
+   background-color: #b26eaa;
+   color: #b26eaa;
+}
+
 .main-menu {
    width: 100%;
    position: relative;
@@ -169,7 +174,11 @@
             background-color: $colorBlue;
          }
          &.purple {
-            background-color: $colorLightOrange;
+            background-color: #b26eaa;
+            //color: #b26eaa;
+            .main-menu__svg {
+               fill: $colorWhite;
+            }
          }
       }
    }
