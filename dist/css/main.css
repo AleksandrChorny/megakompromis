@@ -53,6 +53,7 @@
 .tile-pages__item {
   width: 49%;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 426px) {
   .tile-pages__item {
@@ -122,22 +123,33 @@
   height: auto;
   background-color: #fff;
   border: 2px solid #f5f5f5;
+  padding: 0.8em 0;
+  transition: all 0.3s;
+}
+.goods-card:hover {
+  box-shadow: 2px 3px 4px 2px rgba(111, 111, 111, 0.3);
+}
+.goods-card:hover img {
+  width: 82%;
 }
 .goods-card__img {
   max-width: 100%;
+  aspect-ratio: 4/4;
   text-align: center;
+  overflow: hidden;
 }
 .goods-card__img img {
   max-width: 100%;
   max-height: 100%;
   width: 80%;
   object-fit: cover;
+  transition: all 0.3s;
 }
 .goods-card__color-box {
   max-width: 210px;
   height: 77px;
   position: relative;
-  margin: auto;
+  margin: 0 auto 0.5em auto;
 }
 @media (max-width: 426px) {
   .goods-card__color-box {
@@ -169,13 +181,15 @@
   height: 28px;
   min-width: 28px;
   min-height: 28px;
+  cursor: pointer;
 }
 .goods-card__title {
   text-transform: uppercase;
   font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5em;
   text-align: center;
   color: #6f6f6f;
-  line-height: normal;
 }
 @media (max-width: 769px) {
   .goods-card__title {
@@ -190,7 +204,7 @@
 .goods-card__sub-title {
   font-size: 1em;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.2em;
   text-align: center;
   color: #6f6f6f;
 }
@@ -205,11 +219,11 @@
   }
 }
 .goods-card__price {
-  font-size: 1.5em;
-  font-weight: 800;
+  font-size: 1.3em;
+  font-weight: 700;
   text-align: center;
-  color: #6f6f6f;
-  line-height: normal;
+  color: #4170b4;
+  line-height: 2em;
 }
 @media (max-width: 769px) {
   .goods-card__price {
@@ -229,18 +243,23 @@
 }
 .goods__tile {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(188px, 1fr));
   padding: 0 calc(8px + 112 * (100vw - 1200px) / 240);
   gap: 10px;
 }
 @media (max-width: 769px) {
   .goods__tile {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(188px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .goods__tile {
+    grid-template-columns: repeat(2, minmax(188px, 1fr));
   }
 }
 @media (max-width: 426px) {
   .goods__tile {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(188px, 1fr);
   }
 }
 .goods__separating-container {
