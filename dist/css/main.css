@@ -148,6 +148,7 @@
   width: 100%;
   max-height: 69px;
   overflow: hidden;
+  grid-auto-rows: 28px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
