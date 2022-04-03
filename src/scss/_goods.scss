@@ -31,36 +31,44 @@
       }
    }
    &__color-box {
-      max-width: 210px;
-      height: 77px;
+      //max-width: 210px;
+      width: 100%;
+      //flex-basis: 80%;
+      //background-color: plum;
+      height: calc(28px * 2 + 7px);
 
       position: relative;
       margin: 0 auto .5em auto;
-      @media (max-width: 426px) {
-         max-width: 315px;
-      }
+
+      //@media (max-width: 769px) {
+      //   max-width: 305px;
+      //   height: 116px;
+
+      //}
    }
    &__color-items {
-      width: 100%;
-      max-height: 69px;
-      overflow: hidden;
-      //display: grid;
-      //grid-template-columns: repeat(auto-fill, 28px);
-      grid-auto-rows: 28px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 7px;
-
-      background-color: rgba($colorWhite, 0.8);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 28px);
       position: absolute;
-      padding: 3px;
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      max-width: 85%;
+      max-height: calc(28px * 2 + 7px);
+      min-height: calc(28px * 2 + 7px);
+
+      gap: 7px;
+      background-color: rgba($colorWhite, 0.8);
+      overflow: hidden;
       transition: all 1s;
       &:hover {
          max-height: 400px;
+      }
+      @media (max-width: 769px) {
+         grid-template-columns: repeat(auto-fill, 44px);
+         //max-height: calc(44px * 2 + 7px);
+         //min-height: calc(44px * 2 + 7px);
       }
    }
    &__color-item {
@@ -69,6 +77,11 @@
       min-width: 28px;
       min-height: 28px;
       cursor: pointer;
+
+      @media (max-width: 769px) {
+         min-width: 44px;
+         min-height: 44px;
+      }
    }
    &__title {
       text-transform: uppercase;
@@ -123,13 +136,17 @@
       padding: 0 calc(8px + (120 - 8) * ((100vw - 1200px) / (1440 - 1200)));
       gap: 10px;
       @media (max-width: 769px) {
-         grid-template-columns: repeat(3, minmax(188px, 1fr));
+         grid-template-columns: repeat(2, minmax(188px, 1fr));
+         padding: 0 8px;
       }
       @media (max-width: 600px) {
          grid-template-columns: repeat(2, minmax(188px, 1fr));
+         padding: 0 8px;
+
       }
       @media (max-width: 426px) {
          grid-template-columns: minmax(188px, 1fr);
+         padding: 0 18px;
       }
    }
    &__separating-container {
