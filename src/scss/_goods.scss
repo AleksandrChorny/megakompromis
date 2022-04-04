@@ -1,20 +1,18 @@
 .goods-card {
+   position: relative;
    height: auto;
    background-color: $colorWhite;
    border: 2px solid $colorLightGray;
    padding: .8em 0;
    transition: all .3s;
-
    &:hover {
-      // background-color: red;
       box-shadow: 2px 3px 4px 2px rgba($colorDarkGray, .3);
-      //&__img {
-         //width: 85%;
          img {
             width: 82%;
+            @media (max-width: 426px) {
+               width: 100%;
+            }
          }
-      //}
-      
    }
 
    &__img {
@@ -28,23 +26,20 @@
          width: 80%;
          object-fit: cover;
          transition: all .3s;
+         @media (max-width: 426px) {
+            width: 95%;
+         }
+      }
+      @media (max-width: 426px) {
+         aspect-ratio: 4/5;
       }
    }
    &__color-box {
-      //max-width: 210px;
       width: 100%;
-      //flex-basis: 80%;
-      //background-color: plum;
       height: calc(28px * 2 + 7px);
 
       position: relative;
       margin: 0 auto .5em auto;
-
-      //@media (max-width: 769px) {
-      //   max-width: 305px;
-      //   height: 116px;
-
-      //}
    }
    &__color-items {
       display: grid;
@@ -70,6 +65,10 @@
          //max-height: calc(44px * 2 + 7px);
          //min-height: calc(44px * 2 + 7px);
       }
+      @media (max-width: 426px) {
+         grid-template-columns: repeat(auto-fill, 40px);
+         gap: 4px;
+      }
    }
    &__color-item {
       width: 28px;
@@ -81,6 +80,10 @@
       @media (max-width: 769px) {
          min-width: 44px;
          min-height: 44px;
+      }
+      @media (max-width: 426px) {
+         min-width: 40px;
+         min-height: 40px;
       }
    }
    &__title {
@@ -94,7 +97,7 @@
          font-size: 1.4em;
       }
       @media (max-width: 426px) {
-         font-size: 2.2em;
+         font-size: 1.5em;
       }
    }
    &__sub-title {
@@ -103,18 +106,24 @@
       line-height: 1.2em;
       text-align: center;
       color: $colorDarkGray;
+      margin-bottom: 2em;
       @media (max-width: 769px) {
          font-size: 1.3em;
       }
       @media (max-width: 426px) {
-         font-size: 2.2em;
+         font-size: 1.2em;
       }
    }
 
    &__price {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
       font-size: 1.3em;
       font-weight: 700;
       text-align: center;
+      white-space: nowrap;
       color: $colorBlue;
       line-height: 2em;
       //margin: 100% 0 0 0;
@@ -122,15 +131,26 @@
          font-size: 1.8em;
       }
       @media (max-width: 426px) {
-         font-size: 3em;
+         font-size: 1.6em;
       }
    }
 }
 
 .goods {
-   width: 100%;
-   height: auto;
-   overflow: hidden;
+   &__title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      background-color: $colorLightGray;
+      margin: 2px 0;
+      @media (max-width: 426px) {
+         font-size: 1.6em;
+      }
+   }
    &__tile {
       display: grid;
       grid-template-columns: repeat(4, minmax(188px, 1fr));
@@ -139,19 +159,12 @@
       @media (max-width: 769px) {
          grid-template-columns: repeat(2, minmax(188px, 1fr));
          padding: 0 8px;
+         gap: 6px;
       }
       @media (max-width: 600px) {
          grid-template-columns: repeat(2, minmax(188px, 1fr));
-         padding: 0 8px;
-
+         padding: 0 4px;
+         gap: 4px;
       }
-      @media (max-width: 426px) {
-         grid-template-columns: minmax(188px, 1fr);
-         padding: 0 18px;
-      }
-   }
-   &__separating-container {
-      background: $colorLightGray;
-      margin: 2px 0;
    }
 }

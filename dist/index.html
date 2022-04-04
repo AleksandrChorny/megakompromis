@@ -13,31 +13,17 @@
 <body>
    <header class="header">
    <div class="header__enter wraper">
-      <button>Войти</button>
+      <button>Увійти</button>
       <a href="/?language=UA">ua</a>
-      <!--<span></span>-->
       <a href="/">ru</a>
    </div>
-   <!--<div class="header__wraper_1 wraper">-->
-   <!-- ! При розробці js змінити клас на header__enter -->
-   <!--<div class="enter">
-         <a href="#">Войти</a>
-      </div>
-      <div class="header__language">
-         <a href="/?language=UA">ua</a>
-         <span></span>
-         <a href="/">ru</a>
-      </div>
-   </div>-->
-   <div class="wraper header__wraper_2">
-      <div class="logo">
-         <a href="/">
-            <img src="img/logo_heter.png" alt="Лого">
-         </a>
-      </div>
-      <button class="button heder__button">Связаться с нами</button>
+   <div class="header__logo wraper">
+      <a class="logo" href="/">
+         <img src="img/logo_heter.png" alt="Лого">
+      </a>
+      <button class="heder__button button">Связаться с нами</button>
    </div>
-   <div class="wraper header__wraper_3">
+   <div class="header__contacts-bar wraper">
       <div class="header__social-btn social-btn viber">
          <a href="#">
             <svg>
@@ -179,7 +165,7 @@
 </nav>
    <main>
       <section class="tile-pages">
-   <div class="tile-pages__separating-container separating-container">
+   <div class="tile-pages__title wraper">
       <h1>ДРУК НА РЕКЛАМНО-СУВЕНІРНІЙ ПРОДУКЦІЇ</h1>
    </div>
    <div class="tile-pages__items">
@@ -239,8 +225,8 @@
    </div>
 </section>
       <section class="goods">
-   <div class="goods__separating-container separating-container">
-      <h1>Найпопулярніші товари</h1>
+   <div class="goods__title wraper">
+      <h2>Найпопулярніші товари</h2>
    </div>
    <div class="goods__tile">
       <div class="goods-card">
@@ -419,8 +405,8 @@
 </section>
    </main>
    <footer class="footer">
-   <div class="footer__separating-container separating-container">
-      <h1>зв'яжіться з нами</h1>
+   <div class="footer__title wraper">
+      <h2>зв'яжіться з нами</h2>
    </div>
    <div class="contacts-form">
       <form action="#">
@@ -437,7 +423,7 @@
    </div>
    <div class="footer__contats-items">
       <div class="footer__contats-item">
-         <svg class="footer__icon">
+         <svg>
             <use xlink:href="img/icons/icons.svg#call"></use>
          </svg>
          <p class="footer__title">Телефон</p>
@@ -448,19 +434,19 @@
          </div>
       </div>
       <div class="footer__contats-item">
-         <svg class="footer__icon">
+         <svg>
             <use xlink:href="img/icons/icons.svg#call"></use>
          </svg>
-         <p class="footer__title">Телефон</p>
+         <p class="footer__title">e-mail</p>
          <div class="footer__data">
             <p>info@megakompromis.com.ua</p>
          </div>
       </div>
       <div class="footer__contats-item">
-         <svg class="footer__icon">
+         <svg>
             <use xlink:href="img/icons/icons.svg#call"></use>
          </svg>
-         <p class="footer__title">Телефон</p>
+         <p class="footer__title">Адреса</p>
          <div class="footer__data">
             <p>Офіс</p>
             <p>Україна, Київська обл.,</p>
@@ -471,9 +457,20 @@
             <p>Україна, Київ, вул., Кирилівскьа, 86</p>
          </div>
       </div>
+      <div class="footer__contats-item footer__contats-media">
+         <svg>
+            <use xlink:href="img/icons/icons.svg#call"></use>
+         </svg>
+         <svg>
+            <use xlink:href="img/icons/icons.svg#call"></use>
+         </svg>
+         <svg>
+            <use xlink:href="img/icons/icons.svg#call"></use>
+         </svg>
+      </div>
    </div>
    <div class="footer__links">
-      <ul>
+      <ul class="footer__links-items">
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
@@ -486,10 +483,13 @@
                      <li><a href="#">лінк другого рівня </a></li>
                   </ul>
                </li>
+               <li>
+                  <h3><a href="">Заголовок другого рівня</a></h3>
+               </li>
             </ul>
          </li>
       </ul>
-      <ul>
+      <ul class="footer__links-items">
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
@@ -502,10 +502,13 @@
                      <li><a href="#">лінк другого рівня </a></li>
                   </ul>
                </li>
+               <li>
+                  <h3><a href="">Заголовок другого рівня</a></h3>
+               </li>
             </ul>
          </li>
       </ul>
-      <ul>
+      <ul class="footer__links-items">
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
@@ -518,9 +521,70 @@
                      <li><a href="#">лінк другого рівня </a></li>
                   </ul>
                </li>
+               <li>
+                  <h3><a href="">Заголовок другого рівня</a></h3>
+               </li>
             </ul>
          </li>
       </ul>
+      <ul class="footer__links-items">
+         <li>
+            <h2>Заголовок розділу</h2>
+            <ul>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li>
+                  <h3>Заголовок другого рівня</h3>
+                  <ul>
+                     <li><a href="#">лінк другого рівня </a></li>
+                     <li><a href="#">лінк другого рівня </a></li>
+                  </ul>
+               </li>
+               <li>
+                  <h3><a href="">Заголовок другого рівня</a></h3>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <ul class="footer__links-items">
+         <li>
+            <h2>Заголовок розділу</h2>
+            <ul>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li>
+                  <h3>Заголовок другого рівня</h3>
+                  <ul>
+                     <li><a href="#">лінк другого рівня </a></li>
+                     <li><a href="#">лінк другого рівня </a></li>
+                  </ul>
+               </li>
+               <li>
+                  <h3><a href="">Заголовок другого рівня</a></h3>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <ul class="footer__links-items">
+         <li>
+            <h2>Заголовок розділу</h2>
+            <ul>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li>
+                  <h3>Заголовок другого рівня</h3>
+                  <ul>
+                     <li><a href="#">лінк другого рівня </a></li>
+                     <li><a href="#">лінк другого рівня </a></li>
+                  </ul>
+               </li>
+               <li>
+                  <h3><a href="">Заголовок другого рівня</a></h3>
+               </li>
+            </ul>
+         </li>
+      </ul>
+
    </div>
 </footer>
    <script src="js/app.min.js"></script>

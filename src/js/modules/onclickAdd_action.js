@@ -1,5 +1,5 @@
 // file burger===========================================================================
-const heder_class = document.querySelector('.header__separating-container_3');
+const heder_class = document.querySelector('.header__social-btn');
 const burger_menu = document.querySelector('.burger-menu');
 // console.log(document.querySelector('.main-menu'))
 

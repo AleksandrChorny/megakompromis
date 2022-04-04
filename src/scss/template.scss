@@ -17,7 +17,7 @@ $fontFamily: "Montserrat", sans-serif;
 //Призначаю додаткові змінні проекту
 // calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
 //$adaptiveFZ: calc(12px + (20 - 12) * ((100vw - 770px) / (1600 - 770)));
-$fz: calc(12px + (20 - 12) * ((100vw - 320px) / (1600 - 320)));
+$fz: calc(11px + (16 - 11) * ((100vw - 320px) / (1600 - 320)));
 
 //Підключаю шрифти з файлу 'dist/fonts.scss'
 @import "fonts";
@@ -32,5 +32,5 @@ $fz: calc(12px + (20 - 12) * ((100vw - 320px) / (1600 - 320)));
 //Підключаємо стилі сторніки сайту
 @import "_header";
 @import "_navigation";
-@import "_footer";
 @import "_goodsColor";
+@import "_footer";

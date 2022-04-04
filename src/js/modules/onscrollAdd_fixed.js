@@ -1,7 +1,7 @@
 // file hederOnScroll=========================================================================
-const hederHight_1 = elementHeight('header__separating-container_1');
-const hederHight_2 = elementHeight('header__separating-container_2');
-const hederHight_3 = elementHeight('header__separating-container_3');
+const hederHight_1 = elementHeight('header__enter');
+const hederHight_2 = elementHeight('header__logo');
+const hederHight_3 = elementHeight('header__contacts-bar');
 const hederHight = elementHeight('header');
 const navigateHight = elementHeight('main-menu');
 
@@ -10,16 +10,16 @@ window.onscroll = function () {
    let scrolled = window.pageYOffset;
 
    if (scrolled > hederHight_1 + hederHight_2 && scrolled < hederHight + navigateHight - hederHight_3) {
-      setClassName("header__separating-container_3", "fixed");
-      setClassName("header__separating-container_2", "fixed");
+      setClassName("header__contacts-bar", "fixed");
+      setClassName("header__logo", "fixed");
       // console.log('ja bolshe heder1+2');
-      document.querySelector('.header__separating-container_2').style.marginBottom = '30px';
+      document.querySelector('.header__logo').style.marginBottom = '30px';
    }
 
    if (scrolled < hederHight_1 + hederHight_2) {
-      delClassName('header__separating-container_3', 'fixed');
-      delClassName('header__separating-container_2', 'fixed');
-      document.querySelector('.header__separating-container_2').style.marginBottom = '0px';
+      delClassName('header__contacts-bar', 'fixed');
+      delClassName('header__logo', 'fixed');
+      document.querySelector('.header__logo').style.marginBottom = '0px';
    }
 
 
@@ -28,17 +28,17 @@ window.onscroll = function () {
          if (window.getComputedStyle(document.querySelector('.main-menu')).top < '0') {
             return
          }
-         // margin1 = elementHeight('heder')+elementHeight('main-menu') - elementHeight('header__separating-container_1') - elementHeight('header__separating-container_2')+48;
+         // margin1 = elementHeight('heder')+elementHeight('main-menu') - elementHeight('header__enter') - elementHeight('header__logo')+48;
          setClassName("main-menu", "fixed");
-         setClassName("header__separating-container_3", "fixed");
-         setClassName("header__separating-container_2", "fixed");
-         // setClassName("header__separating-container_2", "fixedNav");
+         setClassName("header__contacts-bar", "fixed");
+         setClassName("header__logo", "fixed");
+         // setClassName("header__logo", "fixedNav");
          // console.log(navigateHight);
          // let a = navigateHight+hederHight_3;
          // console.log(a);
 
-         document.querySelector('.header__separating-container_2').style.marginBottom = navigateHight + hederHight_3 + 'px';
-         // document.querySelector('.header__separating-container_2').style.marginBottom = '439px';
+         document.querySelector('.header__logo').style.marginBottom = navigateHight + hederHight_3 + 'px';
+         // document.querySelector('.header__logo').style.marginBottom = '439px';
       }
    }
 
@@ -59,7 +59,7 @@ window.onscroll = function () {
          // setClassName("main-menu__items", "back");
 
          delClassName('main-menu', 'fixed');
-         document.querySelector('.header__separating-container_2').style.marginBottom = hederHight_3 + 'px';
+         document.querySelector('.header__logo').style.marginBottom = hederHight_3 + 'px';
 
          // const scrollTop = 
          // document.querySelector('.main-menu').style.animation = 'fixedNavigat 4s';

@@ -10,11 +10,11 @@
       content: '';
       position: absolute;
       width: 1px;
-      height: 100%;
+      height: 86%;
+      transform: translateY(7%);
       background-color: $colorWhite;
       top: 0;
       right: 0;
-
    }
    //background-color: wheat;
    form{
@@ -25,12 +25,38 @@
       width: 80%;
       //background-color: plum;
    }
-   input{
-      margin: 0 0 2em 0;
+   input, textarea{
       width: 100%;
+      padding: 0.2em;
+      font-size: inherit;
+      margin: .2em 0 .5em 0;
+      color: $colorDarkGray;
    }
+   textarea{
+      height: 5em;
+   }
+   input[type=submit]{
+      align-self: flex-end;
+
+      height: 45px;
+      width: 200px;
+
+      font-size: inherit;
+      font-weight: 400;
+      text-transform: uppercase;
+      
+      cursor: pointer;
+      background-color: $colorOrange;
+      color: $colorWhite;
+      transition: background-color .5s;
+      &:hover{
+         background-color: $colorLightOrange;
+      }
+   }
+
    p{
-      font-weight: 600;
+      font-size: .8em;
+      font-weight: 400;
       color: $colorWhite;
       span{
          color: red;
@@ -38,10 +64,7 @@
    }
 }
 
-
-
 .footer {
-   background-color: $colorDarkGray;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    //grid-t-rows: 100px 100px;
@@ -49,12 +72,20 @@
       "t t"
       "f i"
       "l l";
+   background-color: $colorDarkGray;
+   overflow: hidden;
    p{
       color: $colorLightGray;
    }
 
-   &__separating-container{
+   &__title{
       grid-area: t;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      text-transform: uppercase;
       background-color: $colorDarkGray;
       color: $colorWhite;
 
@@ -80,15 +111,20 @@
 
       width: 85%;
       gap: 15px;
-
-      //background-color: rgb(72, 225, 171);
-
+      svg {
+         width: 40px;
+         height: 40px;
+         fill: $colorLightGray;
+         transform: translateY(-25%);
+      }
    }
 
-   &__icon {
-      width: 40px;
-      height: 40px;
-      fill: $colorLightGray;
+   
+   &__contats-media{
+      justify-content: center;
+      svg {
+         transform: translateY(0);
+      }
    }
 
    &__title {
@@ -101,8 +137,8 @@
       position: relative;
       grid-area: l;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(calc(100%/6), 1fr));
-      //grid-template-columns: repeat(auto-fit, minmax(calc(100%/6), 1fr));
+      //grid-template-columns: repeat(auto-fill, minmax(calc(100%/6), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(calc(100%/6), 1fr));
 
       height: auto;
 
@@ -124,23 +160,40 @@
       ul{
          margin-left: 1em;
          color: $colorLightGray;
-         h2{
-            font-size: .8em;
-            line-height: normal;
 
-            margin-top: 1em;
+         li{
+            margin: 4px 0;
+         }
+         
+         h2{
+            font-size: 1em;
+            line-height: normal;           
+            a{
+               color: $colorLightGray;
+               font-size: inherit;
+            }
          }
          h3{
             line-height: normal;
-            font-size: .7em;
-            margin-top: 1em;
-
+            font-size: .8em;
+            margin-top: .6em;
+            a{
+               color: $colorLightGray;
+               font-size: inherit;
+            }
          }
          a{
             color: $colorLightGray;
             font-size: 0.8em;
+            &:hover{
+               color: $colorLightOrange;
+            }
          }
+         
       }
+   }
+   &__links-items{
+      margin: 1em 0;
    }
    
 }
