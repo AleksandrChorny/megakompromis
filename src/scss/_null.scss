@@ -2,6 +2,9 @@
    padding: 0;
    margin: 0;
    border: 0;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
 }
 *,
 *:before,
@@ -34,7 +37,6 @@ body {
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
-   box-sizing: border-box;
 }
 input,
 button,

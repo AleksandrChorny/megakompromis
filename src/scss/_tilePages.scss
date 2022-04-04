@@ -73,7 +73,7 @@
          height: 80%;
 
          font-weight: 400;
-         font-size: $adaptiveFZ;
+         font-size: $fz;
          @media (max-width: 769px) {
             font-size: calc(10px + (14 - 10) * ((100vw - 426px) / (769 - 426)));
          }

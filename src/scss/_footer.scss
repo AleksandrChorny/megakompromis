@@ -1,88 +1,148 @@
-.footer {
+.contacts-form {
+   grid-area: f;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   justify-self: end;
+   width: 85%;
+   //height: 400px;
+   &::after{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: $colorWhite;
+      top: 0;
+      right: 0;
+
+   }
+   //background-color: wheat;
+   form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      width: 80%;
+      //background-color: plum;
+   }
+   input{
+      margin: 0 0 2em 0;
+      width: 100%;
+   }
+   p{
+      font-weight: 600;
+      color: $colorWhite;
+      span{
+         color: red;
+      }
+   }
 }
 
-//.container {
-//   width: 100%;
-//   height: 205px;
-//   background-color: plum;
-//   display: grid;
-//   grid-template-columns: repeat(12, 100px);
-//   grid-template-rows: 100px 100px;
-//   grid-template-areas:
-//      "one one two two three three for for five five six six"
-//      "one one two two three three for for five five six six";
-//      //"seven seven eight eight nine nine ten ten Overtate Overtate twelve twelve";
-//   gap: 5px;
-//   transition: all 1s;
-//   &:hover {
-//      grid-template-areas:
-//         "seven twelve twelve two three three for for five five six six"
-//         "ten Overtate Overtate . three three for for five five six six";
-//      //"seven seven eight eight nine nine ten ten Overtate Overtate twelve twelve";
-//   }
 
-//   .dim {
-//      width: 100%;
-//      height: 100%;
-//   }
 
-//   &__1 {
-//      background-color: rgb(0, 203, 253);
-//      grid-area: one;
-//      transition: all 1s;
-//   }
+.footer {
+   background-color: $colorDarkGray;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   //grid-t-rows: 100px 100px;
+   grid-template-areas:
+      "t t"
+      "f i"
+      "l l";
+   p{
+      color: $colorLightGray;
+   }
 
-//   &__2 {
-//      background-color: rgb(5, 121, 150);
-//      grid-area: two;
-//   }
+   &__separating-container{
+      grid-area: t;
+      background-color: $colorDarkGray;
+      color: $colorWhite;
 
-//   &__3 {
-//      background-color: rgb(3, 51, 63);
-//      grid-area: three;
-//   }
+   }
 
-//   &__4 {
-//      background-color: rgb(9, 71, 241);
-//      grid-area: for;
-//   }
+   &__contats-items {
+      grid-area: i;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 85%;
+      height: 400px;
+      gap: 15px;
+      //background-color: rgb(202, 72, 225);
 
-//   &__5 {
-//      background-color: rgb(9, 52, 172);
-//      grid-area: five;
-//   }
+      //padding: 5px;
 
-//   &__6 {
-//      background-color: rgb(27, 46, 99);
-//      grid-area: six;
-//   }
-//   &__7 {
-//      background-color: rgb(55, 0, 255);
-//      grid-area: seven;
-//   }
+   }
 
-//   &__8 {
-//      background-color: rgb(55, 0, 255);
-//      grid-area: eight;
-//   }
+   &__contats-item {
+      display: flex;
 
-//   &__9 {
-//      background-color: rgb(65, 34, 179);
-//      grid-area: nine;
-//   }
+      width: 85%;
+      gap: 15px;
 
-//   &__10 {
-//      background-color: rgb(60, 48, 105);
-//      grid-area: ten;
-//   }
+      //background-color: rgb(72, 225, 171);
 
-//   &__11 {
-//      background-color: rgb(48, 236, 149);
-//      grid-area: Overtate;
-//   }
+   }
 
-//   &__12 {
-//      background-color: rgb(114, 231, 176);
-//      grid-area: twelve;
-//   }
-//}
+   &__icon {
+      width: 40px;
+      height: 40px;
+      fill: $colorLightGray;
+   }
+
+   &__title {
+   }
+
+   &__data {
+   }
+
+   &__links {
+      position: relative;
+      grid-area: l;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(calc(100%/6), 1fr));
+      //grid-template-columns: repeat(auto-fit, minmax(calc(100%/6), 1fr));
+
+      height: auto;
+
+      //background-color: tomato;
+
+      font-size: inherit;
+      &::before{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         transform: translateX(2%);
+
+         width: 96%;
+         height: 1px;
+         background-color: $colorLightGray;
+         margin: 0 auto;
+      }
+      ul{
+         margin-left: 1em;
+         color: $colorLightGray;
+         h2{
+            font-size: .8em;
+            line-height: normal;
+
+            margin-top: 1em;
+         }
+         h3{
+            line-height: normal;
+            font-size: .7em;
+            margin-top: 1em;
+
+         }
+         a{
+            color: $colorLightGray;
+            font-size: 0.8em;
+         }
+      }
+   }
+   
+}
+
+

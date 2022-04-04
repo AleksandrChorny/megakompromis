@@ -11,75 +11,16 @@
 </head>
 
 <body>
-   <!--<header class="heder">
-   <div class="heder__conteiner_1">
-      <div class="enter">
-         <a href="#">Войти</a>
-      </div>
-      <div class="language">
-         <a href="/?language=UA">ua</a>
-         <span></span>
-         <a href="/">ru</a>
-      </div>
+   <header class="header">
+   <div class="header__enter wraper">
+      <button>Войти</button>
+      <a href="/?language=UA">ua</a>
+      <!--<span></span>-->
+      <a href="/">ru</a>
    </div>
-   <div class="heder__conteiner_2">
-      <div class="logo">
-         <a href="/">
-            <img src="img/logo_heter.png" alt="Лого">
-         </a>
-      </div>
-      <button class="button heder__button">Связаться с нами</button>
-   </div>
-   <div class="heder__conteiner_3">
-      <div class="viber">
-         <a href="">
-            <svg>
-               <use xlink:href="img/icons/icons.svg#viber"></use>
-            </svg>
-            <div class="viber-text">
-               <p>viber</p>
-            </div>
-         </a>
-      </div>
-      <div class="telegram">
-         <a href="">
-            <svg>
-               <use xlink:href="img/icons/icons.svg#telegram"></use>
-            </svg>
-            <div class="telegram-text">
-               <p>telegram</p>
-            </div>
-         </a>
-
-      </div>
-      <div class="call">
-         <svg class="_call_click">
-            <use xlink:href="img/icons/icons.svg#call"></use>
-         </svg>
-         <div class="numbers">
-            <p>+38 044 333 42 15</p>
-            <p>+38 050 436 35 26</p>
-            <p>+38 067 124 32 06</p>
-         </div>
-      </div>
-      <div class="e-mail">
-         <svg class="_e-mail_click">
-            <use xlink:href="img/icons/icons.svg#e-mail"></use>
-         </svg>
-         <div class="mail">
-            <p>info@megakompromis.com.ua</p>
-         </div>
-      </div>
-      <div class="burger-menu">
-         <div class="burger-menu__line"></div>
-      </div>
-   </div>
-</header>-->
-
-<header class="header">
-   <div class="separating-container header__separating-container_1">
-      <!-- ! При розробці js змінити клас на header__enter -->
-      <div class="enter">
+   <!--<div class="header__wraper_1 wraper">-->
+   <!-- ! При розробці js змінити клас на header__enter -->
+   <!--<div class="enter">
          <a href="#">Войти</a>
       </div>
       <div class="header__language">
@@ -87,8 +28,8 @@
          <span></span>
          <a href="/">ru</a>
       </div>
-   </div>
-   <div class="separating-container header__separating-container_2">
+   </div>-->
+   <div class="wraper header__wraper_2">
       <div class="logo">
          <a href="/">
             <img src="img/logo_heter.png" alt="Лого">
@@ -96,7 +37,7 @@
       </div>
       <button class="button heder__button">Связаться с нами</button>
    </div>
-   <div class="separating-container header__separating-container_3">
+   <div class="wraper header__wraper_3">
       <div class="header__social-btn social-btn viber">
          <a href="#">
             <svg>
@@ -367,6 +308,7 @@
          </div>
          <h3 class="goods-card__title">Товстовка</h3>
          <h3 class="goods-card__sub-title">З логотипом ширина 12 мм</h3>
+         <!--<br>-->
          <p class="goods-card__price">Ціна: 425,00 грн.</p>
       </div>
 
@@ -399,7 +341,7 @@
                <li class="goods-card__color-item col009"></li>
             </ul>
          </div>
-         <h3 class="goods-card__title">Браслет силіконовий</h3>
+         <h3 class="goods-card__title">Браслет силіконовий в два ряди</h3>
          <h3 class="goods-card__sub-title">З логотипом ширина 12 мм</h3>
          <p class="goods-card__price">Ціна: 187,00 грн.</p>
       </div>
@@ -478,51 +420,109 @@
    </main>
    <footer class="footer">
    <div class="footer__separating-container separating-container">
-      <h1>зі'яжіться з нами</h1>
+      <h1>зв'яжіться з нами</h1>
    </div>
-   <div class="footer__container">
-      <div class="footer__form">
-         <form action="#">
-            <input type="text">dkvvkdn
-            <input type="text">dkvvkdn
-            <input type="text">dkvvkdn
-            <input type="text">dkvvkdn
-            <textarea>dvkdv</textarea>
-            <input type="submit">
-         </form>
+   <div class="contacts-form">
+      <form action="#">
+         <p>Ім'я<span>*</span></p>
+         <input type="text" name="name" value="">
+         <p>E-mail<span>*</span></p>
+         <input type="email" name="email" value="">
+         <p>Телефон<span>*</span></p>
+         <input type="tel" name="tel" value="">
+         <p>Ваше повідомлення</p>
+         <textarea name="text"></textarea>
+         <input type="submit" name="tel" value="Надіслати">
+      </form>
+   </div>
+   <div class="footer__contats-items">
+      <div class="footer__contats-item">
+         <svg class="footer__icon">
+            <use xlink:href="img/icons/icons.svg#call"></use>
+         </svg>
+         <p class="footer__title">Телефон</p>
+         <div class="footer__data">
+            <p>+38 044 333 42 15</p>
+            <p>+38 095 931 76 31</p>
+            <p>+38 067 124 32 06</p>
+         </div>
       </div>
-      <div class="footer__contakts">
-         <div class="footer__numbers">
-            <svg class="_e-mail_click">
-               <use xlink:href="img/icons/icons.svg#e-mail"></use>
-            </svg>
-            <p class="txt"></p>
-            <p class="number"></p>
-            <p class="number"></p>
-            <p class="number"></p>
-
+      <div class="footer__contats-item">
+         <svg class="footer__icon">
+            <use xlink:href="img/icons/icons.svg#call"></use>
+         </svg>
+         <p class="footer__title">Телефон</p>
+         <div class="footer__data">
+            <p>info@megakompromis.com.ua</p>
+         </div>
+      </div>
+      <div class="footer__contats-item">
+         <svg class="footer__icon">
+            <use xlink:href="img/icons/icons.svg#call"></use>
+         </svg>
+         <p class="footer__title">Телефон</p>
+         <div class="footer__data">
+            <p>Офіс</p>
+            <p>Україна, Київська обл.,</p>
+            <p>Киево-Святошинский р-н, г. Вишневе,</p>
+            <br>
+            <p>вул., Київска, 4,офіс 408</p>
+            <p>Производство</p>
+            <p>Україна, Київ, вул., Кирилівскьа, 86</p>
          </div>
       </div>
    </div>
-   <div class="foote__link">
-
+   <div class="footer__links">
+      <ul>
+         <li>
+            <h2>Заголовок розділу</h2>
+            <ul>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li>
+                  <h3>Заголовок другого рівня</h3>
+                  <ul>
+                     <li><a href="#">лінк другого рівня </a></li>
+                     <li><a href="#">лінк другого рівня </a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <h2>Заголовок розділу</h2>
+            <ul>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li>
+                  <h3>Заголовок другого рівня</h3>
+                  <ul>
+                     <li><a href="#">лінк другого рівня </a></li>
+                     <li><a href="#">лінк другого рівня </a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <h2>Заголовок розділу</h2>
+            <ul>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li><a href="#">лінк першого рівня </a></li>
+               <li>
+                  <h3>Заголовок другого рівня</h3>
+                  <ul>
+                     <li><a href="#">лінк другого рівня </a></li>
+                     <li><a href="#">лінк другого рівня </a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
    </div>
 </footer>
-
-<!--<div class="container">
-   <div class="container__1 dim">1</div>
-   <div class="container__2 dim">2</div>
-   <div class="container__3 dim">3</div>
-   <div class="container__4 dim">4</div>
-   <div class="container__5 dim">5</div>
-   <div class="container__6 dim">6</div>
-   <div class="container__7 dim">7</div>
-   <div class="container__8 dim">8</div>
-   <div class="container__9 dim">9</div>
-   <div class="container__10 dim">10</div>
-   <div class="container__11 dim">11</div>
-   <div class="container__12 dim">12</div>
-</div>-->
    <script src="js/app.min.js"></script>
 </body>
 
