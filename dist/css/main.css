@@ -252,6 +252,10 @@
   }
 }
 
+.goods {
+  width: 100%;
+  overflow: hidden;
+}
 .goods__title {
   display: flex;
   justify-content: center;
@@ -282,7 +286,7 @@
 }
 @media (max-width: 600px) {
   .goods__tile {
-    grid-template-columns: repeat(2, minmax(188px, 1fr));
+    grid-template-columns: repeat(2, minmax(155px, 1fr));
     padding: 0 4px;
     gap: 4px;
   }
