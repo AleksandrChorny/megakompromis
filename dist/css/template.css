@@ -2026,7 +2026,6 @@ body._lock {
   flex-wrap: nowrap;
   width: 85%;
   height: 400px;
-  gap: 15px;
 }
 @media (max-width: 1025px) {
   .footer__contats-items {
@@ -2041,7 +2040,7 @@ body._lock {
 .footer__contats-item {
   display: flex;
   width: 85%;
-  gap: 15px;
+  margin-bottom: 15px;
 }
 .footer__contats-item svg {
   flex-shrink: 0;
@@ -2053,6 +2052,7 @@ body._lock {
 .footer__contats-item p {
   white-space: nowrap;
   line-height: normal;
+  margin-left: 15px;
 }
 @media (max-width: 768px) {
   .footer__contats-item {
@@ -2063,6 +2063,7 @@ body._lock {
   justify-content: center;
 }
 .footer__contats-media svg {
+  margin: 15px;
   transform: translateY(0);
 }
 .footer__links {
