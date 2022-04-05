@@ -1,106 +1,83 @@
 .tile-pages {
-   width: 100%;
    overflow: hidden;
    &__title {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
 
       font-size: 1.2em;
       text-align: center;
+      line-height: normal;
       text-transform: uppercase;
-      margin-bottom: 2px;
       background-color: $colorLightGray;
-      color: $colorBlue;
-      @media (max-width: 426px) {
-         font-size: 1.6em;
-      }
    }
+
    &__items {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 0 calc(8px + (120 - 8) * ((100vw - 1200px) / (1440 - 1200)));
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 4px;
+      img{
+         max-width: 100%;
+      }
       @media (max-width: 426px) {
+         grid-template-columns: 1fr;
          gap: 0;
       }
    }
+
    &__item {
-      width: 49%;
       position: relative;
-      overflow: hidden;
-      @media (max-width: 426px) {
-         width: 100%;
-      }
-      &:hover {
-         .tile-pages__content {
+      &:hover{
+         .tile-pages__content{
             width: 100%;
          }
-         //h2 {
-         //   font-size: 2.2em;
-         //   color: $colorLightOrange;
-         //}
-         ul {
+         h2{
             color: $colorLightOrange;
          }
-         img {
-            filter: blur(3px);
-         }
-      }
-      img {
-         width: 100%;
-         transition: all 0.5s;
-         //filter: blur(3px);
       }
    }
 
    &__content {
       position: absolute;
-      width: 60%;
-      height: 100%;
       top: 0;
       left: 0;
-      overflow: hidden;
+      width: 60%;
+      height: 100%;
+
+      color: $colorWhite;
+
       background: rgba(1, 26, 63, 0.4);
       backdrop-filter: blur(3px);
-      transition: all 0.5s;
-      h2 {
-         width: 100%;
-         height: 30%;
-         text-decoration: none;
 
-         text-align: left;
-         color: $colorLightGray;
-         //mix-blend-mode: screen;
+      transition: all .3s;
+      h2{
+         height: 35%;
          font-size: 2em;
          padding: 1.2em .8em;
 
-         transition: all 0.5s;
-         @media (max-width: 426px) {
+         color: $colorWhite;
 
+         transition: all .3s;
+         &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
          }
+         //background-color: tomato;
       }
-      ul {
-         width: 100%;
-         height: 80%;
+      ul{
+         height: 65%;
 
-         font-weight: 400;
-         font-size: $fz;
-         @media (max-width: 769px) {
-            font-size: calc(10px + (14 - 10) * ((100vw - 426px) / (769 - 426)));
-         }
-         @media (max-width: 426px) {
-            font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (426 - 320)));
-         }
-         line-height: 150%;
-         color: $colorLightGray;
+         font-size: inherit;
+         padding: 1em;
 
-         padding: 3%;
-
-         transition: all 0.5s;
+         line-height: normal;
+         
+         //background-color: greenyellow;
       }
    }
 }
+

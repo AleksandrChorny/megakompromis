@@ -62,11 +62,12 @@
       }
       @media (max-width: 769px) {
          grid-template-columns: repeat(auto-fill, 44px);
-         //max-height: calc(44px * 2 + 7px);
-         //min-height: calc(44px * 2 + 7px);
+         max-width: 90%;
+
       }
       @media (max-width: 426px) {
          grid-template-columns: repeat(auto-fill, 40px);
+         max-width: 95%;
          gap: 4px;
       }
    }
