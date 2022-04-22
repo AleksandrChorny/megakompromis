@@ -30,6 +30,7 @@ $fz: calc(11px + (16 - 11) * ((100vw - 320px) / (1600 - 320)));
 
 
 //Підключаємо стилі сторніки сайту
+@import "_modal";
 @import "_header";
 @import "_navigation";
 @import "_goodsColor";
