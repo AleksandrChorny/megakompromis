@@ -2,8 +2,8 @@
    position: relative;
 
    height: auto;
-   max-width: 420px;
-   padding: .8em 0;
+   width: 320px;
+   //padding: .8em 0;
 
    background-color: $colorWhite;
    border: 2px solid $colorLightGray;
@@ -26,7 +26,6 @@
       text-align: center;
       overflow: hidden;
       img {
-         max-width: 100%;
          width: 80%;
          max-height: 100%;
          object-fit: cover;
@@ -59,11 +58,12 @@
       bottom: 0;
       //left: 50%;
       //transform: translateX(-50%);
-
+ 
       display: grid;
       grid-template-columns: repeat(auto-fill, 28px);
+      justify-content: center;
 
-      max-width: 85%;
+      width: 300px;
       padding: 35px 4px 0 4px;
       max-height: calc(28px * 2 + 7px);
       min-height: calc(28px * 2 + 7px);
@@ -91,16 +91,16 @@
          border: 1px solid rgba(111, 111, 111, 0.08);
          box-shadow: inset -1px -2px 3px rgba(0, 0, 0, 0.25);
       }
-      @media (max-width: 769px) {
-         grid-template-columns: repeat(auto-fill, 44px);
-         max-width: 90%;
+      //@media (max-width: 769px) {
+      //   grid-template-columns: repeat(auto-fill, 44px);
+      //   max-width: 90%;
 
-      }
-      @media (max-width: 426px) {
-         grid-template-columns: repeat(auto-fill, 40px);
-         max-width: 95%;
-         gap: 4px;
-      }
+      //}
+      //@media (max-width: 426px) {
+      //   grid-template-columns: repeat(auto-fill, 40px);
+      //   max-width: 95%;
+      //   gap: 4px;
+      //}
    }
    &__color-item {
       width: 28px;
@@ -114,14 +114,14 @@
          width: 40px;
          height: 40px;
       }
-      @media (max-width: 769px) {
-         min-width: 44px;
-         min-height: 44px;
-      }
-      @media (max-width: 426px) {
-         min-width: 40px;
-         min-height: 40px;
-      }
+      //@media (max-width: 769px) {
+      //   min-width: 44px;
+      //   min-height: 44px;
+      //}
+      //@media (max-width: 426px) {
+      //   min-width: 40px;
+      //   min-height: 40px;
+      //}
    }
    &__title {
       text-transform: uppercase;
@@ -130,12 +130,12 @@
       line-height: 1.5em;
       text-align: center;
       color: $colorDarkGray;
-      @media (max-width: 769px) {
-         font-size: 1.4em;
-      }
-      @media (max-width: 426px) {
-         font-size: 1.5em;
-      }
+      //@media (max-width: 769px) {
+      //   font-size: 1.4em;
+      //}
+      //@media (max-width: 426px) {
+      //   font-size: 1.5em;
+      //}
    }
    &__sub-title {
       font-size: 1em;
@@ -144,12 +144,12 @@
       text-align: center;
       color: $colorDarkGray;
       margin-bottom: 2em;
-      @media (max-width: 769px) {
-         font-size: 1.3em;
-      }
-      @media (max-width: 426px) {
-         font-size: 1.2em;
-      }
+      //@media (max-width: 769px) {
+      //   font-size: 1.3em;
+      //}
+      //@media (max-width: 426px) {
+      //   font-size: 1.2em;
+      //}
    }
 
    &__price {
@@ -164,18 +164,19 @@
       color: $colorBlue;
       line-height: 2em;
       //margin: 100% 0 0 0;
-      @media (max-width: 769px) {
-         font-size: 1.8em;
-      }
-      @media (max-width: 426px) {
-         font-size: 1.6em;
-      }
+      //@media (max-width: 769px) {
+      //   font-size: 1.8em;
+      //}
+      //@media (max-width: 426px) {
+      //   font-size: 1.6em;
+      //}
    }
 }
 
 .goods {
    width: 100%;
    overflow: hidden;
+   font-size: 16px;
    &__title{
       display: flex;
       justify-content: center;
@@ -192,19 +193,22 @@
    }
    &__tile {
       display: grid;
-      grid-template-columns: repeat(4, minmax(188px, 1fr));
-      padding: 0 calc(8px + (120 - 8) * ((100vw - 1200px) / (1440 - 1200)));
-      gap: 10px;
-      @media (max-width: 769px) {
-         grid-template-columns: repeat(2, minmax(188px, 1fr));
-         padding: 0 8px;
-         gap: 6px;
-      }
-      @media (max-width: 600px) {
-         grid-template-columns: minmax(155px, 1fr);
-         justify-items: center;
-         padding: 0 4px;
-         gap: 4px;
-      }
+      //grid-template-columns: repeat(4, 320px);
+      grid-template-columns: repeat(auto-fill, 320px);
+
+      justify-content: center;
+      //padding: 0 calc(8px + (120 - 8) * ((100vw - 1200px) / (1440 - 1200)));
+      gap: 4px;
+      //@media (max-width: 769px) {
+      //   grid-template-columns: repeat(2, minmax(188px, 1fr));
+      //   padding: 0 0;
+      //   gap: 6px;
+      //}
+      //@media (max-width: 600px) {
+      //   grid-template-columns: minmax(155px, 1fr);
+      //   justify-items: center;
+      //   //padding: 0 4px;
+      //   gap: 4px;
+      //}
    }
 }
