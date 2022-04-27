@@ -5,27 +5,45 @@ export function choiceColor(options) {
       if (event.target.closest(`.${options.goodsColorBoard}`)) {
 
          if (event.target.closest(`.${options.actionClassName} `)) {
-            event.target.classList.remove(options.actionClassName);
+
+            updGoodsImage(event);
+
+            event.target.closest(`.${options.goodsColorBoard}`).classList.remove(options.actionClassName);
+
+            event.target.closest(`.${options.goodsColorBoard}`)
+               .querySelectorAll(`.${options.goodsColor}`)
+               .forEach((element) => {
+                  element.classList.remove(options.actionClassName);
+               });
             return;
          }
 
-         console.log(`Відкриваю доску кольорів ${options.goodsColorBoard} `);
-         event.target.classList.add(options.actionClassName);
-         return;
-      }
-      //}
+         //add _action to color items
+         event.target.closest(`.${options.goodsColorBoard}`).classList.add(options.actionClassName);
 
-      //function setColor(event) {
-      //if (event.target.classList.contains(options.colorItem)) {
-      //   console.log(`this ${ options.colorItem } `);
-      //   return;
-      //}
-      //}
+         //add _action to color item
+         event.target.closest(`.${options.goodsColorBoard}`)
+            .querySelectorAll(`.${options.goodsColor}`)
+            .forEach((element) => {
+               element.classList.add(options.actionClassName);
+            });
+      }
    });
 
+   function updGoodsImage(event) {
+      if (event.target.getAttribute("data-srcImg")) {
+         event.target.closest(`.${options.goodsCard}`)
+            .querySelector('img')
+            .setAttribute("src", event.target.getAttribute("data-srcImg"));
+      }
+      if (event.target.getAttribute("data-price")) {
+         event.target.closest(`.${options.goodsCard}`)
+            .querySelector(`.${options.goodsPrice}`)
+            .innerHTML = `Ціна: ${event.target.getAttribute("data-price")} грн.`
+      }
+
+   }
 }
-
-
 
 
 

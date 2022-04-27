@@ -130,6 +130,7 @@
   transition: max-height 1s;
 }
 .goods-card__color-items._action {
+  grid-template-columns: repeat(auto-fill, 40px);
   max-height: 400px;
 }
 .goods-card__color-items::before {
@@ -163,6 +164,11 @@
   min-width: 28px;
   min-height: 28px;
   cursor: pointer;
+  transition: all 1s;
+}
+.goods-card__color-item._action {
+  width: 40px;
+  height: 40px;
 }
 @media (max-width: 769px) {
   .goods-card__color-item {

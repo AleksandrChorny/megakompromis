@@ -20,5 +20,7 @@ color.choiceColor({
    goodsCard: 'goods-card',
    goodsColorBoard: 'goods-card__color-items',
    goodsColor: 'goods-card__color-item',
+   goodsImage: 'goods-card__img',
+   goodsPrice: 'goods-card__price',
    actionClassName: '_action'
 })
