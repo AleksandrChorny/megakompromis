@@ -4,6 +4,7 @@ import * as flsFunctions from "./modules/functions.js";
 import * as scroll from "./modules/onscrollAdd_fixed.js";
 import * as click from "./modules/onclickAdd_action.js";
 import * as modal from "./modules/modal.js";
+import * as color from "./modules/color-choice.js";
 
 flsFunctions.isWebp();
 
@@ -13,4 +14,11 @@ modal.activateBlock({
    buttonToCloseBlockClass: 'modal__close',
    actionClassName: '_action',
    scroll: false
+})
+
+color.choiceColor({
+   goodsCard: 'goods-card',
+   goodsColorBoard: 'goods-card__color-items',
+   goodsColor: 'goods-card__color-item',
+   actionClassName: '_action'
 })
