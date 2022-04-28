@@ -1,0 +1,137 @@
+.goods-card {
+   position: relative;
+
+   height: auto;
+   width: 320px;
+
+   background-color: $colorWhite;
+   border: 2px solid $colorLightGray;
+   
+   transition: all .3s;
+   &:hover {
+      box-shadow: 2px 3px 4px 2px rgba($colorDarkGray, .3);
+         img {
+            width: 82%;
+            @media (max-width: 426px) {
+               width: 100%;
+            }
+         }
+   }
+
+   &__img {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 4/4;
+      text-align: center;
+      overflow: hidden;
+      img {
+         width: 80%;
+         max-height: 100%;
+         object-fit: cover;
+         transition: all .3s;
+         @media (max-width: 426px) {
+            width: 95%;
+         }
+      }
+      @media (max-width: 426px) {
+         aspect-ratio: 4/5;
+      }
+   }
+   &__color-box {
+      display: grid;
+      justify-items: center;
+      position: relative;
+
+      width: 100%;
+      height: calc(28px * 2 + 7px);
+
+      
+      margin: 0 auto .5em auto;
+
+   }
+   &__color-items {
+      //position: relative;
+      position: absolute;
+      bottom: 0;
+      //left: 50%;
+      //transform: translateX(-50%);
+ 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 40px);
+      justify-content: center;
+
+      width: 300px;
+      padding: 35px 4px 0 4px;
+      max-height: calc(40px * 2 + 7px);
+      min-height: calc(40px * 2 + 7px);
+
+      gap: 7px;
+      background: rgba(246, 246, 246, 0.6);
+      box-shadow: -1px -1px 3px 1px rgba(111, 111, 111, 0.25);
+      //background-color: rgba($colorWhite, 0.8);
+      overflow: hidden;
+      transition: max-height .6s;
+      &._action {
+         grid-template-columns: repeat(auto-fill, 40px);
+         max-height: 400px;
+         padding-bottom: 7px;
+      }
+      &::before {
+         content: '';
+         position: absolute;
+         width: 80px;
+         height: 10px;
+         border-radius: 5px;
+         left: 50%;
+         top: 12px;
+         transform: translateX(-50%);
+         //background-color: rgb(246, 169, 169);
+         border: 1px solid rgba(111, 111, 111, 0.08);
+         box-shadow: inset -1px -2px 3px rgba(0, 0, 0, 0.25);
+      }
+   }
+   &__color-item {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      cursor: pointer;
+
+      transition: all .3s;
+     
+      &._action {
+         width: 40px;
+         height: 40px;
+         transition: all .3s;
+      }
+   }
+   &__title {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 700;
+      line-height: 1.5em;
+      text-align: center;
+      color: $colorDarkGray;
+   }
+   &__sub-title {
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 1.2em;
+      text-align: center;
+      color: $colorDarkGray;
+      margin-bottom: 2em;
+   }
+
+   &__price {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      font-size: 1.3em;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+      color: $colorBlue;
+      line-height: 2em;
+   }
+}

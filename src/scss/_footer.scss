@@ -142,8 +142,11 @@
    }
    &__contats-media{
       justify-content: center;
-      svg {
+      a{
          margin: 15px;
+
+      }  
+      svg {
          transform: translateY(0);
       }
    }

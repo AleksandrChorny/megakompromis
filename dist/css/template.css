@@ -2214,8 +2214,10 @@ body._lock {
 .footer__contats-media {
   justify-content: center;
 }
-.footer__contats-media svg {
+.footer__contats-media a {
   margin: 15px;
+}
+.footer__contats-media svg {
   transform: translateY(0);
 }
 .footer__links {
