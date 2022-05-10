@@ -13,6 +13,57 @@
    <main>
       @@include('html/tilePages.html',{})
       @@include('html/goods.html',{})
+      <section class="test">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </section>
+      <style>
+         .test {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            width: 50%;
+            height: auto;
+            background-color: rgb(240, 222, 222);
+         }
+
+         .test div {
+            margin: 20px;
+            width: 40%;
+            min-height: 200px;
+            max-height: 200px;
+            background-color: red;
+            transition: all 1s;
+         }
+
+         .test ._action {
+            width: 100%;
+            min-height: 500px;
+            max-height: 500px;
+
+            background-color: rgb(0, 255, 242);
+
+         }
+      </style>
+
+      <script>
+
+         document.querySelector('.test').onclick = (event) => {
+            if (event.target.classList.contains('_action')) {
+               event.target.classList.remove('_action');
+               return;
+            }
+            event.target.classList.add('_action');
+         }
+      </script>
    </main>
    @@include('html/footer.html',{})
    <script src="js/app.min.js"></script>
