@@ -1,4 +1,4 @@
-import del from "del";
+import { deleteAsync as del } from "del";
 import zipPlugin from "gulp-zip";
 
 export const zip = () => {

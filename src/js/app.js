@@ -1,22 +1,18 @@
 //Подключение файлов js из папки 'modules'
-import * as flsFunctions from "./modules/functions.js";
-//Імпорт функції додавання класу '_action'
-import * as scroll from "./modules/onscrollAdd_fixed.js";
-import * as click from "./modules/onclickAdd_action.js";
-import * as modal from "./modules/modal.js";
-import * as color from "./modules/color-choice.js";
+//** Імпортовані функції що не використовуються в файлі підсвічуються блідо. Хоча можливо вони працюють на власному розташуванні */
+import * as MK_Functions from "./modules/functions.js";
 
-flsFunctions.isWebp();
-
-modal.activateBlock({
+MK_Functions.isWebp();
+MK_Functions.headerOnScroll();
+MK_Functions.onClickADD_action();
+MK_Functions.activateBlock({
    actionBlockClass: 'modal',
    buttonToActionBlockClass: 'heder__button',
    buttonToCloseBlockClass: 'modal__close',
    actionClassName: '_action',
    scroll: false
 })
-
-color.choiceColor({
+MK_Functions.choiceColor({
    goodsCard: 'goods-card',
    goodsColorBoard: 'goods-card__color-items',
    goodsColor: 'goods-card__color-item',
