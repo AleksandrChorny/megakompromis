@@ -1,0 +1,40 @@
+//обнуляємо стилі браузеру
+@import "_null";
+
+//Призначаю кольори проекту
+$colorWhite: #fff;
+$colorDarkGray: #6f6f6f;
+$colorLightGray: #f5f5f5;
+$colorBlue: #4170b4;
+$colorOrange: #f7931e;
+$colorLightOrange: #fbb03b;
+$colorPurple: #b26eaa;
+$colorTest: lightblue;
+
+//Призначаю шрифти проекту
+$fontFamily: "Montserrat", sans-serif;
+
+//Призначаю додаткові змінні проекту
+// calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
+//$adaptiveFZ: calc(12px + (20 - 12) * ((100vw - 770px) / (1600 - 770)));
+$fz: calc(11px + (16 - 11) * ((100vw - 320px) / (1600 - 320)));
+
+//Підключаю шрифти з файлу 'dist/fonts.scss'
+@import "fonts";
+
+//Подключаю налащтування 'dist/_global.scss'
+@import "_global";
+@import "_burger";
+
+//! Внести потрібні налаштування в body якщо це потрібно
+
+
+//Підключаємо стилі сторніки сайту
+@import "_modal";
+@import "_header";
+@import "_navigation";
+@import "_tilePages";
+@import "_goods";
+@import "_goods-card";
+@import "_goodsColor";
+@import "_footer";
