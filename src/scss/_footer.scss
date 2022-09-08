@@ -1,79 +1,3 @@
-.contacts-form {
-   grid-area: f;
-   position: relative;
-   display: flex;
-   justify-content: center;
-   justify-self: end;
-   width: 85%;
-   //height: 400px;
-   &::after{
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: 86%;
-      transform: translateY(7%);
-      background-color: $colorWhite;
-      top: 0;
-      right: 0;
-   }
-   //background-color: wheat;
-   form{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      width: 80%;
-      //background-color: plum;
-   }
-   input, textarea{
-      width: 100%;
-      padding: 0.2em;
-      font-size: inherit;
-      margin: .2em 0 .5em 0;
-      color: $colorDarkGray;
-   }
-   textarea{
-      height: 5em;
-   }
-   input[type=submit]{
-      align-self: flex-end;
-
-      height: 45px;
-      width: 200px;
-
-      font-size: inherit;
-      font-weight: 400;
-      text-transform: uppercase;
-      
-      cursor: pointer;
-      background-color: $colorOrange;
-      color: $colorWhite;
-      transition: background-color .5s;
-      &:hover{
-         background-color: $colorLightOrange;
-      }
-   }
-
-   p{
-      font-size: .8em;
-      font-weight: 400;
-      color: $colorWhite;
-      span{
-         color: red;
-      }
-   }
-   @media (max-width: 1025px) {
-      width: 80%;
-      justify-self: center;
-      &::after{
-         display: none;
-      }
-      input[type=submit]{
-         align-self: center;
-      }
-   }
-}
-
 .footer {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
@@ -81,10 +5,13 @@
    grid-template-areas:
       "t t"
       "f i"
+      "w w"
       "l l";
+   
    background-color: $colorDarkGray;
    overflow: hidden;
    margin-top: 4px;
+   width: 100%;
    p{
       color: $colorLightGray;
    }
@@ -96,20 +23,35 @@
       margin-top: .5em;
 
       text-align: center;
-      font-size: 2em;
-      line-height: normal;
+      //font-size: 2em;
+      //line-height: normal;
       text-transform: uppercase;
       background-color: $colorDarkGray;
       color: $colorWhite;
+      h2{
+         font-size: 2.1em;
+         line-height: normal;
+         text-transform: uppercase;
+      }
    }
    &__contats-items {
       grid-area: i;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      width: 85%;
+
+      display: grid;
+
+      grid-template: 
+      "c ct cd"
+      "e et ed"
+      "a at ad"
+      "cm cm cm"
+      /max-content max-content max-content;
+
+      //display: flex;
+      //align-items: center;
+      //justify-content: center;
+      //flex-direction: column;
+      //flex-wrap: nowrap;
+      //width: 85%;
       height: 400px;
       //margin-bottom: 15px;
       @media (max-width: 1025px) {
@@ -118,29 +60,57 @@
       @media (max-width: 768px) {
          width: 80%;
       }
-   }
-   &__contats-item {
-      display: flex;
-
-      width: 85%;
+      //width: 85%;
       margin-bottom: 15px;
       svg {
-         flex-shrink: 0;
+         //flex-shrink: 0;
          width: 40px;
          height: 40px;
          fill: $colorLightGray;
-         transform: translateY(-25%);
+         //transform: translateY(-25%);
       }
       p{
+         font-size: 1.4em;
          white-space: nowrap;
          line-height: normal;
          margin-left: 15px;
+      }
+      ._call {
+         grid-area: c;
+      }
+      ._call-title {
+         grid-area: ct;
+
+      }
+      ._call-description {
+         grid-area: cd;
+
+      }
+      ._e-mail {
+         grid-area: e;
+      }
+      ._e-mail-title {
+         grid-area: et;
+      }
+      ._e-mail-description {
+         grid-area: ed;
+      }
+      ._adress {
+         grid-area: a;
+      }
+      ._adress-title {
+         grid-area: at;
+      }
+      ._adress-description {
+         grid-area: ad;
       }
       @media (max-width: 768px) {
          width: 80%;
       }
    }
    &__contats-media{
+      grid-area: cm;
+
       justify-content: center;
       a{
          margin: 15px;
@@ -150,95 +120,99 @@
          transform: translateY(0);
       }
    }
-
-   &__title {
-   }
-
-   &__data {
+   &__whiteLine {
+      grid-area: w;
+      width: 96%;
+      height: 1px;
+      background-color: $colorLightGray;
+      margin: 0 auto;
    }
 
    &__links {
       width: 100%;
       position: relative;
       grid-area: l;
-      display: grid;
-      justify-items: center;
-      //grid-template-columns: repeat(auto-fill, minmax(calc(100%/6), 1fr));
-      grid-template-columns: repeat(auto-fit, minmax(calc(100%/6), 1fr));
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: nowrap;
 
       height: auto;
-
+      
+      overflow-x: auto;
       //background-color: tomato;
 
-      font-size: inherit;
-      @media (max-width: 768px) {
-         //grid-template-columns: 1fr 1fr 1fr 1fr;
-         grid-template-columns: repeat(auto-fit, minmax(calc(100%/4), 1fr));
-         
+      //font-size: 1.4em;
+      @media (max-width: 1280px) {
+         justify-content: start;
+      }
+      
+   }
+   &__links-items{
+      margin: 14px 4px 6px 4px;
+      width: auto;
+
+      min-width: 200px;
+      color: $colorLightGray;
+      font-size: 12px;
+      @media (max-width: 1280px) {
+         min-width: 230px;
       }
       @media (max-width: 426px) {
-         //grid-template-columns: 1fr 1fr 1fr 1fr;
-         grid-template-columns: repeat(auto-fit, minmax(calc(100%/2), 1fr));
-         
+         min-width: 250px;
       }
-      &::before{
-         content: '';
-         position: absolute;
-         top: 0;
-         left: 0;
-         transform: translateX(2%);
-
-         width: 96%;
-         height: 1px;
-         background-color: $colorLightGray;
-         margin: 0 auto;
+      li{
+         margin: 0;
+         ul {
+            //margin-left: 1em;
+            font-size: 1.2em;
+         }
       }
-      ul{
-         margin-left: 1em;
-         color: $colorLightGray;
+      h2{
+         text-transform: uppercase;
 
-         li{
-            margin: 4px 0;
-         }
-         
-         h2{
-            font-size: 1em;
-            line-height: normal;           
-            a{
-               color: $colorLightGray;
-               font-size: inherit;
-            }
-         }
-         h3{
-            line-height: normal;
-            font-size: .8em;
-            margin-top: .6em;
-            a{
-               color: $colorLightGray;
-               font-size: inherit;
-            }
-         }
-         a{
+         margin: 2px 0 8px 0;
+
+         font-weight: 700;
+         text-align: left;
+         line-height: 16px;
+         font-size: 14px;
+      }
+      h3{
+         margin: 8px 0 4px 10px;
+         text-align: left;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 14px;
+      }
+      a{
+         p {
+            margin: 8px 0 0 30px;
             color: $colorLightGray;
-            font-size: 0.8em;
+            font-size: 12px;
+            line-height: 13px;
+            font-weight: 400;
+            text-align: left;
+            word-wrap: brak-word;
+            transition: all .3s;
             &:hover{
                color: $colorLightOrange;
             }
          }
          
+         h3{
+            margin: 8px 0 4px 10px;
+            text-align: left;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: $colorLightGray;
+
+            transition: all .3s;
+            &:hover{
+               color: $colorLightOrange;
+            }
+         }
       }
-   }
-   &__links-items{
-      margin: 1em 0;
-   }
-   @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      align-items: center;
-      grid-template-areas:
-         "t"
-         "f"
-         "i"
-         "l";
    }
 }

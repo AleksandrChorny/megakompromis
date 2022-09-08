@@ -1,18 +1,26 @@
 //Подключение файлов js из папки 'modules'
-//** Імпортовані функції що не використовуються в файлі підсвічуються блідо. Хоча можливо вони працюють на власному розташуванні */
-import * as MK_Functions from "./modules/functions.js";
+import * as webp from "./modules/isWebp.js";
+import * as onScroll from "./modules/onScroll.js";
+import * as onClick from "./modules/onClick.js";
+//import * as modal from "./modules/activateBlock.js";
+import * as goods from "./modules/goods.js";
 
-MK_Functions.isWebp();
-MK_Functions.headerOnScroll();
-MK_Functions.onClickADD_action();
-//MK_Functions.activateBlock({
+//!! import * as test from "./modules/test.js";
+
+
+webp.isWebp();
+onScroll.fixedHeaderAndMainMenu();
+onClick.ADD_actionToHeaderAndBurger();
+onClick.openLoginInModal();
+onClick.openContactUsInModal();
+//modal.activateBlock({
 //   actionBlockClass: 'modal',
 //   buttonToActionBlockClass: 'heder__button',
 //   buttonToCloseBlockClass: 'modal__close',
 //   actionClassName: '_action',
 //   scroll: false
 //})
-MK_Functions.choiceColor({
+goods.choiceColor({
    goodsCard: 'goods-card',
    goodsColorBoard: 'goods-card__color-items',
    goodsColor: 'goods-card__color-item',
@@ -20,3 +28,5 @@ MK_Functions.choiceColor({
    goodsPrice: 'goods-card__price',
    actionClassName: '_action'
 })
+
+//!! test.test();

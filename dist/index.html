@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.min.css?_v=20220817151243">
+   <link rel="stylesheet" href="css/style.min.css?_v=20220908180837">
    <!-- Вставляем в тайтл передаваемое значение title -->
    <title>Главная</title>
 </head>
@@ -13,29 +13,26 @@
    <div class="modal">
    <div class="modal__content">
       <span class="modal__close"></span>
-
-      <form class="form" action="#">
-         <p>Name<i>*</i></p>
-         <input type="text">
-         <p>Telephone<i>*</i></p>
-         <input type="tel">
-         <p>E-mail<i>*</i></p>
-         <input type="email">
-         <input type="submit" value="submit">
-      </form>
+      <div class="modal__items"></div>
    </div>
 </div>
    <header class="header">
-   <div class="header__enter wraper">
-      <button>Увійти</button>
-      <a href="/?language=UA">ua</a>
-      <a href="/">ru</a>
-   </div>
-   <div class="header__logo wraper">
-      <a class="logo" href="/">
-         <picture><source srcset="img/logo_heter.webp" type="image/webp"><img src="img/logo_heter.png" alt="Лого"></picture>
+   <div class="header__top-line wraper">
+      <button></button>
+      <a href="/ru/" title="Перекласти сторінку">
+         <p>САЙТ ВОРОЖОЮ</p>
+         <svg>
+            <use xlink:href="img/icons/icons.svg#ork"></use>
+         </svg>
       </a>
-      <button class="heder__button button">Связаться с нами</button>
+   </div>
+   <div class="header__mid-line wraper">
+      <a class="logo" href="/" title="Рекламно-виробнича компанія Мега Компроміс">
+         <svg>
+            <use xlink:href="img/icons/icons.svg#logo"></use>
+         </svg>
+      </a>
+      <button class="contacts-button button">Связаться с нами</button>
    </div>
    <div class="header__contacts-bar wraper">
       <div class="header__social-btn social-btn viber">
@@ -340,6 +337,12 @@
                <li class="goods-card__color-item col009" data-srcImg="img/goods/img/goods/Baloon_023.jpg"
                   data-price="11,22">
                </li>
+               <li class="goods-card__color-item col011" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col030" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
             </ul>
          </div>
          <h3 class="goods-card__title">Товстовка</h3>
@@ -450,60 +453,172 @@
          <p class="goods-card__price">Ціна: 6,5 грн.</p>
       </div>
 
+      <div class="goods-card">
+         <div class="goods-card__img">
+            <picture><source srcset="img/goods/Classic-sandvich_027.webp" type="image/webp"><img src="img/goods/Classic-sandvich_027.jpg" alt=""></picture>
+         </div>
+         <div class="goods-card__color-box">
+            <ul class="goods-card__color-items">
+               <li class="goods-card__color-item col035"></li>
+               <li class="goods-card__color-item col022"></li>
+               <li class="goods-card__color-item col013"></li>
+               <li class="goods-card__color-item col017"></li>
+               <li class="goods-card__color-item col025"></li>
+               <li class="goods-card__color-item col023"></li>
+               <li class="goods-card__color-item col012"></li>
+               <li class="goods-card__color-item col021"></li>
+               <li class="goods-card__color-item col003"></li>
+               <li class="goods-card__color-item col005"></li>
+               <li class="goods-card__color-item col008"></li>
+               <li class="goods-card__color-item col033"></li>
+               <li class="goods-card__color-item col031"></li>
+               <li class="goods-card__color-item col034"></li>
+               <li class="goods-card__color-item col035"></li>
+               <li class="goods-card__color-item col012"></li>
+               <li class="goods-card__color-item col028"></li>
+               <li class="goods-card__color-item col030"></li>
+               <li class="goods-card__color-item col020"></li>
+               <li class="goods-card__color-item col011"></li>
+               <li class="goods-card__color-item col009"></li>
+            </ul>
+         </div>
+         <h3 class="goods-card__title">Браслет силіконовий в два ряди</h3>
+         <h3 class="goods-card__sub-title">З логотипом ширина 12 мм</h3>
+         <p class="goods-card__price">Ціна: 187,00 грн.</p>
+      </div>
+
+      <div class="goods-card">
+         <div class="goods-card__img">
+            <img src="img/goods/Original T_019.jpg" alt="">
+         </div>
+         <div class="goods-card__color-box">
+            <ul class="goods-card__color-items">
+               <li class="goods-card__color-item col035"></li>
+               <li class="goods-card__color-item col022"></li>
+               <li class="goods-card__color-item col013"></li>
+               <li class="goods-card__color-item col017"></li>
+               <li class="goods-card__color-item col025"></li>
+               <li class="goods-card__color-item col023"></li>
+               <li class="goods-card__color-item col012"></li>
+               <li class="goods-card__color-item col021"></li>
+               <li class="goods-card__color-item col003"></li>
+               <li class="goods-card__color-item col005"></li>
+               <li class="goods-card__color-item col008"></li>
+               <li class="goods-card__color-item col033"></li>
+               <li class="goods-card__color-item col031"></li>
+               <li class="goods-card__color-item col034"></li>
+               <li class="goods-card__color-item col035"></li>
+               <li class="goods-card__color-item col012"></li>
+               <li class="goods-card__color-item col028"></li>
+               <li class="goods-card__color-item col030"></li>
+               <li class="goods-card__color-item col020"></li>
+               <li class="goods-card__color-item col011"></li>
+               <li class="goods-card__color-item col009"></li>
+            </ul>
+         </div>
+         <h3 class="goods-card__title">Браслет силіконовий</h3>
+         <h3 class="goods-card__sub-title">З логотипом ширина 12 мм</h3>
+         <p class="goods-card__price">Ціна: 6,5 грн.</p>
+      </div>
+
+      <div class="goods-card">
+         <div class="goods-card__img">
+            <picture><source srcset="img/goods/CLASSIC-HOODED-SWEAT_021.webp" type="image/webp"><img src="img/goods/CLASSIC-HOODED-SWEAT_021.jpg" alt=""></picture>
+         </div>
+         <div class="goods-card__color-box">
+            <ul class="goods-card__color-items">
+               <li class="goods-card__color-item col032" data-srcImg="img/goods/AURA_001.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col022" data-srcImg="img/goods/Baloon_006.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col013" data-srcImg="img/goods/Baloon_023.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col017" data-srcImg="img/goods/bras-sel_031.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col025" data-srcImg="img/goods/bras-sel_034.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col023" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col012" data-srcImg="img/goods/Eco-bag_013.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col021" data-srcImg="img/goods/Original T_019.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col003" data-srcImg="img/goods/Valueweigth-T_028.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col005" data-srcImg="img/goods/bras-sel_031.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col008" data-srcImg="img/goods/Eco-bag_013.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col033" data-srcImg="img/goods/Valueweigth-T_028.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col031" data-srcImg="img/goods/Eco-bag_013.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col034" data-srcImg="img/goods/bras-sel_031.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col035" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col012" data-srcImg="img/goods/Eco-bag_013.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col028" data-srcImg="img/goods/Valueweigth-T_028.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col030" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col020" data-srcImg="img/goods/bras-sel_031.jpg" data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col011" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col009" data-srcImg="img/goods/img/goods/Baloon_023.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col011" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+               <li class="goods-card__color-item col030" data-srcImg="img/goods/Classic-sandvich_027.jpg"
+                  data-price="11,22">
+               </li>
+            </ul>
+         </div>
+         <h3 class="goods-card__title">Товстовка</h3>
+         <h3 class="goods-card__sub-title">З логотипом ширина 12 мм</h3>
+         <!--<br>-->
+         <p class="goods-card__price">Ціна: 425,00 грн.</p>
+      </div>
+
 
    </div>
 </section>
-      <section class="test">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-      </section>
-      <style>
-         .test {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+      <section class="page-description">
+   <div class="page-description__title wraper">
+      <h2>ПРО НАС</h2>
+   </div>
+   <div class="page-description__txt">Компанія "Мега компроміс"надає широкий спектр рекламно-сувенірної продукції для
+      нанесення логотипу, фотографії або корпоративної символіки. Маючи власну виробничу базу для нанесення зображень,
+      "Мега Компроміс" може вирішити будь-яке завдання з нанесення зображення будь-якої складності. Для виготовлення
+      рекламно-сувенірної продукції ми можемо використовувати друк, гравіювання, вишивку та інші способи нанесення на
+      промо продукцію. Ми зібрали на своєму виробництві весь асортимент технологій для нанесення, такі як:
+      шовкотрафаретний друк, тамподрук, деколь, прямий друк по текстилю, УФ друк, сублімація, термотрансферний друк,
+      лазерне гравіювання, вишивка, тиснення, плотерна порізка, цифровий друк, офсетний друк і багато
+      іншого.<br><br>Завдяки всім цим технологіям ми можемо наносити логотипи, корпоративну символіку, графічні
+      зображення на ручки, запальнички, брелоки, чашки, тарілки, попільнички, поліетиленові пакети, текстиль, пластик,
+      метали, скло, кераміку, дерево і багато іншого, а також виготовляти наклейки, магніти, ароматизатори, килимки для
+      миші, прапорці, вимпели, силіконові браслети<br><br>Використовуючи напівавтоматичне обладнання, ми можемо в
+      найкоротші терміни виконати навіть дуже велике замовлення, а за допомогою ручних верстатів - виконувати різні
+      нестандартні замовлення і домагатися найвищої якості при виготовленні маленьких тиражів за рахунок повного
+      (ручного) контролю над усім технологічним процесом.<br><br>Якщо Вам потрібна сувенірна продукція з логотипом
+      швидше звертайтеся до наших менеджерів, вони обов'язково підберуть для Вас найбільш підходящий варіант з точки
+      зору ціни, якості і термінів. Не дарма ми "Мега Копроміс"! Основне завдання яку ми собі поставили не просто
+      виготовляти сувеніри з Вашим логотипом, а виготовляти кращу промо продукцію для Вас, і саме таку як хочете Ви!
+   </div>
+</section>
 
-            width: 50%;
-            height: auto;
-            background-color: rgb(240, 222, 222);
-         }
-
-         .test div {
-            margin: 20px;
-            width: 40%;
-            min-height: 200px;
-            max-height: 200px;
-            background-color: red;
-            transition: all 1s;
-         }
-
-         .test ._action {
-            width: 100%;
-            min-height: 500px;
-            max-height: 500px;
-
-            background-color: rgb(0, 255, 242);
-
-         }
-      </style>
-
-      <script>
-
-         document.querySelector('.test').onclick = (event) => {
-            if (event.target.classList.contains('_action')) {
-               event.target.classList.remove('_action');
-               return;
-            }
-            event.target.classList.add('_action');
-         }
-      </script>
+      
    </main>
    <footer class="footer">
    <div class="footer__title wraper">
@@ -523,41 +638,41 @@
       </form>
    </div>
    <div class="footer__contats-items">
-      <div class="footer__contats-item">
-         <svg>
-            <use xlink:href="img/icons/icons.svg#call"></use>
-         </svg>
-         <p>Телефон</p>
-         <div class="footer__data">
-            <p>+38 044 333 42 15</p>
-            <p>+38 095 931 76 31</p>
-            <p>+38 067 124 32 06</p>
-         </div>
+      <!--<div class="footer__contats-item">-->
+      <svg class="_call">
+         <use xlink:href="img/icons/icons.svg#call"></use>
+      </svg>
+      <p class="_call-title">Телефон</p>
+      <div class="footer__data _call-description">
+         <p>+38 044 333 42 15</p>
+         <p>+38 095 931 76 31</p>
+         <p>+38 067 124 32 06</p>
       </div>
-      <div class="footer__contats-item">
-         <svg>
-            <use xlink:href="img/icons/icons.svg#e-mail"></use>
-         </svg>
-         <p>e-mail</p>
-         <div class="footer__data">
-            <p>info@megakompromis.com.ua</p>
-         </div>
+      <!--</div>-->
+      <!--<div class="footer__contats-item">-->
+      <svg class="_e-mail">
+         <use xlink:href="img/icons/icons.svg#e-mail"></use>
+      </svg>
+      <p class="_e-mail-title">e-mail</p>
+      <div class="footer__data _e-mail-description">
+         <p>info@megakompromis.com.ua</p>
       </div>
-      <div class="footer__contats-item">
-         <svg>
-            <use xlink:href="img/icons/icons.svg#adress"></use>
-         </svg>
-         <p>Адреса</p>
-         <div class="footer__data">
-            <p>Офіс</p>
-            <p>Україна, Київська обл.,</p>
-            <p>Киево-Святошинский р-н, г. Вишневе,</p>
-            <br>
-            <p>вул., Київска, 4,офіс 408</p>
-            <p>Производство</p>
-            <p>Україна, Київ, вул., Кирилівскьа, 86</p>
-         </div>
+      <!--</div>-->
+      <!--<div class="footer__contats-item">-->
+      <svg class="_adress">
+         <use xlink:href="img/icons/icons.svg#adress"></use>
+      </svg>
+      <p class="_adress-title">Адреса</p>
+      <div class="footer__data _adress-description">
+         <p>Офіс</p>
+         <p>Україна, Київська обл.,</p>
+         <p>Киево-Святошинский р-н, г. Вишневе,</p>
+         <br>
+         <p>вул., Київска, 4,офіс 408</p>
+         <p>Производство</p>
+         <p>Україна, Київ, вул., Кирилівскьа, 86</p>
       </div>
+      <!--</div>-->
       <div class="footer__contats-item footer__contats-media">
          <a href="#">
             <svg>
@@ -579,25 +694,39 @@
                <use xlink:href="img/icons/icons.svg#footer-insta"></use>
             </svg>
          </a>
-
       </div>
    </div>
+   <div class="footer__whiteLine"></div>
    <div class="footer__links">
       <ul class="footer__links-items">
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
-               <li><a href="#">лінк першого рівня </a></li>
-               <li><a href="#">лінк першого рівня </a></li>
                <li>
-                  <h3>Заголовок другого рівня</h3>
+                  <h3>Заголовок першого рівня</h3>
                   <ul>
-                     <li><a href="#">лінк другого рівня </a></li>
-                     <li><a href="#">лінк другого рівня </a></li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
                   </ul>
                </li>
                <li>
-                  <h3><a href="">Заголовок другого рівня</a></h3>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
                </li>
             </ul>
          </li>
@@ -606,17 +735,31 @@
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
-               <li><a href="#">лінк першого рівня </a></li>
-               <li><a href="#">лінк першого рівня </a></li>
                <li>
-                  <h3>Заголовок другого рівня</h3>
+                  <h3>Заголовок першого рівня</h3>
                   <ul>
-                     <li><a href="#">лінк другого рівня </a></li>
-                     <li><a href="#">лінк другого рівня </a></li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
                   </ul>
                </li>
                <li>
-                  <h3><a href="">Заголовок другого рівня</a></h3>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
                </li>
             </ul>
          </li>
@@ -625,17 +768,31 @@
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
-               <li><a href="#">лінк першого рівня </a></li>
-               <li><a href="#">лінк першого рівня </a></li>
                <li>
-                  <h3>Заголовок другого рівня</h3>
+                  <h3>Заголовок першого рівня</h3>
                   <ul>
-                     <li><a href="#">лінк другого рівня </a></li>
-                     <li><a href="#">лінк другого рівня </a></li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
                   </ul>
                </li>
                <li>
-                  <h3><a href="">Заголовок другого рівня</a></h3>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
                </li>
             </ul>
          </li>
@@ -644,17 +801,31 @@
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
-               <li><a href="#">лінк першого рівня </a></li>
-               <li><a href="#">лінк першого рівня </a></li>
                <li>
-                  <h3>Заголовок другого рівня</h3>
+                  <h3>Заголовок першого рівня</h3>
                   <ul>
-                     <li><a href="#">лінк другого рівня </a></li>
-                     <li><a href="#">лінк другого рівня </a></li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
                   </ul>
                </li>
                <li>
-                  <h3><a href="">Заголовок другого рівня</a></h3>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
                </li>
             </ul>
          </li>
@@ -663,17 +834,31 @@
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
-               <li><a href="#">лінк першого рівня </a></li>
-               <li><a href="#">лінк першого рівня </a></li>
                <li>
-                  <h3>Заголовок другого рівня</h3>
+                  <h3>Заголовок першого рівня</h3>
                   <ul>
-                     <li><a href="#">лінк другого рівня </a></li>
-                     <li><a href="#">лінк другого рівня </a></li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
                   </ul>
                </li>
                <li>
-                  <h3><a href="">Заголовок другого рівня</a></h3>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
                </li>
             </ul>
          </li>
@@ -682,25 +867,38 @@
          <li>
             <h2>Заголовок розділу</h2>
             <ul>
-               <li><a href="#">лінк першого рівня </a></li>
-               <li><a href="#">лінк першого рівня </a></li>
                <li>
-                  <h3>Заголовок другого рівня</h3>
+                  <h3>Заголовок першого рівня</h3>
                   <ul>
-                     <li><a href="#">лінк другого рівня </a></li>
-                     <li><a href="#">лінк другого рівня </a></li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>лінк першого рівня</p>
+                        </a>
+                     </li>
                   </ul>
                </li>
                <li>
-                  <h3><a href="">Заголовок другого рівня</a></h3>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
+                  <a href="#">
+                     <h3>Заголовок лінк другого рівня</h3>
+                  </a>
                </li>
             </ul>
          </li>
       </ul>
-
    </div>
 </footer>
-   <script src="js/app.min.js?_v=20220817151243"></script>
+   <script src="js/app.min.js?_v=20220908180837"></script>
 </body>
 
 </html>

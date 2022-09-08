@@ -2,6 +2,7 @@
    position: fixed;
    z-index: 999;
    top: -100%;
+   
    width: 100vw;
    height: 100vh;
 
@@ -9,24 +10,35 @@
    justify-content: center;
    align-items: center;
 
-   padding: 4%;
+   padding: 0;
    
    background-color: rgba(64, 62, 59, 0.7);
    backdrop-filter: blur(3px);
    cursor: pointer;
 
-   transition: opacity .3s;
-
-   opacity: 0;
+   overflow-y: auto;
    &._action{
-      top: 0;
-      opacity: 1;
+      animation: modalRun .3s;
+      animation-fill-mode: forwards;
+
+   }
+   &._passive{
+      animation: modalClose .3s;
    }
    &__content {
       position: relative;
       min-width: 10%;
       min-height: 10%;
+      max-height: 100%;
       cursor: default;
+      //background-color: silver;
+   }
+   &__items {
+      //min-width: 10%;
+      //min-height: 10%;
+      height: auto;
+      cursor: default;
+      //background-color: grey;
    }
    &__close{  
       position: absolute;
@@ -67,66 +79,32 @@
    }
 }
 
-.form {   
-   width: auto;
-   height: auto;
-
-   padding: 30px;
-   
-   font-family: inherit;
-   font-size: 18px;
-   line-height: normal;
-
-   color: #fff;
-   //background-color: rgba(64, 62, 59, 0);
-   //backdrop-filter: blur(3px);
-   // background: $colorDarkBroun;
-
-   input {
-      //grid-column: 2/2;
-      display: block;
-
-      width: 350px;
-      height: 1.5em;
-
-      margin: 0 0 .5em 0;
-
-      font-size: 1em;
-      line-height: normal;
-      font-family: inherit;
-
-      color: $colorDarkGray;
-      box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
+@keyframes modalClose {
+   0%{
+      top: 0;
+      opacity: 1;
    }
-
-   input[type=submit]{
-      height: 46px;
-      width: 200px;
-      margin: 2em auto 0 auto;
-
-      text-transform: uppercase;
-      font-family: inherit;
-      font-size: .9em;
-
-      //border: 2px solid $colorWhite;
-      color: $colorWhite;
-      background-color: $colorOrange;
-
-      cursor: pointer;
-      transition: transform .1s;
-
-      &:hover {
-         // transform: scale(1.02);
-         background-color: $colorLightOrange;
-      }
+   99% {
+      top: 0;
+      //opacity: 1;
    }
-   p {
-      display: block;
+   100% {
+      top: -100%;
+      opacity: 0;
+    }
+}
 
-      font-size: .7em;
-      line-height: 2em;
-      i {
-         color: red;
-      }
+@keyframes modalRun {
+   0%{
+      top: -100%;
+      opacity: 0;
    }
+   1% {
+      top: 0;
+      opacity: 0;
+   }
+   100% {
+      top: 0;
+      opacity: 1;
+    }
 }

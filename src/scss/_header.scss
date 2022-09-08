@@ -2,13 +2,21 @@
    display: flex;
    justify-content: center;
    align-items: center;
+
+   font-size: 1.6em;
+   @media (max-width: 1024px){
+      font-size: 1.4em;
+   }
+   //@media (max-width: 950px){
+   //   font-size: 1.1em;
+   //}
    a {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: nowrap;
       text-transform: lowercase;
-      font-size: $fz;
+      //font-size: $fz;
       svg {
          width: 35px;
          height: 35px;
@@ -48,10 +56,12 @@
       align-items: center;
       flex-wrap: nowrap;
       p {
-         text-transform: lowercase;
-         font-size: $fz;
          position: relative;
+
          margin-right: calc(0px + (30 - 0) * ((100vw - 320px) / (1600 - 320)));
+
+         text-transform: lowercase;
+         font-size: 1.6em;
          &::after {
             content: "";
             width: 3px;
@@ -65,12 +75,14 @@
             transform: translate(0, -50%);
             margin-left: calc(0px + (15 - 0) * ((100vw - 320px) / (1600 - 320)));
          }
-      }
-
-      @media (min-width: 768px) {
-         *:last-child {
-            margin: auto;
-            &:after {
+         @media (max-width: 1024px){
+            font-size: 1.4em;
+         }
+         @media (max-width: 950px){
+            font-size: 2.5em;
+            color: $colorWhite;
+            line-height: 200%;
+            &::after {
                display: none;
             }
          }
@@ -89,112 +101,83 @@
 
          z-index: -2;
          transition: all 0.7s;
-
-         p {
-            //width: 100%;
-            color: $colorWhite;
-            line-height: 200%;
-            font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (768 - 320)));
-            &::after {
-               display: none;
-            }
-         }
          &._active {
             top: 0;
             left: 0;
             transition: all 0.7s;
             overflow: auto;
          }
-      }
+      }    
    }
 }
 
 .header {
    z-index: 2;
    position: relative;
-   &__enter{
+   &__top-line {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
-      grid-template-columns: repeat(4, 50px);
+      //height: inherit;
+      //grid-template-columns: repeat(4, 50px);
 
       text-transform: uppercase;
-      font-size: 1.2em;
-      font-weight: 700;
       text-align: right;
 
       background-color: $colorDarkGray;
       color: $colorWhite;
-      //gap: 25px;
-      @media (max-width: 426px) {
-         font-size: 2em;
-      }
       button{
-         margin: 0;
-         font-size: inherit;
-         font-weight: inherit;
-         //font-weight: 700;
-         text-transform: uppercase;
-         background-color: inherit;
-         color: inherit;
-         transition: all 0.5s;
-         &:hover {
-            color: $colorLightOrange;
-         }
-         @media (max-width: 768px) {
-            margin-right: auto;
-         }
+         height: 36px;
+         width: 36px;
+         background-color: transparent;
       }
       a {
-         //display: inline-block;
-         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         //position: relative;
+         font-size: 1.6em;
+         font-weight: 400;
+         padding: 50px auto;
          color: $colorWhite;
          transition: all 0.5s;
-         margin-left: 25px;
          &:hover {
             color: $colorLightOrange;
          }
-         &::after{
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: #fff;
-            margin-left: 12px ;
+         svg {
+            width: 32px;
+            height: 32px;
+            margin: 2px 2px 2px 6px;
          }
-         &:last-child::after {
-           display: none;
-         }
-         
       }
+      
       @media (max-width: 1200px) {
          padding: 0 8px;
       }
-      @media (max-width: 768px) {
-         //justify-content: space-between;
-      }
-
    }
-   &__logo{
+   &__mid-line{
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding-top: 2px;
       padding-bottom: 2px;
       @media (max-width: 426px) {
-         justify-content: center;
-         button{
-            display: none;
-         }
+         padding: 2px;
       }
    }
    &__contacts-bar{
       display: flex;
       justify-content: space-evenly;
       flex-wrap: nowrap;
+
+      height: 44px;
+
+      //font-size: 1.4em;
+
       background-color: $colorLightGray;
       color: $colorBlue;
       overflow: hidden;
-      height: 44px;
+      
       z-index: 2;
       &.fixed {
          position: fixed;

@@ -1,30 +1,26 @@
 
 body {
-   font-family: $fontFamily;
-   font-size: $fz;
-   font-weight: 400;
    &._lock {
       overflow: hidden;
    }
 }
 
 .logo {
-   img {
+   svg {
       height: 50px;
+      width: 100px;
       transition: all 0.5s;
-      //&:hover {
-      //   height: 64px;
-      //   margin: 0;
-      //}
    }
 }
 
 .button {
-   width: 250px;
-   height: 50px;
-   font-family: $fz;
-   font-size: 16px;
-   font-weight: 700;
+   //width: 250px;
+   //height: auto;
+   //font-family: $fontFamily;
+   font-size: 1.6em;
+   //font-weight: 400;
+   //line-height: 1em;
+   padding: 1em 2em;
    background-color: $colorOrange;
    color: $colorWhite;
    text-align: center;
@@ -34,6 +30,11 @@ body {
    &:hover {
       background-color: $colorLightOrange;
    }
+   @media (max-width: 375px) {
+      font-size: 1.4em;
+      //line-height: 0.6em;
+
+   }
 }
 
 .wraper {
@@ -42,10 +43,6 @@ body {
    height: auto;
 
    padding: 0 calc(8px + (120 - 8) * ((100vw - 1026px) / (1440 - 1026)));
-
-   font-size: $fz;
-   font-weight: 400;
-   line-height: normal;
 
    background-color: $colorWhite;
    color: $colorBlue;
@@ -58,5 +55,83 @@ body {
    }
    @media (max-width: 1026px) {
       padding: 0 calc(0px + (8 - 0) * ((100vw - 426px) / (1026 - 426)));
+   }
+}
+
+.contacts-form {
+   grid-area: f;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   justify-self: end;
+   width: 85%;
+   //height: 400px;
+   &::after{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 86%;
+      transform: translateY(7%);
+      background-color: $colorWhite;
+      top: 0;
+      right: 0;
+   }
+   //background-color: wheat;
+   form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      width: 80%;
+      //background-color: plum;
+   }
+   input, textarea{
+      width: 100%;
+      height: 2em;
+      padding: 0.1em;
+      font-size: 1.2em;
+      margin: .4em 0 .8em 0;
+      color: $colorDarkGray;
+   }
+   textarea{
+      height: 6em;
+   }
+   input[type=submit]{
+      height: 48px;
+      width: 200px;
+
+      margin: 16px auto;
+
+      font-size: 1.6em;
+      font-weight: 400;
+      text-transform: uppercase;
+      
+      cursor: pointer;
+      background-color: $colorOrange;
+      color: $colorWhite;
+      transition: background-color .5s;
+      &:hover{
+         background-color: $colorLightOrange;
+      }
+   }
+
+   p{
+      font-size: 1.2em;
+      font-weight: 400;
+      color: $colorWhite;
+      span{
+         color: red;
+      }
+   }
+
+   @media (max-width: 768px) {
+      width: 80%;
+      justify-self: center;
+      &::after{
+         display: none;
+      }
+      input[type=submit]{
+         align-self: center;
+      }
    }
 }

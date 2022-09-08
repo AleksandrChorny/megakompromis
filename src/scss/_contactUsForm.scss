@@ -1,0 +1,97 @@
+.form {   
+   width: auto;
+   height: auto;
+
+   //padding: 30px;
+   
+   font-family: inherit;
+   font-size: 18px;
+   line-height: normal;
+
+   color: #fff;
+   
+   h2{
+      margin: .3em auto 2em auto;
+      //margin: .3em;
+
+      font-weight: 400;
+   }
+   input {
+      //grid-column: 2/2;
+      display: block;
+
+      width: 350px;
+      height: 1.5em;
+
+      margin: 0 0 .5em 0;
+      padding: 0 .5em;
+
+      font-size: 1em;
+      line-height: normal;
+      font-family: inherit;
+
+      color: $colorDarkGray;
+      box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
+   }
+
+   textarea {
+      width: 350px;
+      height: 7em;
+      padding: .5em;
+
+      font-size: 1em;
+      line-height: normal;
+      font-family: inherit;
+
+      color: $colorDarkGray;
+      box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
+   }
+
+
+   input[type=submit]{
+      height: 46px;
+      width: 200px;
+      margin: 2em auto;
+
+      text-transform: uppercase;
+      font-family: inherit;
+      font-size: .9em;
+
+      //border: 2px solid $colorWhite;
+      color: $colorWhite;
+      background-color: $colorOrange;
+
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+         // transform: scale(1.02);
+         background-color: $colorLightOrange;
+      }
+   }
+   input[name=registration] {
+      margin: 2em auto 0 auto;
+
+      background-color: transparent;
+      border: 2px solid #FFFFFF;
+
+      //transition: transform .1s;
+      &:hover {
+         color: $colorLightOrange;
+         background-color: transparent;
+         border: 2px solid $colorLightOrange;
+
+      }
+   }
+   p {
+      display: block;
+
+      font-size: .7em;
+      line-height: 2em;
+      i {
+         color: red;
+      }
+   }
+}
+
+

@@ -1,0 +1,42 @@
+.page-description {
+   width: 100%;
+   background: $colorLightGray;
+   margin: 0 auto;
+
+   &__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-transform: uppercase;
+      //font-size: 1.2em;
+      text-align: center;
+      line-height: normal;
+      text-transform: uppercase;
+      background-color: $colorLightGray;
+      h2{
+         font-size: 2.1em;
+         line-height: 40px;
+         letter-spacing: 0%;
+      }
+   }
+
+   &__txt {
+      font-weight: 400;
+      font-size: 1.5em;
+      line-height: 1.3em;
+      text-align: center;
+
+      padding: .5em;
+      margin: 0 44px 44px 44px;
+
+      border: 1px solid #4170B4;
+      color: $colorBlue;
+      @media (max-width: 425px) {
+         margin: 0 22px 22px 22px;;
+      }
+      @media (max-width: 425px) {
+         margin: 0 12px 12px 12px;;
+      }
+   }
+}

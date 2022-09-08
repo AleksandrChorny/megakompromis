@@ -31,9 +31,11 @@ html,
 body {
    height: 100%;
    width: 100%;
-   font-size: 100%;
+   
    line-height: 1;
-   font-size: 14px;
+   font-family: $fontFamily;
+   font-size: $fz;
+   font-weight: 400;
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
@@ -74,5 +76,6 @@ h5,
 h6 {
    font-size: inherit;
    font-weight: 700;
+   text-align: center;
 }
 /*--------------------*/

@@ -7,6 +7,9 @@
    width: 100%;
    position: relative;
    //background-color: rgba($colorWhite, 0.8);
+      background: rgba(1, 26, 63, 0.4);
+      backdrop-filter: blur(3px);
+
    z-index: 1;
    &::before {
       content: '';
@@ -21,7 +24,7 @@
       animation: flag 4s linear infinite;
       z-index: -5;
    }
-   @media (max-width: 768px) {
+   @media (max-width: 769px) {
       height: 100%;
       position: fixed;
       top: -100%;
@@ -29,6 +32,10 @@
       padding: 150px 0 0 0;
       transition: top 1s;
       overflow: auto;
+      &::before {
+         background: transparent;
+         animation: none;
+      }
    }
    .main-menu__list {
       max-width: 1200px;
@@ -38,7 +45,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      @media (max-width: 768px) {
+      @media (max-width: 769px) {
          width: 100%;
       }
 
@@ -505,7 +512,11 @@
 
 
    z-index: -6;
-   //background-color: $colorBlue;
+   @media (max-width: 769px) {
+      animation: none;
+   background: none;
+
+   }
 }
 
  @keyframes flag {

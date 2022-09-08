@@ -1,6 +1,3 @@
-//обнуляємо стилі браузеру
-@import "_null";
-
 //Призначаю кольори проекту
 $colorWhite: #fff;
 $colorDarkGray: #6f6f6f;
@@ -17,7 +14,11 @@ $fontFamily: "Montserrat", sans-serif;
 //Призначаю додаткові змінні проекту
 // calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
 //$adaptiveFZ: calc(12px + (20 - 12) * ((100vw - 770px) / (1600 - 770)));
-$fz: calc(11px + (16 - 11) * ((100vw - 320px) / (1600 - 320)));
+//$fz: calc(11px + (16 - 11) * ((100vw - 320px) / (1600 - 320)));
+$fz: 10px;
+
+//обнуляємо стилі браузеру
+@import "_null";
 
 //Підключаю шрифти з файлу 'dist/fonts.scss'
 @import "fonts";
@@ -30,11 +31,14 @@ $fz: calc(11px + (16 - 11) * ((100vw - 320px) / (1600 - 320)));
 
 
 //Підключаємо стилі сторніки сайту
-//@import "_modal";
+@import "_modal";
+@import "_contactUsForm";
 @import "_header";
 @import "_navigation";
 @import "_tilePages";
 @import "_goods";
 @import "_goods-card";
 @import "_goodsColor";
+@import "_pageDescription";
 @import "_footer";
+//!! @import "_test";
