@@ -11,8 +11,10 @@ import * as goods from "./modules/goods.js";
 webp.isWebp();
 onScroll.fixedHeaderAndMainMenu();
 onClick.ADD_actionToHeaderAndBurger();
-onClick.openLoginInModal();
-onClick.openContactUsInModal();
+//onClick.openLoginInModal();
+//onClick.openContactUsInModal();
+onClick.openInModal('login');
+onClick.openInModal('contacts-button');
 //modal.activateBlock({
 //   actionBlockClass: 'modal',
 //   buttonToActionBlockClass: 'heder__button',
@@ -28,5 +30,3 @@ goods.choiceColor({
    goodsPrice: 'goods-card__price',
    actionClassName: '_action'
 })
-
-//!! test.test();

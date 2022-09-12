@@ -759,7 +759,7 @@ body._lock {
   color: #fff;
 }
 
-.header__top-line button {
+.header__top-line .login {
   height: 36px;
   width: 36px;
   background-color: transparent;
