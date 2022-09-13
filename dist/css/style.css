@@ -2497,6 +2497,7 @@ body._lock {
   grid-area: i;
   display: grid;
   grid-template: "c ct cd" "e et ed" "a at ad" "cm cm cm"/max-content max-content max-content;
+  width: 85%;
   height: 400px;
   margin-bottom: 15px;
 }
