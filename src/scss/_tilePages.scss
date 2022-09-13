@@ -30,7 +30,7 @@
       img{
          max-width: 100%;
       }
-      @media (max-width: 426px) {
+      @media (max-width: 643px) {
          grid-template-columns: 1fr;
          gap: 0;
       }
@@ -38,6 +38,21 @@
 
    &__item {
       position: relative;
+
+      min-height: 280px;
+      @media (max-width: 900px) {
+         min-height: 250px; 
+      }
+      @media (max-width: 768px) {
+         min-height: 200px; 
+      }
+      @media (max-width: 644px) {
+         min-height: 250px; 
+      }
+      @media (max-width: 376px) {
+         min-height: 200px; 
+      }
+      
       &:hover{
          .tile-pages__content{
             width: 100%;
@@ -45,6 +60,9 @@
          h2{
             font-size: 3.5em;
             color: $colorLightOrange;
+            @media (max-width: 900px) {
+               font-size: 3em;
+            }
          }
          ul{
             font-size: 1.8em;
@@ -76,12 +94,15 @@
          text-align: left;
 
          transition: all .3s;
-         @media (max-width: 768px) {
+         @media (max-width: 900px) {
+            font-size: 2.7em;
+         }
+         @media (max-width: 769px) {
             font-size: 2.5em;
             line-height: 1.1em;
             letter-spacing: -1%;
          }
-         @media (max-width: 320px) {
+         @media (max-width: 376px) {
             font-size: 2.2em;
          }
          &::after{
@@ -104,11 +125,17 @@
          line-height: 1.4em;
         
          transition: all .3s;
-         @media (max-width: 768px) {
-            font-size: 1.4em;
+         @media (max-width: 900px) {
+            font-size: 1.6em;
+         }
+         @media (max-width: 769px) {
+            font-size: 1.2em;
             line-height: 1.5em;
          }
-         @media (max-width: 320px) {
+         @media (max-width: 644px) {
+            font-size: 1.6em;
+         }
+         @media (max-width: 376px) {
             font-size: 1.2em;
             line-height: 1.5em;
          }

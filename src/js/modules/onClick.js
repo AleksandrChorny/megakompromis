@@ -135,12 +135,13 @@ export function ADD_actionToHeaderAndBurger() {
 
 }
 
-export function openLoginInModal() {
-   if (document.querySelector('.header__top-line button')) {
+export function openInModal(buttonClassName) {
+   const button = document.querySelector(`.${buttonClassName}`);
+   if (button) {
       document.addEventListener('click', loginModal);
       function loginModal(event) {
-         if (event.target.closest('.header__top-line button')) {
-            const url = '../../login.html';
+         if (event.target.closest(`.${buttonClassName}`)) {
+            const url = button.dataset.form;
 
             getFile.includeFile(url, {})
                .then((loginForm) => {
@@ -154,28 +155,5 @@ export function openLoginInModal() {
             modal.run();
          }
       }
-   }
-}
-
-export function openContactUsInModal() {
-   const buttons = document.querySelectorAll('.contacts-button');
-   if (buttons) {
-      buttons.forEach(button => {
-         document.addEventListener('click', contactAsModal);
-
-         function contactAsModal(event) {
-            if (event.target.closest('.contacts-button')) {
-               const url = '../../contactUs.html';
-
-               getFile.includeFile(url, {})
-                  .then((contactForm) => {
-                     modal.setContent(contactForm);
-                  });
-
-               modal.run();
-            }
-         }
-         //console.log(button)
-      });
    }
 }

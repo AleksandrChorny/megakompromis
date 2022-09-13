@@ -759,7 +759,7 @@ body._lock {
   color: #fff;
 }
 
-.header__top-line button {
+.header__top-line .login {
   height: 36px;
   width: 36px;
   background-color: transparent;
@@ -1485,6 +1485,7 @@ body._lock {
 
 .tile-pages__item {
   position: relative;
+  min-height: 280px;
 }
 
 .tile-pages__item:hover .tile-pages__content {
@@ -3252,6 +3253,24 @@ body._lock {
   }
 }
 
+@media (max-width: 900px) {
+  .tile-pages__item {
+    min-height: 250px;
+  }
+
+  .tile-pages__item:hover h2 {
+    font-size: 3em;
+  }
+
+  .tile-pages__content h2 {
+    font-size: 2.7em;
+  }
+
+  .tile-pages__content ul {
+    font-size: 1.6em;
+  }
+}
+
 @media (max-width: 769px) {
   .main-menu {
     height: 100%;
@@ -3279,6 +3298,17 @@ body._lock {
     -webkit-animation: none;
             animation: none;
     background: none;
+  }
+
+  .tile-pages__content h2 {
+    font-size: 2.5em;
+    line-height: 1.1em;
+    letter-spacing: -1%;
+  }
+
+  .tile-pages__content ul {
+    font-size: 1.2em;
+    line-height: 1.5em;
   }
 }
 
@@ -3322,15 +3352,8 @@ body._lock {
             animation: none;
   }
 
-  .tile-pages__content h2 {
-    font-size: 2.5em;
-    line-height: 1.1em;
-    letter-spacing: -1%;
-  }
-
-  .tile-pages__content ul {
-    font-size: 1.4em;
-    line-height: 1.5em;
+  .tile-pages__item {
+    min-height: 200px;
   }
 
   .footer__contats-items {
@@ -3350,15 +3373,27 @@ body._lock {
   }
 }
 
-@media (max-width: 426px) {
-  .header__mid-line {
-    padding: 2px;
+@media (max-width: 644px) {
+  .tile-pages__item {
+    min-height: 250px;
   }
 
+  .tile-pages__content ul {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 643px) {
   .tile-pages__items {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 0;
+  }
+}
+
+@media (max-width: 426px) {
+  .header__mid-line {
+    padding: 2px;
   }
 
   .goods__title h2 {
@@ -3392,13 +3427,11 @@ body._lock {
   }
 }
 
-@media (max-width: 375px) {
-  .button {
-    font-size: 1.4em;
+@media (max-width: 376px) {
+  .tile-pages__item {
+    min-height: 200px;
   }
-}
 
-@media (max-width: 320px) {
   .tile-pages__content h2 {
     font-size: 2.2em;
   }
@@ -3406,5 +3439,11 @@ body._lock {
   .tile-pages__content ul {
     font-size: 1.2em;
     line-height: 1.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  .button {
+    font-size: 1.4em;
   }
 }
