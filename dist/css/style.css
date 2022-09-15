@@ -901,6 +901,46 @@ body._lock {
 .main-menu .main-menu__list .main-menu__items.purple .main-menu__svg {
   fill: #fff;
 }
+.main-menu .main-menu__close {
+  width: 50px;
+  height: 32px;
+  background-color: #f5f5f5;
+  position: absolute;
+  right: 20px;
+  bottom: -25px;
+  z-index: -6;
+  border-radius: 7px;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.main-menu .main-menu__close::before {
+  content: "";
+  width: 3px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  left: 17px;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  background-color: #6f6f6f;
+  transition: background-color 0.3s;
+}
+.main-menu .main-menu__close::after {
+  content: "";
+  width: 3px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  transform: rotate(-45deg);
+  border-radius: 3px;
+  background-color: #6f6f6f;
+  transition: background-color 0.3s;
+}
+.main-menu .main-menu__close:hover {
+  bottom: -27px;
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+}
 .main-menu._active {
   top: 0;
 }
@@ -2497,8 +2537,10 @@ body._lock {
   grid-area: i;
   display: grid;
   grid-template: "c ct cd" "e et ed" "a at ad" "cm cm cm"/max-content max-content max-content;
+  align-items: center;
   width: 85%;
   height: 400px;
+  margin: 15px auto 0 auto;
   margin-bottom: 15px;
 }
 @media (max-width: 1025px) {
@@ -2557,6 +2599,8 @@ body._lock {
 .footer__contats-media {
   grid-area: cm;
   justify-content: center;
+  width: auto;
+  margin: auto;
 }
 .footer__contats-media a {
   margin: 15px;
