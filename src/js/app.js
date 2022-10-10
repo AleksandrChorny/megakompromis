@@ -7,7 +7,6 @@ import * as goods from "./modules/goods.js";
 
 //!! import * as test from "./modules/test.js";
 
-
 webp.isWebp();
 onScroll.fixedHeaderAndMainMenu();
 onClick.ADD_actionToHeaderAndBurger();
@@ -15,6 +14,7 @@ onClick.ADD_actionToHeaderAndBurger();
 //onClick.openContactUsInModal();
 onClick.openInModal('login');
 onClick.openInModal('contacts-button');
+onClick.hideNavigate();
 //modal.activateBlock({
 //   actionBlockClass: 'modal',
 //   buttonToActionBlockClass: 'heder__button',

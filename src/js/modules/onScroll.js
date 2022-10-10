@@ -60,6 +60,7 @@ export function fixedHeaderAndMainMenu() {
             // setClassName("main-menu__items", "back");
 
             delClassName('main-menu', 'fixed');
+            //delClassName('main-menu', '_hide');
             document.querySelector('.header__mid-line').style.marginBottom = hederHightContactsBar + 'px';
 
             // const scrollTop = 

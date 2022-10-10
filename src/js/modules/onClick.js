@@ -157,3 +157,20 @@ export function openInModal(buttonClassName) {
       }
    }
 }
+
+export function hideNavigate() {
+   const button = document.querySelector('.main-menu__close');
+   const navigate = document.querySelector('.main-menu');
+   if (button) {
+      document.addEventListener('click', hideNavigate);
+      function hideNavigate(event) {
+         if (event.target.closest('.main-menu__close')) {
+            if (!navigate.classList.contains('_hide')) {
+               navigate.classList.add("_hide");
+               return;
+            }
+            navigate.classList.remove("_hide");
+         }
+      }
+   }
+}
