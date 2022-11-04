@@ -14,7 +14,9 @@ onClick.ADD_actionToHeaderAndBurger();
 //onClick.openContactUsInModal();
 onClick.openInModal('login');
 onClick.openInModal('contacts-button');
+//onClick.openInModalTest('contacts-button');
 onClick.hideNavigate();
+onClick.sendForm();
 //modal.activateBlock({
 //   actionBlockClass: 'modal',
 //   buttonToActionBlockClass: 'heder__button',

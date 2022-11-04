@@ -1,18 +1,18 @@
 const body = document.querySelector("body");
-const modal = document.querySelector('.modal');
-const closeButton = document.querySelector('.modal__close');
-//const modalWindow = document.querySelector('.modal__close');
+const alert = document.querySelector('.alert');
+const closeButton = document.querySelector('.alert__close');
+//const alertWindow = document.querySelector('.alert__close');
 
 export function close() {
    //console.log('closeModal');
-   if (modal.closest('._action')) {
-      //if (getComputedStyle(modal).top == '0px') {
-      //   modal.style.top = '0';
-      //   setTimeout(function () { modal.style.top = '-100%'; }, 2000);
+   if (alert.closest('._action')) {
+      //if (getComputedStyle(alert).top == '0px') {
+      //   alert.style.top = '0';
+      //   setTimeout(function () { alert.style.top = '-100%'; }, 2000);
       //}
-      modal.classList.remove('_action');
-      modal.classList.add('_passive');
-      if (document.querySelector('.alert').closest('._action')) {
+      alert.classList.remove('_action');
+      alert.classList.add('_passive');
+      if (document.querySelector('.modal').closest('._action')) {
          return;
       }
       if (body.style.overflow == "hidden") {
@@ -22,9 +22,9 @@ export function close() {
 }
 
 export function run() {
-   if (modal && !modal.closest('._action')) {
-      modal.classList.remove('_passive');
-      modal.classList.add('_action');
+   if (alert && !alert.closest('._action')) {
+      alert.classList.remove('_passive');
+      alert.classList.add('_action');
       if (body.style.overflow !== "hidden") {
          body.style.overflow = "hidden";
       }
@@ -35,7 +35,7 @@ export function run() {
 
       function stop(event) {
          //console.log(event.target);
-         if (event.target == closeButton || event.target == modal) {
+         if (event.target == closeButton || event.target == alert) {
             close()
          }
       }
@@ -43,32 +43,32 @@ export function run() {
 
 }
 
-//set Content to Modal if this content do not set at this modal earlier
+//set Content to Modal if this content do not set at this alert earlier
 export function setContent(htmlString) {
    if (typeof htmlString === 'string' || htmlString instanceof String) {
-      if (modal) {
-         const modalContent = modal.querySelector('.modal__items');
+      if (alert) {
+         const alertContent = alert.querySelector('.alert__items');
 
-         if (modalContent && htmlString) {
-            if (!modalContent.querySelector('[data-not-reset]')) {
-               modalContent.innerHTML = htmlString;
+         if (alertContent && htmlString) {
+            if (!alertContent.querySelector('[data-not-reset]')) {
+               alertContent.innerHTML = htmlString;
                return;
             }
 
-            if (modalContent.querySelector('[data-not-reset]')) {
+            if (alertContent.querySelector('[data-not-reset]')) {
 
                const parser = new DOMParser();
                let newHtml = parser.parseFromString(htmlString, "text/html");
 
                if (newHtml.querySelector('[data-not-reset]')) {
-                  if (newHtml.querySelector('[data-not-reset]').dataset.notReset !== modalContent.querySelector('[data-not-reset]').dataset.notReset) {
-                     modalContent.innerHTML = htmlString;
+                  if (newHtml.querySelector('[data-not-reset]').dataset.notReset !== alertContent.querySelector('[data-not-reset]').dataset.notReset) {
+                     alertContent.innerHTML = htmlString;
                   }
                   return;
                }
 
                if (newHtml) {
-                  modalContent.innerHTML = htmlString;
+                  alertContent.innerHTML = htmlString;
                }
             }
          }
@@ -80,14 +80,14 @@ export function setContent(htmlString) {
 
 //export function closeModal() {
 //   function closeModal() {
-//      modal.classList.remove('._action');
+//      alert.classList.remove('._action');
 //   }
 
 //   function setBodyOverflowNoHidden() {
 //      body.style.overflow = "";
 //   }
 
-//   if (modal.closest('._action')) {
+//   if (alert.closest('._action')) {
 //      closeModal();
 //      if (body.style.overflow == "hidden") {
 //         setBodyOverflowNoHidden();
@@ -100,15 +100,15 @@ export function setContent(htmlString) {
 //   document.addEventListener('click', actionModal);
 //   //Додаємо, або забираємо клас активації модального вікна
 //   function actionModal(event) {
-//      const modal = document.querySelector(`.${options.actionBlockClass}`);
+//      const alert = document.querySelector(`.${options.actionBlockClass}`);
 //      //Якщо неіснує класу модального вікна показуємо alert з повідомленням
-//      if (event.target.closest(`.${options.buttonToActionBlockClass}`) && !modal) {
+//      if (event.target.closest(`.${options.buttonToActionBlockClass}`) && !alert) {
 //         alert(`Модального вікна з класом ${options.actionBlockClass} не існує`);
 //         return;
 //      }
 //      //Додаємо клас та блокуємо скрол
-//      if (event.target.closest(`.${options.buttonToActionBlockClass}`) && modal) {
-//         modal.classList.add(options.actionClassName);
+//      if (event.target.closest(`.${options.buttonToActionBlockClass}`) && alert) {
+//         alert.classList.add(options.actionClassName);
 //         if (document.querySelector("body").style.overflow !== "hidden" && options.scroll === false) {
 //            document.querySelector("body").style.overflow = "hidden";
 //         }
@@ -116,7 +116,7 @@ export function setContent(htmlString) {
 //      }
 //      //Знімаємо клас та деблокуємо скрол
 //      if (event.target.closest(`.${options.buttonToCloseBlockClass}`) || event.target.classList.contains(options.actionBlockClass)) {
-//         modal.classList.remove(options.actionClassName);
+//         alert.classList.remove(options.actionClassName);
 //         document.querySelector("body").style.overflow = "";
 //      }
 //   }

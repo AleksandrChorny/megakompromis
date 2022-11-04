@@ -1,5 +1,7 @@
 import * as modal from "./modal.js";
+import * as alert from "./alert.js";
 import * as getFile from "./includeFile.js";
+import * as formValidate from "./formValidate.js";
 
 export function ADD_actionToHeaderAndBurger() {
 
@@ -138,14 +140,14 @@ export function ADD_actionToHeaderAndBurger() {
 export function openInModal(buttonClassName) {
    const button = document.querySelector(`.${buttonClassName}`);
    if (button) {
-      document.addEventListener('click', loginModal);
-      function loginModal(event) {
+      document.addEventListener('click', getModal);
+      function getModal(event) {
          if (event.target.closest(`.${buttonClassName}`)) {
             const url = button.dataset.form;
 
             getFile.includeFile(url, {})
-               .then((loginForm) => {
-                  modal.setContent(loginForm);
+               .then((modalContent) => {
+                  modal.setContent(modalContent);
                   //modal.querySelector('.modal__content').innerHTML = data;
                   // console.log(data['id']); // JSON data parsed by `response.json()` call
                   //console.log(data)
@@ -170,6 +172,53 @@ export function hideNavigate() {
                return;
             }
             navigate.classList.remove("_hide");
+         }
+      }
+   }
+}
+
+export function sendForm() {
+   //const button = document.querySelector('.modal');
+   document.addEventListener('click', sendForm);
+
+
+   function sendForm(event) {
+      const listOfForm = [
+         'contactBtn',
+         'loginBtn',
+         'registrationBtn'
+      ]
+      //console.log(listOfForm.includes('contactBtn'));
+      //console.log(listOfForm.indexOf('contactBtn1'));
+      //if (event.target.closest('.form')) {
+
+
+      if (event.target.type == 'submit' && listOfForm.includes(event.target.name)) {
+         event.preventDefault();
+         const form = event.target.form;
+
+         if (form) {
+            if (formValidate.isRequiredTrue(form)) {
+               const formData = new FormData(form);
+               const url = "/form/";
+
+               getFile.includeFile(url, formData)
+                  .then((data) => {
+                     if (data) {
+                        alert.run();
+                        //alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
+                        modal.close();
+                        return;
+                     }
+                     alert.run();
+                     //modal.close();
+
+
+
+                     //alert('Форма не відправлена, спробуйте ще раз, або скористайтесь іншим методом зв\'язку');
+                     //modal.closeModal();
+                  });
+            }
          }
       }
    }
