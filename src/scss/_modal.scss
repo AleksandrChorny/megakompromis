@@ -1,6 +1,6 @@
 .modal{
    position: fixed;
-   z-index: 999;
+   z-index: 998;
    top: -100%;
    
    width: 100vw;
@@ -38,12 +38,13 @@
       //min-height: 10%;
       height: auto;
       cursor: default;
-      //background-color: grey;
+      background-color: rgba(64, 62, 59, 0.4);
+      //border: 1px solid #fff;
    }
    &__close{  
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 8px;
+      right: 8px;
       display: flex;
       justify-content: center;
       align-items: center;

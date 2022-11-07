@@ -2,13 +2,14 @@
    width: auto;
    height: auto;
 
-   //padding: 30px;
+   padding: 30px;
    
    font-family: inherit;
    font-size: 18px;
    line-height: normal;
 
    color: #fff;
+   //border: 1px solid #fff;
    
    h2{
       margin: .3em auto 2em auto;
@@ -20,7 +21,8 @@
       //grid-column: 2/2;
       display: block;
 
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
       height: 1.5em;
 
       margin: 0 0 .5em 0;
@@ -35,7 +37,10 @@
    }
 
    textarea {
-      width: 350px;
+      display: block;
+
+      width: 100%;
+      max-width: 350px;
       height: 7em;
       padding: .5em;
 
@@ -83,7 +88,7 @@
 
       }
    }
-   p {
+   p, label {
       display: block;
 
       font-size: .7em;

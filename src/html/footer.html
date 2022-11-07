@@ -3,16 +3,17 @@
       <h2>зв'яжіться з нами</h2>
    </div>
    <div class="contacts-form">
-      <form action="#">
-         <p>Ім'я<span>*</span></p>
-         <input type="text" name="name" value="">
-         <p>E-mail<span>*</span></p>
-         <input type="email" name="email" value="">
-         <p>Телефон<span>*</span></p>
-         <input type="tel" name="tel" value="">
-         <p>Ваше повідомлення</p>
+      <form action="">
+         <label for="name">Name:<i>*</i></label>
+         <input type="text" name="name" required>
+         <label for="phone">Telephone:<i>*</i></label>
+         <input type="tel" name="phone" required>
+         <label for="email">E-mail:</label>
+         <input type="email" name="email">
+         <label for="text">Ваше повідомлення:</label>
          <textarea name="text"></textarea>
-         <input type="submit" name="tel" value="Надіслати">
+         <input type="submit" value="Надіслати" name="contactBtn">
+         <!--<input type="submit" value="Надіслати">-->
       </form>
    </div>
    <div class="footer__contats-items">
