@@ -199,18 +199,10 @@ export function sendForm() {
 
          if (form) {
             if (formValidate.isRequiredTrue(form)) {
-               //const q = document.querySelector('form');
-               //console.log(q);
                const formData = new FormData(form);
-               //console.log(formData);
-               //console.log(formData.keys);
-               //console.log(formData);
-               //console.log(formData);
 
-
-               //for (let item of formData) {
-               //   console.log(item[0], item[1]);
-               //}
+               // Додаємо до форми строку данних для наскрізної аналітики
+               formData.append('trace', b24Tracker.guest.getTrace());
 
                const url = "/form/";
                //const url = "https://httpbin.org/post";
