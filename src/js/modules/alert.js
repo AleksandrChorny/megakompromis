@@ -45,10 +45,10 @@ export function run() {
 
 //set Content to Modal if this content do not set at this alert earlier
 export function setContent(htmlString) {
+   const alertContent = alert.querySelector('.alert__items');
+
    if (typeof htmlString === 'string' || htmlString instanceof String) {
       if (alert) {
-         const alertContent = alert.querySelector('.alert__items');
-
          if (alertContent && htmlString) {
             if (!alertContent.querySelector('[data-not-reset]')) {
                alertContent.innerHTML = htmlString;
@@ -74,6 +74,7 @@ export function setContent(htmlString) {
          }
       }
    } else {
+      //alertContent.innerHTML = "Вибачте, виникла помилка даних. Будь-ласка спробуйте ще раз, або скористайтесь іншим способом зв'язку";
       console.log('typeof not string')
    }
 }

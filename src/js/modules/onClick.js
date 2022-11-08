@@ -201,15 +201,19 @@ export function sendForm() {
             if (formValidate.isRequiredTrue(form)) {
                const formData = new FormData(form);
                const url = "/form/";
+               //const url = "../../login.html";
 
                getFile.includeFile(url, formData)
                   .then((data) => {
+                     //console.log(data);
                      if (data) {
+                        alert.setContent(data);
                         alert.run();
                         //alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
                         modal.close();
                         return;
                      }
+                     //alert.setContent(data);
                      alert.run();
                      //modal.close();
 
