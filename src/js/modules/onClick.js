@@ -199,14 +199,28 @@ export function sendForm() {
 
          if (form) {
             if (formValidate.isRequiredTrue(form)) {
+               //const q = document.querySelector('form');
+               //console.log(q);
                const formData = new FormData(form);
+               //console.log(formData);
+               //console.log(formData.keys);
+               //console.log(formData);
+               //console.log(formData);
+
+
+               //for (let item of formData) {
+               //   console.log(item[0], item[1]);
+               //}
+
                const url = "/form/";
+               //const url = "https://httpbin.org/post";
                //const url = "../../login.html";
 
-               getFile.includeFile(url, formData)
+               getFile.submitFormOnPhp(url, formData)
                   .then((data) => {
                      //console.log(data);
                      if (data) {
+                        //console.log(data);
                         alert.setContent(data);
                         alert.run();
                         //alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
