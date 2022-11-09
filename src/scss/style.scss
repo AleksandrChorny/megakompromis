@@ -31,6 +31,8 @@ $fz: 10px;
 
 
 //Підключаємо стилі сторніки сайту
+@import "_preloader";
+@import "_preloaderModal";
 @import "_modal";
 @import "_alert";
 @import "_contactUsForm";
