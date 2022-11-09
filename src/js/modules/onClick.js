@@ -202,17 +202,23 @@ export function sendForm() {
                //const q = document.querySelector('form');
                //console.log(q);
                const formData = new FormData(form);
-               //console.log(formData);
-               //console.log(formData.keys);
-               //console.log(formData);
-               //console.log(formData);
 
+               //додаємо  наскрізну аналітику бітрікс.
+               try {
+                  formData.append('trace', b24Tracker.guest.getTrace());
+               }
+               catch (e) {
+                  // инструкции для обработки ошибок
+                  console.log('Немає зв\'язку з Б24')
+                  //logMyErrors(e); // передать объект исключения обработчику ошибок
+               }
 
-               //for (let item of formData) {
-               //   console.log(item[0], item[1]);
-               //}
+               //! Перевірка formData
+               //*for (let item of formData) {
+               //*   console.log(item[0], item[1]);
+               //*}
 
-               const url = "/form/";
+               const url = "/formSubmit/";
                //const url = "https://httpbin.org/post";
                //const url = "../../login.html";
 
