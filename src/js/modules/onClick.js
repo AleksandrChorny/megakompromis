@@ -201,10 +201,22 @@ export function sendForm() {
             if (formValidate.isRequiredTrue(form)) {
                const formData = new FormData(form);
 
-               // Додаємо до форми строку данних для наскрізної аналітики
-               formData.append('trace', b24Tracker.guest.getTrace());
+               //додаємо  наскрізну аналітику бітрікс.
+               try {
+                  formData.append('trace', b24Tracker.guest.getTrace());
+               }
+               catch (e) {
+                  // инструкции для обработки ошибок
+                  console.log('Немає зв\'язку з Б24')
+                  //logMyErrors(e); // передать объект исключения обработчику ошибок
+               }
 
-               const url = "/form/";
+               //! Перевірка formData
+               //*for (let item of formData) {
+               //*   console.log(item[0], item[1]);
+               //*}
+
+               const url = "/formSubmit/";
                //const url = "https://httpbin.org/post";
                //const url = "../../login.html";
 
