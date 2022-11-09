@@ -202,7 +202,7 @@ export function sendForm() {
                const formData = new FormData(form);
 
                // Додаємо до форми строку данних для наскрізної аналітики
-               formData.append('trace', b24Tracker.guest.getTrace());
+               // formData.append('trace', b24Tracker.guest.getTrace());
 
                const url = "/form/";
                //const url = "https://httpbin.org/post";

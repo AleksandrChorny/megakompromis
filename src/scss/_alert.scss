@@ -12,7 +12,7 @@
 
    padding: 0;
    
-   background-color: rgba(64, 62, 59, 0.7);
+   background-color: rgba(64, 62, 59, 0.8);
    backdrop-filter: blur(3px);
    cursor: pointer;
 
@@ -31,6 +31,7 @@
       min-height: 10%;
       max-height: 100%;
       cursor: default;
+      margin-top: -6em;
       
      & button {
          //height: 46px;
@@ -56,7 +57,7 @@
    
          &:hover {
             // transform: scale(1.02);
-            //background-color: $colorLightOrange;
+            background-color: rgba(255, 255, 255, 0.3);
          }
       }
    }
@@ -67,16 +68,53 @@
       cursor: default;
 
       //padding-top: 50px;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 2em;
-
       text-align: center;
 
       //background-color: rgba(64, 62, 59, 0.8);
       color: #fff;
+      & p {
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 1.6em;
 
+         color: #fff;
+      }
    }
+   &__ico {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: auto;
+
+      margin: 0 0 3em 0;
+      & svg {
+         width: 100px;
+         height: 100px;
+         fill: #fff;
+      }
+   }
+   &__social-btn {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   
+
+      width: 80%;
+      height: auto;
+      margin: 2em auto 0 auto;
+      & svg {
+         width: 36px;
+         height: 36px;
+         fill: rgba(255, 255, 255, 0.5);
+         transition: fill .3s;
+         &:hover {
+            fill: rgba(255, 255, 255, 1);
+         }
+      }
+   }
+
    //&__close{  
    //   position: absolute;
    //   top: 8px;
