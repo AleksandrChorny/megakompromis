@@ -199,8 +199,6 @@ export function sendForm() {
 
          if (form) {
             if (formValidate.isRequiredTrue(form)) {
-               //const q = document.querySelector('form');
-               //console.log(q);
                const formData = new FormData(form);
 
                //додаємо  наскрізну аналітику бітрікс.
