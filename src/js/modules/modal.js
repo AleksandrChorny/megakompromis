@@ -45,6 +45,7 @@ export function run() {
 
 //set Content to Modal if this content do not set at this modal earlier
 export function setContent(htmlString) {
+   //console.log(htmlString)
    if (typeof htmlString === 'string' || htmlString instanceof String) {
       if (modal) {
          const modalContent = modal.querySelector('.modal__items');

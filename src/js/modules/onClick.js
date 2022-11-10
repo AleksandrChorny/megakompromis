@@ -137,13 +137,56 @@ export function ADD_actionToHeaderAndBurger() {
 
 }
 
-export function openInModal(buttonClassName) {
-   const button = document.querySelector(`.${buttonClassName}`);
+
+//export function openInModal(buttonClassName) {
+//   const button = document.querySelector(`.${buttonClassName}`);
+//   if (button) {
+//      document.addEventListener('click', getModal);
+//      function getModal(event) {
+//         if (event.target.closest(`.${buttonClassName}`)) {
+//            const url = button.dataset.form;
+
+//            getFile.includeFile(url, {})
+//               .then((modalContent) => {
+//                  modal.setContent(modalContent);
+//                  //modal.querySelector('.modal__content').innerHTML = data;
+//                  // console.log(data['id']); // JSON data parsed by `response.json()` call
+//                  //console.log(data)
+//                  //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
+//               });
+
+//            modal.run();
+//         }
+//      }
+//   }
+//}
+export function openInModal(buttonName) {
+   const button = document.querySelector(`[name = ${buttonName}]`);
+
+   //die;
+   //console.log(document.querySelector('[name=contactUs]'))
    if (button) {
       document.addEventListener('click', getModal);
       function getModal(event) {
-         if (event.target.closest(`.${buttonClassName}`)) {
+         if (event.target.closest(`[name = ${buttonName}]`)) {
             const url = button.dataset.form;
+            const preloader = document.querySelector(`.spinner`);
+            //const el = document.querySelector("div.user-panel.main input[name='login']");
+
+
+            //console.log(document.querySelector(`.modal`))
+            //console.log(document.querySelector(`.modal [name = ${buttonName}]`))
+            //console.log(document.querySelector('.modal').forms[buttonName])
+            //Якщо існує форма ім'я якої дорівнює імені кнопки запускаємо модалку
+            if (document.querySelector(`.modal [name = ${buttonName}]`)) {
+               modal.run();
+               console.log('run')
+               return;
+            }
+            modal.setContent(preloader);
+            modal.run();
+            //console.log('svdbfng')
+            //console.log(document.forms[buttonName])
 
             getFile.includeFile(url, {})
                .then((modalContent) => {
@@ -153,8 +196,6 @@ export function openInModal(buttonClassName) {
                   //console.log(data)
                   //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
                });
-
-            modal.run();
          }
       }
    }
@@ -180,52 +221,57 @@ export function hideNavigate() {
 export function sendForm() {
    //const button = document.querySelector('.modal');
    document.addEventListener('click', sendForm);
-
-
    function sendForm(event) {
-      const listOfForm = [
-         'contactBtn',
-         'loginBtn',
-         'registrationBtn'
-      ]
+      //const listOfForm = [
+      //   'contactBtn',
+      //   'loginBtn',
+      //   'registrationBtn'
+      //]
       //console.log(listOfForm.includes('contactBtn'));
       //console.log(listOfForm.indexOf('contactBtn1'));
       //if (event.target.closest('.form')) {
 
 
-      if (event.target.type == 'submit' && listOfForm.includes(event.target.name)) {
+      if (event.target.type == 'submit'
+         // && listOfForm.includes(event.target.name)
+      ) {
          event.preventDefault();
+         //const button = event.target;
+         //const ButtonName = button.getAttribute("name")
          const form = event.target.form;
+         const formName = form.getAttribute("name");
 
          if (form) {
             if (formValidate.isRequiredTrue(form)) {
                const formData = new FormData(form);
+
+               formData.append('formName', formName);
 
                //додаємо  наскрізну аналітику бітрікс.
                try {
                   formData.append('trace', b24Tracker.guest.getTrace());
                }
                catch (e) {
-                  // инструкции для обработки ошибок
+                  // Інструкції для обробки помилок
                   console.log('Немає зв\'язку з Б24')
                   //logMyErrors(e); // передать объект исключения обработчику ошибок
                }
 
                //! Перевірка formData
-               //*for (let item of formData) {
-               //*   console.log(item[0], item[1]);
-               //*}
+               //for (let item of formData) {
+               //   console.log(item[0], item[1]);
+               //}
 
-               const url = "/formSubmit/";
+               const url = "/form/submit/";
                //const url = "https://httpbin.org/post";
                //const url = "../../login.html";
 
                getFile.submitFormOnPhp(url, formData)
-                  .then((data) => {
+                  .then((response) => {
                      //console.log(data);
-                     if (data) {
+                     if (response) {
                         //console.log(data);
-                        alert.setContent(data);
+                        alert.setContent(response);
                         alert.run();
                         //alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
                         modal.close();
