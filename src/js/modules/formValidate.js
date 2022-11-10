@@ -5,32 +5,36 @@ export function isRequiredTrue(form) {
    //const inputType = event.target.type;
 
    if (requiredInputs.length > 0) {
-      requiredInputs.forEach(input => {
-         input.addEventListener('focus', (event) => {
-            event.target.classList.remove('wrongValue');
-            event.target.style.backgroundColor = null;
+      requiredInputs.forEach(requiredInput => {
+         requiredInput.addEventListener('focus', (event) => {
+            const focusInput = event.target
+            //Знімаємо виділення не правильно введених данних
+            focusInput.classList.remove('wrongValue');
+            focusInput.style.backgroundColor = null;
          });
 
-         input.addEventListener('blur', (event) => {
-            if (!event.target.value) {
-               //console.log(event.target)
+         requiredInput.addEventListener('blur', (event) => {
+            const blurInput = event.target
+            if (!blurInput.value) {
+               //console.log(blurInput)
 
                //modal.classList.add('_passive');
-               event.target.classList.add('wrongValue');
-               event.target.style.backgroundColor = '#F7931E';
+               //Відмічаємо інпути з помилками
+               blurInput.classList.add('wrongValue');
+               blurInput.style.backgroundColor = '#F7931E';
                //return result = false;
             }
          });
 
-         if (input.value && result == false) {
+         if (requiredInput.value && result == false) {
             return result = false;
          }
-         if (input.value) {
+         if (requiredInput.value) {
             return result = true;
          }
-         if (!input.value) {
-            input.classList.add('wrongValue');
-            input.style.backgroundColor = '#F7931E';
+         if (!requiredInput.value) {
+            requiredInput.classList.add('wrongValue');
+            requiredInput.style.backgroundColor = '#F7931E';
             return result = false;
          }
       });
