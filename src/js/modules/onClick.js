@@ -163,39 +163,31 @@ export function ADD_actionToHeaderAndBurger() {
 export function openInModal(buttonName) {
    const button = document.querySelector(`[name = ${buttonName}]`);
 
-   //die;
-   //console.log(document.querySelector('[name=contactUs]'))
    if (button) {
       document.addEventListener('click', getModal);
       function getModal(event) {
          if (event.target.closest(`[name = ${buttonName}]`)) {
             const url = button.dataset.form;
-            const preloader = document.querySelector(`.spinner`);
-            //const el = document.querySelector("div.user-panel.main input[name='login']");
 
-
-            //console.log(document.querySelector(`.modal`))
-            //console.log(document.querySelector(`.modal [name = ${buttonName}]`))
-            //console.log(document.querySelector('.modal').forms[buttonName])
+            let preloader = document.querySelector(`.spinner`);
+            if (preloader) {
+               preloader = preloader.innerHTML;
+            }
             //Якщо існує форма ім'я якої дорівнює імені кнопки запускаємо модалку
-            if (document.querySelector(`.modal [name = ${buttonName}]`)) {
+            if (document.querySelector(`.modal form[name = ${buttonName}]`)) {
                modal.run();
-               console.log('run')
                return;
             }
-            modal.setContent(preloader);
+            //Вставляємо прелоедер
+            document.querySelector('.modal__items').innerHTML = preloader;
             modal.run();
-            //console.log('svdbfng')
-            //console.log(document.forms[buttonName])
 
+            //!setTimeout(() => {
             getFile.includeFile(url, {})
                .then((modalContent) => {
                   modal.setContent(modalContent);
-                  //modal.querySelector('.modal__content').innerHTML = data;
-                  // console.log(data['id']); // JSON data parsed by `response.json()` call
-                  //console.log(data)
-                  //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
                });
+            //!}, "2000")
          }
       }
    }
@@ -228,7 +220,7 @@ export function sendForm() {
       //   'registrationBtn'
       //]
       //console.log(listOfForm.includes('contactBtn'));
-      //console.log(listOfForm.indexOf('contactBtn1'));
+      //console.log(event.target.type);
       //if (event.target.closest('.form')) {
 
 
@@ -239,13 +231,17 @@ export function sendForm() {
          //const button = event.target;
          //const ButtonName = button.getAttribute("name")
          const form = event.target.form;
-         const formName = form.getAttribute("name");
+         //const formName = form.getAttribute("name");
 
          if (form) {
             if (formValidate.isRequiredTrue(form)) {
                const formData = new FormData(form);
 
-               formData.append('formName', formName);
+               if (form.getAttribute("name")) {
+                  formData.append('formName', form.getAttribute("name"));
+               }
+
+
 
                //додаємо  наскрізну аналітику бітрікс.
                try {
@@ -258,9 +254,9 @@ export function sendForm() {
                }
 
                //! Перевірка formData
-               //for (let item of formData) {
-               //   console.log(item[0], item[1]);
-               //}
+               //!for (let item of formData) {
+               //!   console.log(item[0], item[1]);
+               //!}
 
                const url = "/form/submit/";
                //const url = "https://httpbin.org/post";

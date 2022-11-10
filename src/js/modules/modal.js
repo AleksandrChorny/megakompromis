@@ -45,38 +45,40 @@ export function run() {
 
 //set Content to Modal if this content do not set at this modal earlier
 export function setContent(htmlString) {
+   const modalContent = modal.querySelector('.modal__items');
+   modalContent.innerHTML = htmlString;
    //console.log(htmlString)
-   if (typeof htmlString === 'string' || htmlString instanceof String) {
-      if (modal) {
-         const modalContent = modal.querySelector('.modal__items');
+   //if (typeof htmlString === 'string' || htmlString instanceof String) {
+   //   if (modal) {
+   //      const modalContent = modal.querySelector('.modal__items');
 
-         if (modalContent && htmlString) {
-            if (!modalContent.querySelector('[data-not-reset]')) {
-               modalContent.innerHTML = htmlString;
-               return;
-            }
+   //      if (modalContent && htmlString) {
+   //         if (!modalContent.querySelector('[data-not-reset]')) {
+   //            modalContent.innerHTML = htmlString;
+   //            return;
+   //         }
 
-            if (modalContent.querySelector('[data-not-reset]')) {
+   //         if (modalContent.querySelector('[data-not-reset]')) {
 
-               const parser = new DOMParser();
-               let newHtml = parser.parseFromString(htmlString, "text/html");
+   //            const parser = new DOMParser();
+   //            let newHtml = parser.parseFromString(htmlString, "text/html");
 
-               if (newHtml.querySelector('[data-not-reset]')) {
-                  if (newHtml.querySelector('[data-not-reset]').dataset.notReset !== modalContent.querySelector('[data-not-reset]').dataset.notReset) {
-                     modalContent.innerHTML = htmlString;
-                  }
-                  return;
-               }
+   //            if (newHtml.querySelector('[data-not-reset]')) {
+   //               if (newHtml.querySelector('[data-not-reset]').dataset.notReset !== modalContent.querySelector('[data-not-reset]').dataset.notReset) {
+   //                  modalContent.innerHTML = htmlString;
+   //               }
+   //               return;
+   //            }
 
-               if (newHtml) {
-                  modalContent.innerHTML = htmlString;
-               }
-            }
-         }
-      }
-   } else {
-      console.log('typeof not string')
-   }
+   //            if (newHtml) {
+   //               modalContent.innerHTML = htmlString;
+   //            }
+   //         }
+   //      }
+   //   }
+   //} else {
+   //   console.log('typeof not string')
+   //}
 }
 
 //export function closeModal() {
