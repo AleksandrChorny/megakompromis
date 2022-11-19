@@ -126,11 +126,7 @@
 
       background-color: $colorDarkGray;
       color: $colorWhite;
-      .login{
-         height: 36px;
-         width: 36px;
-         background-color: transparent;
-      }
+      
       a {
          display: flex;
          justify-content: center;
@@ -153,6 +149,87 @@
       
       @media (max-width: 1200px) {
          padding: 0 8px;
+      }
+   }
+   &__left-elements{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .login{
+         height: 36px;
+         width: 36px;
+         background-color: transparent;
+         svg {
+            height: 32px;
+            width: 32px;
+            fill: $colorWhite;
+            transition: all 0.5s;
+         }
+      }
+      .search {
+         min-width: 275px;
+         //width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         //padding: 0 2em;
+         height: 37px;
+         //background-color: $colorTest;
+         &._action{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            background-color: rgba(64, 62, 59, 0.7);
+            backdrop-filter: blur(3px);
+
+         }
+         &__close{
+            height: 37px;
+            width: 37px;
+            border-radius: 50%;
+            border: 1px solid $colorWhite;
+         }
+         &__elements{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 31px;
+            //padding: 0 1em;
+            border: 1px solid $colorWhite;
+            border-radius: 52px;
+            //background-color: $colorTest;
+            svg   {
+               margin: 0 1em;
+               height: 21px;
+               width: 21px;
+               fill: $colorWhite;
+            }
+            input {
+               //min-width: 275px;
+               //width: auto;
+               //padding-left: 1em;
+               //color: red;
+               color: $colorWhite;
+               //background: red;
+               background: transparent;
+            }
+            input::placeholder {
+               
+               color: $colorWhite;
+               //background: red;
+               //background: transparent;
+            }
+            
+            //input[type=submit]
+            //input[placeholder] {
+            //   color: red;
+            //   //background: transparent;
+            //}
+         }
       }
    }
    &__mid-line{
