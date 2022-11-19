@@ -1,6 +1,23 @@
 <header class="header">
    <div class="header__top-line wraper">
-      <button class="login" type="button" name="login" data-form="../../login.html"></button>
+      <div class="header__left-elements">
+         <button class="login" type="button" name="login" data-form="../../login.html">
+            <svg>
+               <use xlink:href="@img/icons/icons.svg#enter"></use>
+            </svg>
+         </button>
+         <div class="search">
+            <div class="search__elements">
+               <svg>
+                  <use xlink:href="@img/icons/icons.svg#search"></use>
+               </svg>
+               <input type="search" name="name" placeholder="Пошук">
+            </div>
+            <div class="search__close">
+
+            </div>
+         </div>
+      </div>
       <a href="/ru/" title="Перекласти сторінку">
          <p></p>
          <svg>

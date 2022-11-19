@@ -287,3 +287,15 @@ export function sendForm() {
       }
    }
 }
+
+export function serchPanel() {
+   document.addEventListener('click', openSerachPanel);
+
+   function openSerachPanel(event) {
+      if (event.target.closest('.search__elements')) {
+         document.querySelector('.search').classList.add('_action')
+         console.log(document.querySelector('.search'));
+
+      }
+   }
+}

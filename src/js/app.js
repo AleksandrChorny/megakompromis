@@ -18,6 +18,7 @@ onClick.openInModal('contactUs');
 //onClick.openInModalTest('contacts-button');
 onClick.hideNavigate();
 onClick.sendForm();
+onClick.serchPanel();
 //modal.activateBlock({
 //   actionBlockClass: 'modal',
 //   buttonToActionBlockClass: 'heder__button',
