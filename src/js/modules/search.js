@@ -96,7 +96,7 @@ export function mySearch(inputValue) {
             link.append(card);
 
             const img = document.createElement('img');
-            img.setAttribute('src', '/img/goods/' + element.fileName + '_001.jpeg');
+            img.setAttribute('src', `/img/goods/${element.file_name}_002.jpg`);
             img.setAttribute('alt', element.altImg);
             card.append(img);
 
