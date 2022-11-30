@@ -57,12 +57,15 @@ export function mySearch(inputValue) {
    getFile.getJsonOnPhp(url, formData)
       .then((searchData) => {
          if (searchData) {
+            if (searchData == 'fulse') {
+               //TODO close spinner preloader if this nid
+               searchResult.append(createNosingNotFound());
+               return;
+            }
             //TODO close spinner preloader if this nid
             searchResult.replaceWith(createSearchResults(searchData));
             return;
          }
-         //TODO close spinner preloader if this nid
-         searchResult.append(createNosingNotFound());
       });
 
    function createNosingNotFound() {
@@ -82,10 +85,8 @@ export function mySearch(inputValue) {
    function createSearchResults(searchData) {
       const result = document.createElement('div');
       result.classList.add(`${searchResultsClassName}`);
-
       searchData.forEach(element => {
          if (element) {
-            console.log(element)
             const link = document.createElement('a');
             link.setAttribute('href', element.link);
 
