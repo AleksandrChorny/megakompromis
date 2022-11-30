@@ -12,6 +12,15 @@
    overflow: hidden;
    //margin-top: 4px;
    width: 100%;
+   @media (max-width: 768px) {
+      grid-template-columns: 100%;
+      grid-template-areas:
+      "t"
+      "f"
+      "i"
+      "w"
+      "l";
+   }
    p{
       color: $colorLightGray;
    }
@@ -34,7 +43,7 @@
          text-transform: uppercase;
       }
    }
-   &__contats-items {
+   &__contacts-items {
       grid-area: i;
 
       display: grid;
@@ -48,6 +57,8 @@
 
       
       align-items: center;
+      
+
       width: 85%;
       height: 400px;
       margin: 15px auto 0 auto;
@@ -57,6 +68,17 @@
       }
       @media (max-width: 768px) {
          width: 80%;
+         justify-content: center;
+         //align-self: center;
+         //justify-self: center;
+      }
+      @media (max-width: 426px) {
+         grid-template: 
+         "c cd"
+         "e ed"
+         "a ad"
+         "cm cm"
+         /max-content 100%;
       }
       //width: 85%;
       margin-bottom: 15px;
@@ -72,12 +94,19 @@
          white-space: nowrap;
          line-height: normal;
          margin-left: 15px;
+         @media (max-width: 426px) {
+            white-space: normal;
+
+         }
       }
       ._call {
          grid-area: c;
       }
       ._call-title {
          grid-area: ct;
+         @media (max-width: 426px) {
+            display: none;
+         }
 
       }
       ._call-description {
@@ -89,6 +118,9 @@
       }
       ._e-mail-title {
          grid-area: et;
+         @media (max-width: 426px) {
+            display: none;
+         }
       }
       ._e-mail-description {
          grid-area: ed;
@@ -98,6 +130,9 @@
       }
       ._adress-title {
          grid-area: at;
+         @media (max-width: 426px) {
+            display: none;
+         }
       }
       ._adress-description {
          grid-area: ad;
@@ -106,7 +141,7 @@
          width: 80%;
       }
    }
-   &__contats-media{
+   &__contacts-media{
       grid-area: cm;
 
       justify-content: center;

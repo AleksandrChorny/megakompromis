@@ -1,3 +1,4 @@
+import * as search from "./search.js";
 import * as modal from "./modal.js";
 import * as alert from "./alert.js";
 import * as getFile from "./includeFile.js";
@@ -137,30 +138,8 @@ export function ADD_actionToHeaderAndBurger() {
 
 }
 
-
-//export function openInModal(buttonClassName) {
-//   const button = document.querySelector(`.${buttonClassName}`);
-//   if (button) {
-//      document.addEventListener('click', getModal);
-//      function getModal(event) {
-//         if (event.target.closest(`.${buttonClassName}`)) {
-//            const url = button.dataset.form;
-
-//            getFile.includeFile(url, {})
-//               .then((modalContent) => {
-//                  modal.setContent(modalContent);
-//                  //modal.querySelector('.modal__content').innerHTML = data;
-//                  // console.log(data['id']); // JSON data parsed by `response.json()` call
-//                  //console.log(data)
-//                  //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
-//               });
-
-//            modal.run();
-//         }
-//      }
-//   }
-//}
 export function openInModal(buttonName) {
+
    const button = document.querySelector(`[name = ${buttonName}]`);
 
    if (button) {
@@ -266,7 +245,7 @@ export function sendForm() {
                   .then((response) => {
                      //console.log(data);
                      if (response) {
-                        //console.log(data);
+                        console.log(response);
                         alert.setContent(response);
                         alert.run();
                         //alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
@@ -288,14 +267,12 @@ export function sendForm() {
    }
 }
 
-export function serchPanel() {
-   document.addEventListener('click', openSerachPanel);
+export function searchPanel() {
+   document.addEventListener('click', openSearchPanel);
 
-   function openSerachPanel(event) {
-      if (event.target.closest('.search__elements')) {
-         document.querySelector('.search').classList.add('_action')
-         console.log(document.querySelector('.search'));
-
+   function openSearchPanel(event) {
+      if (event.target.closest('.search__input')) {
+         search.run()
       }
    }
 }

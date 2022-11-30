@@ -2,6 +2,7 @@
 import * as webp from "./modules/isWebp.js";
 import * as onScroll from "./modules/onScroll.js";
 import * as onClick from "./modules/onClick.js";
+import * as header from "./modules/header.js";
 //import * as modal from "./modules/activateBlock.js";
 import * as goods from "./modules/goods.js";
 
@@ -18,7 +19,8 @@ onClick.openInModal('contactUs');
 //onClick.openInModalTest('contacts-button');
 onClick.hideNavigate();
 onClick.sendForm();
-onClick.serchPanel();
+header.searchPanel();
+//header.searchPanel();
 //modal.activateBlock({
 //   actionBlockClass: 'modal',
 //   buttonToActionBlockClass: 'heder__button',

@@ -1,5 +1,5 @@
 .alert{
-   position: absolute;
+   position: fixed;
    z-index: 998;
    top: -100vh;
    
@@ -13,7 +13,7 @@
    padding: 0;
    
    background-color: rgba(64, 62, 59, 0.8);
-   backdrop-filter: blur(3px);
+   backdrop-filter: blur(20px);
    cursor: pointer;
 
    overflow-y: auto;
