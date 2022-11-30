@@ -365,6 +365,11 @@ $animateTimePassive: .5s;
       justify-items: center;
       align-items: start;
       gap: 18px;
+
+      &._center {
+         grid-auto-rows: auto;
+         align-items: center;
+      }
    }
    &__resultCard {
       display: none;
@@ -372,7 +377,7 @@ $animateTimePassive: .5s;
 }
 
 
-.searchResultCard {
+.search-card {
    display: none;
    align-items: center;
    width: 360px;
@@ -383,7 +388,13 @@ $animateTimePassive: .5s;
    box-shadow: 2px 2px 4px rgba(64, 62, 59, 0.5);
    border-radius: 25px;
 
+
    text-transform: none;
+
+   &._transparency {
+      background: rgba(255, 255, 255, 0);
+      box-shadow: none;
+   }
    @media (max-width: 426px) {
       width: 95vw;
    }
@@ -394,11 +405,15 @@ $animateTimePassive: .5s;
    }
    &__content {
       height: 100%;
+      width: 100%;
       margin-left: 1em;
       color: $colorDarkGray;
       text-align: left;
 
       overflow: hidden;
+      &._non-margin-left {
+         margin: 0;
+      }
      
    }
    &__title {
@@ -424,6 +439,11 @@ $animateTimePassive: .5s;
       font-size: 12px;
       line-height: 15px;
       text-transform: none;
+      &._start-message {
+         text-align: center;
+         color: $colorWhite;
+         font-size: 1.5em;
+      }
    }
 }
 
