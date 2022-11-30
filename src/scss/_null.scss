@@ -80,3 +80,35 @@ h6 {
    text-align: center;
 }
 /*--------------------*/
+
+/* width */
+::-webkit-scrollbar {
+   width: 5px;
+   transition: all .3s;
+   &:hover {
+      width: 9px;
+   }
+ }
+ 
+ 
+ /* Track */
+// ::-webkit-scrollbar-track {
+//   //background-color: rgba(64, 62, 59, 0.4);
+//      //backdrop-filter: blur(20px);
+//      //opacity: 0.5;
+// }
+
+// ::-webkit-scrollbar-track:hover {
+//   //background: #14dfe6;
+// }
+ 
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+   background: #6f6f6f;
+ }
+ 
+ /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }

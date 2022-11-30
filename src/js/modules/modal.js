@@ -1,4 +1,6 @@
-const body = document.querySelector("body");
+import * as body from "./body.js";
+
+//const body = document.querySelector("body");
 const modal = document.querySelector('.modal');
 const closeButton = document.querySelector('.modal__close');
 //const modalWindow = document.querySelector('.modal__close');
@@ -15,9 +17,7 @@ export function close() {
       if (document.querySelector('.alert').closest('._action')) {
          return;
       }
-      if (body.style.overflow == "hidden") {
-         body.style.overflow = "";
-      }
+      body.scrole();
    }
 }
 
@@ -25,9 +25,8 @@ export function run() {
    if (modal && !modal.closest('._action')) {
       modal.classList.remove('_passive');
       modal.classList.add('_action');
-      if (body.style.overflow !== "hidden") {
-         body.style.overflow = "hidden";
-      }
+      body.noneScrole();
+
    }
 
    if (closeButton) {
