@@ -70,10 +70,10 @@ export function mySearch(inputValue) {
 
    function createNosingNotFound() {
       const searchResult = document.createElement('div');
-      searchResult.classList.add('search__resultCard', 'searchResultCard');
+      searchResult.classList.add('search__result-card', 'searchResultCard');
 
       const searchDescription = document.createElement('p');
-      searchDescription.classList.add('searchResultCard__description');
+      searchDescription.classList.add('search-card__description');
       searchDescription.textContent = 'Нічого не знайшли';
 
 
@@ -87,37 +87,38 @@ export function mySearch(inputValue) {
       result.classList.add(`${searchResultsClassName}`);
       searchData.forEach(element => {
          if (element) {
+            console.log(element);
             const link = document.createElement('a');
             link.setAttribute('href', element.link);
 
 
             const card = document.createElement('div');
-            card.classList.add('search__resultCard', 'searchResultCard');
+            card.classList.add('search__result-card', 'search-card');
             //card.textContent = element.img;
             link.append(card);
 
             const img = document.createElement('img');
-            img.setAttribute('src', `/img/goods/${element.file_name}_002.jpg`);
+            img.setAttribute('src', `/img/goods/${element.file_name}_${element.color}.jpg`);
             img.setAttribute('alt', element.altImg);
             card.append(img);
 
             const content = document.createElement('div');
-            content.classList.add('searchResultCard__content');
+            content.classList.add('search-card__content');
             card.append(content);
 
             const title = document.createElement('h3');
-            title.classList.add('searchResultCard__title');
+            title.classList.add('search-card__title');
             title.textContent = element.title;
             content.append(title);
 
             const art = document.createElement('p');
-            art.classList.add('searchResultCard__art');
+            art.classList.add('search-card__art');
             art.textContent = element.art;
             content.append(art);
 
             const description = document.createElement('p');
-            description.classList.add('searchResultCard__description');
-            description.textContent = element.description;
+            description.classList.add('search-card__description');
+            description.innerHTML = element.description;
             content.append(description);
 
             result.append(link);
