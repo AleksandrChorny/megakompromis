@@ -193,7 +193,7 @@ $animateTimePassive: .5s;
          animation-fill-mode: forwards;
          ////overflow: hidden;
       }
-      .search__resultCard {
+      .search__result-card {
          display: flex;
          animation: actionSearchResultCard $animateTime;
          animation-fill-mode: forwards;
@@ -263,7 +263,7 @@ $animateTimePassive: .5s;
          animation-fill-mode: forwards;
          ////overflow: hidden;
       }
-      .search__resultCard {
+      .search__result-card {
          display: flex;
          animation: passiveSearchResultCard $animateTime;
          animation-fill-mode: forwards;
@@ -374,7 +374,7 @@ $animateTimePassive: .5s;
          align-items: center;
       }
    }
-   &__resultCard {
+   &__result-card {
       display: none;
    }
 }
