@@ -11,6 +11,37 @@ $colorTest: lightblue;
 //Призначаю шрифти проекту
 $fontFamily: "Montserrat", sans-serif;
 
+
+:root {
+    --widthSearchInput: 500px; // Ширина (input) строки пошуку
+    --marginRightSearchElements: 3em; //  Відступ (search__elements) строки пошука від кнопкі закріття пошука
+    --widthSearchPassive100: 250px; // Ширина (search) поля пошуку писля переходу з стану "action" в стан "passive" (@keyframes passiveSearch 100%)
+    @media (max-width: 600px) {
+        --widthSearchInput: 400px;
+    }
+    @media (max-width: 514px) {
+        --widthSearchInput: 350px;
+     }
+    @media (max-width: 425px) {
+        --widthSearchInput: 295px;
+        --marginRightSearchElements: 1.5em;
+    }
+    @media (max-width: 375px) {
+        --widthSearchInput: 245px;
+    }
+    @media (max-width: 375px) {
+        --widthSearchInput: 230px;
+    }
+    @media (max-width: 320px) {
+        --widthSearchInput: 210px;
+        --widthSearchPassive100: 220px;
+    }
+}
+
+
+ 
+
+
 //Призначаю додаткові змінні проекту
 // calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
 //$adaptiveFZ: calc(12px + (20 - 12) * ((100vw - 770px) / (1600 - 770)));
