@@ -14,3 +14,15 @@ export function run() {
    //set preloader
    document.querySelector('.search__result').innerHTML = preloader;
 }
+
+export function createPreloaderSpinner() {
+   const result = document.createElement('div');
+   const divSpinner = document.createElement('div');
+   result.classList.add('preloader-spinner');
+
+   result.append(divSpinner);
+   result.append(divSpinner);
+   result.append(divSpinner);
+
+   return result;
+}
