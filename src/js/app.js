@@ -13,7 +13,7 @@ onScroll.fixedHeaderAndMainMenu();
 onClick.ADD_actionToHeaderAndBurger();
 //onClick.openLoginInModal();
 //onClick.openContactUsInModal();
-onClick.openInModal('login');
+//onClick.openInModal('login');
 //onClick.openInModal('contacts-button');
 onClick.openInModal('contactUs');
 //onClick.openInModalTest('contacts-button');
