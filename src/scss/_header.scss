@@ -535,7 +535,10 @@ $animateTimePassive: .5s;
 
       //font-size: 1.4em;
 
-      background-color: $colorLightGray;
+      //background-color: $colorLightGray;
+      background: rgba(246, 246, 246, 0.6);
+      backdrop-filter: blur(12px);
+      //-webkit-backdrop-filter: blur(5px);
       color: $colorBlue;
       overflow: hidden;
       
@@ -552,7 +555,8 @@ $animateTimePassive: .5s;
             top: 0;
             width: 100%;
             height: 44px;
-            background-color: $colorLightGray;
+            //background-color: $colorLightGray;
+            background: rgba(246, 246, 246, 0.6);
             z-index: -1;
          }
       }
