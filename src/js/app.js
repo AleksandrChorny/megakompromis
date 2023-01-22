@@ -1,15 +1,28 @@
 //Подключение файлов js из папки 'modules'
 import * as webp from "./modules/isWebp.js";
+import * as header from "./modules/header.js"
+
+
 import * as onScroll from "./modules/onScroll.js";
 import * as onClick from "./modules/onClick.js";
-import * as header from "./modules/header.js";
+//import * as header from "./modules/header.js";
 //import * as modal from "./modules/activateBlock.js";
 import * as goods from "./modules/goods.js";
 
 //!! import * as test from "./modules/test.js";
 
 webp.isWebp();
-onScroll.fixedHeaderAndMainMenu();
+
+header.fixedContactBar();
+header.unFixedContactBar();
+header.fixedMainMenu();
+header.unFixedMainMenu();
+
+//header.viewContactForm();
+
+header.searchPanel();
+
+
 onClick.ADD_actionToHeaderAndBurger();
 //onClick.openLoginInModal();
 //onClick.openContactUsInModal();
@@ -19,7 +32,6 @@ onClick.openInModal('contactUs');
 //onClick.openInModalTest('contacts-button');
 onClick.hideNavigate();
 onClick.sendForm();
-header.searchPanel();
 //header.searchPanel();
 //modal.activateBlock({
 //   actionBlockClass: 'modal',

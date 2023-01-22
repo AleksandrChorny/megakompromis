@@ -18,15 +18,15 @@ export function close() {
    }
 }
 
-//run search
+//run search panel
 export function run() {
-   //add style left $ top to var
+   //add style left & top to variable css
    const styleOfsetX = search.getBoundingClientRect().x;
    const styleOfsetY = search.getBoundingClientRect().y;
    search.style.cssText = `--searchLeft: ${styleOfsetX}px; --searchTop: ${styleOfsetY}px;`;
 
-   //manipulate classes _action or _passive to run search
-   if (search && !search.closest('._action')) {
+   //on search remove _passive  and add _action tu run search
+   if (search) {
       search.classList.remove('_passive');
       search.classList.add('_action');
       body.noneScrole();
@@ -67,11 +67,11 @@ export function mySearch(inputValue) {
       .then((searchData) => {
          if (searchData) {
             if (searchData == 'fulse') {
-               //TODO close spinner preloader if this nid
+               //TODO close spinner preloader if this nead
                searchResult.append(createNosingNotFound());
                return;
             }
-            //TODO close spinner preloader if this nid
+            //TODO close spinner preloader iif it's necessary
             searchResult.replaceWith(createSearchResults(searchData));
             return;
          }

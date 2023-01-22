@@ -80,6 +80,10 @@ export function setContent(htmlString) {
    //}
 }
 
+export function createModal() {
+   //TODO create html modal window
+}
+
 //export function closeModal() {
 //   function closeModal() {
 //      modal.classList.remove('._action');
