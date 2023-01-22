@@ -10,6 +10,7 @@ import * as goods from "./modules/goods.js";
 
 webp.isWebp();
 onScroll.fixedHeaderAndMainMenu();
+
 onClick.ADD_actionToHeaderAndBurger();
 //onClick.openLoginInModal();
 //onClick.openContactUsInModal();
