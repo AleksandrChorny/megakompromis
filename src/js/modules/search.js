@@ -44,53 +44,58 @@ export function run() {
    }
 }
 
+//search fuunction
 export function mySearch(inputValue) {
+   //get variable
    const searchResult = document.querySelector(`.${searchResultsClassName}`);
    const url = "/form/submit/";
    const formData = new FormData();
    const language = document.documentElement.lang;
 
-   //TODO run spinner preloader
+   //run spinner preloader befor get search result
    const pre = document.createElement('div');
    pre.classList.add('search__results', '_center');
    pre.append(preloader.createPreloaderSpinner());
    searchResult.replaceWith(pre);
-   die();
-   //console.log(language);
-   //console.log(formData);
 
+   //set input and formName to formdata
    formData.append('formName', 'mySearch');
    formData.append('inputValue', inputValue);
    //formData.append('language', language);
 
+   //get search result from backEnd
    getFile.getJsonOnPhp(url, formData)
       .then((searchData) => {
          if (searchData) {
             if (searchData == 'fulse') {
-               //TODO close spinner preloader if this nid
-               searchResult.append(createNosingNotFound());
+               const s = document.querySelector('.search__results')
+               document.querySelector('.search__results').replaceWith(createNosingNotFound());
+               //searchResult.replaceWith(document.createElement('div'));
                return;
             }
             //TODO close spinner preloader if this nid
-            searchResult.replaceWith(createSearchResults(searchData));
+            document.querySelector('.search__results').replaceWith(createSearchResults(searchData));
             return;
          }
       });
 
    function createNosingNotFound() {
-      const searchResult = document.createElement('div');
-      searchResult.classList.add('search__result-card', 'searchResultCard');
-
       const searchDescription = document.createElement('p');
       searchDescription.classList.add('search-card__description');
-      searchDescription.textContent = 'Нічого не знайшли';
+      searchDescription.textContent = 'Нічого не знайдено, спробуйте ще';
       if (language == 'ru-UA') {
-         searchDescription.textContent = 'Ничего не найдено';
+         searchDescription.textContent = 'Ничего не найдено. попробуйте еще';
       }
 
+      const searchResult = document.createElement('div');
+      searchResult.classList.add('search__result-card', 'search-card');
       searchResult.append(searchDescription);
 
-      return searchResult;
+      const results = document.createElement('div');
+      results.classList.add('search__results')
+      results.append(searchResult)
+
+      return results;
    }
 
    function createSearchResults(searchData) {

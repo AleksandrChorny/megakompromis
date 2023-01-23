@@ -51,6 +51,10 @@ export async function getJsonOnPhp(url = '', data) {
       method: 'POST',
       body: data
    });
+   if (!response.ok) {
+      console.log(`catch error '${response.status}'`)
+      return 'fulse';
+   }
    if (response.ok) {
       return await response.json();
    }
