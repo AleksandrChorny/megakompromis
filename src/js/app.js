@@ -8,6 +8,7 @@ import * as onClick from "./modules/onClick.js";
 //import * as header from "./modules/header.js";
 //import * as modal from "./modules/activateBlock.js";
 import * as goods from "./modules/goods.js";
+import * as goods from "./modules/roznica.js";
 
 //!! import * as test from "./modules/test.js";
 
