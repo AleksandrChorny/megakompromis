@@ -1,4 +1,8 @@
 // Показати модалку з налаштуваннями, чекбоксами вибору.
+import * as formValidate from "./formValidate.js";
+import * as includeFile from "./includeFile.js";
+
+
 export function viewSettings() {
    const settingsBtn = document.querySelector('.settings-btn');
    const settingsMenu = document.querySelector('.settings');
@@ -180,6 +184,61 @@ export function setOrderTitle() {
          const location = document.querySelector('.settings .settings__front-back input:checked').dataset.location;
          const title = document.querySelector('.catalog-prints .tile ._selected picture img').getAttribute('title');
          document.querySelector('.order h2').innerHTML = `${model}, ${color} з принтом "${title}", ${location}`
+      }
+   }
+}
+
+export function sendForm() {
+   const submitButton = document.querySelector('.order .submit');
+
+   document.addEventListener('click', sendForm);
+
+   function getFormData() {
+      const result = new FormData();
+
+      const formName = document.querySelector('.order').dataset.name;
+      const formTitle = document.querySelector('.order h2').innerHTML;
+      const sizeProduct = document.querySelector('.size._visible input:checked').id;
+      const form = document.querySelector('.order form');
+
+      result.append('formName', formName);
+      result.append('formTitle', formTitle);
+      result.append('sizeProduct', sizeProduct);
+      result.append('contactName', form.name.value);
+      result.append('contactPhone', form.phone.value);
+      result.append('contactComent', form.comments.value);
+
+      //! Перевірка result
+      //for (let item of result) {
+      //   console.log(item[0], item[1]);
+      //}
+
+      return result;
+   }
+
+   function sendForm(event) {
+      const form = document.querySelector('.order form');
+      if (event.target == submitButton) {
+         if (formValidate.isRequiredTrue(form)) {
+            const formData = getFormData();
+
+            const url = "/form/submit/";
+            includeFile.submitFormOnPhp(url, formData)
+               .then((response) => {
+                  console.log(response);
+                  if (response) {
+                     //console.log(response);
+                     //alert.setContent(response);
+                     //alert.run();
+                     alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
+                     modal.close();
+                     return;
+                  }
+                  //alert.run();
+                  alert('Невдался відправити замовлення спробуй те ще раз, або скористайтесь іншим каналом звʼязку');
+               });
+
+         }
       }
    }
 }

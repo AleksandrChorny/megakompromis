@@ -14,3 +14,4 @@ roznica.setPrint();
 roznica.setChengingSettings();
 roznica.viewPhoneNomber();
 roznica.setOrderTitle();
+roznica.sendForm();
