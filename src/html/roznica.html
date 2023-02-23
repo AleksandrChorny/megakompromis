@@ -279,7 +279,7 @@
          <button class="comunication__buy" type="button">ЗАМОВИТИ</button>
       </div>
       <!-- Форма замовлення -->
-      <div class="order landing-roznica__order">
+      <div class="order landing-roznica__order" data-name="landing-roznica">
          <!-- замість data-model, data-color та title підставляються відповідні значення за допомогою JS -->
          <h2>Футболка data-model, data-color
             з принтом “title”
@@ -287,27 +287,27 @@
          <div class="size _visible" data-name="mens">
             <p>Оберіть розмір</p>
             <div class="size__input-size">
-               <input id="mens-S" type="radio" name="size" checked>
+               <input id="mens-S" type="radio" name="size-mens">
                <label for="mens-S">
                   <p>S</p>
                </label>
-               <input id="mens-M" type="radio" name="size">
+               <input id="mens-M" type="radio" name="size-mens">
                <label for="mens-M">
                   <p>M</p>
                </label>
-               <input id="mens-L" type="radio" name="size">
+               <input id="mens-L" type="radio" name="size-mens" checked>
                <label for="mens-L">
                   <p>L</p>
                </label>
-               <input id="mens-XL" type="radio" name="size">
+               <input id="mens-XL" type="radio" name="size-mens">
                <label for="mens-XL">
                   <p>XL</p>
                </label>
-               <input id="mens-XXL" type="radio" name="size">
+               <input id="mens-XXL" type="radio" name="size-mens">
                <label for="mens-XXL">
                   <p>XXL</p>
                </label>
-               <input id="mens-XXXL" type="radio" name="size">
+               <input id="mens-XXXL" type="radio" name="size-mens">
                <label for="mens-XXXL">
                   <p>XXXL</p>
                </label>
@@ -316,27 +316,27 @@
          <div class="size" data-name="ledies">
             <p>Оберіть розмір</p>
             <div class="size__input-size">
-               <input id="ledies-XS" type="radio" name="size">
+               <input id="ledies-XS" type="radio" name="size-ledies">
                <label for="ledies-XS">
                   <p>XS</p>
                </label>
-               <input id="ledies-S" type="radio" name="size">
+               <input id="ledies-S" type="radio" name="size-ledies">
                <label for="ledies-S">
                   <p>S</p>
                </label>
-               <input id="ledies-M" type="radio" name="size" checked>
+               <input id="ledies-M" type="radio" name="size-ledies" checked>
                <label for="ledies-M">
                   <p>M</p>
                </label>
-               <input id="ledies-L" type="radio" name="size">
+               <input id="ledies-L" type="radio" name="size-ledies">
                <label for="ledies-L">
                   <p>L</p>
                </label>
-               <input id="ledies-XL" type="radio" name="size">
+               <input id="ledies-XL" type="radio" name="size-ledies">
                <label for="ledies-XL">
                   <p>XL</p>
                </label>
-               <input id="ledies-XXL" type="radio" name="size">
+               <input id="ledies-XXL" type="radio" name="size-ledies">
                <label for="ledies-XXL">
                   <p>XXL</p>
                </label>
@@ -345,31 +345,31 @@
          <div class="size" data-name="kids">
             <p>Оберіть розмір</p>
             <div class="size__input-size">
-               <input id="kids-1-2" type="radio" name="size">
+               <input id="kids-1-2" type="radio" name="size-kids">
                <label for="kids-1-2">
                   <p>1-2 <br>роки</p>
                </label>
-               <input id="kids-3-4" type="radio" name="size">
+               <input id="kids-3-4" type="radio" name="size-kids">
                <label for="kids-3-4">
                   <p>3-4<br>роки</p>
                </label>
-               <input id="kids-5-6" type="radio" name="size" checked>
+               <input id="kids-5-6" type="radio" name="size-kids" checked>
                <label for="kids-5-6">
                   <p>5-6<br>років</p>
                </label>
-               <input id="kids-7-8" type="radio" name="size">
+               <input id="kids-7-8" type="radio" name="size-kids" checked>
                <label for="kids-7-8">
                   <p>7-8<br>років</p>
                </label>
-               <input id="kids-9-10" type="radio" name="size">
+               <input id="kids-9-10" type="radio" name="size-kids">
                <label for="kids-9-10">
                   <p>9-10<br>років</p>
                </label>
-               <input id="kids-11-12" type="radio" name="size">
+               <input id="kids-11-12" type="radio" name="size-kids">
                <label for="kids-11-12">
                   <p>11-12<br>років</p>
                </label>
-               <input id="kids-12-13" type="radio" name="size">
+               <input id="kids-12-13" type="radio" name="size-kids">
                <label for="kids-12-13">
                   <p>12-13<br>років</p>
                </label>
@@ -381,9 +381,9 @@
             </p>
             <form action="">
                <label for="name">Імʼя:</label>
-               <input type="text" name="name" id="name">
+               <input type="text" name="name" id="name" required>
                <label for="phone">Телефон:</label>
-               <input type="tel" name="phone" id="phone">
+               <input type="tel" name="phone" id="phone" required>
                <label for="comments">Коментар:</label>
                <textarea type="text" name="comments" id="comments"></textarea>
             </form>
