@@ -40,6 +40,8 @@ body {
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
+   min-height: 100vh;
+   min-height: -webkit-fill-available;
 }
 input,
 button,
