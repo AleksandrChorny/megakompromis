@@ -195,11 +195,11 @@ export function sendForm() {
 
    function getFormData() {
       const result = new FormData();
-
       const formName = document.querySelector('.order').dataset.name;
       const formTitle = document.querySelector('.order h2').innerHTML;
       const sizeProduct = document.querySelector('.size._visible input:checked').id;
       const form = document.querySelector('.order form');
+      const price = `${document.querySelector('.header .price b').innerHTML}${document.querySelector('.header .price i').innerHTML}`;
 
       result.append('formName', formName);
       result.append('formTitle', formTitle);
@@ -207,6 +207,7 @@ export function sendForm() {
       result.append('contactName', form.name.value);
       result.append('contactPhone', form.phone.value);
       result.append('contactComent', form.comments.value);
+      result.append('price', price);
 
       //! Перевірка result
       //for (let item of result) {
@@ -231,7 +232,7 @@ export function sendForm() {
                      //alert.setContent(response);
                      //alert.run();
                      alert('Дякуємо ми отримали ваше повідомлення скоро ми зв\'яжемося з Вами');
-                     modal.close();
+                     //modal.close();
                      return;
                   }
                   //alert.run();
