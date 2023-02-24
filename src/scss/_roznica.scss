@@ -51,6 +51,12 @@ $borderWight_1px: 1px solid $colorWight;
       background: $colorWight;
    }
 }
+.price {
+   width: auto;
+   display: flex;
+   justify-content: center;
+   align-items: baseline;
+}
 .header {
    display: flex;
    justify-content: space-between;
@@ -445,7 +451,7 @@ $borderWight_1px: 1px solid $colorWight;
          font-size: 18px;
          line-height: 1em;
          padding: 1em 2em;
-         margin: 8px 0 24px 0;
+         margin: 12px 0 24px 0;
          border-radius: 15px;
          background: $colorBlue;
          color: $colorWight;
@@ -536,6 +542,7 @@ $borderWight_1px: 1px solid $colorWight;
          height: 36px;
          background-color: $colorWight;
          border-radius: 50%;
+         cursor: pointer;
       }
       label[for="Blck"] {
          justify-self: flex-end;
@@ -588,6 +595,7 @@ $borderWight_1px: 1px solid $colorWight;
          background: $colorWightTrans20;
          border: 1px solid $colorWight;
          border-radius: 15px;
+         cursor: pointer;
       }
       input:checked + label{
          border: 4px solid $colorWight;
@@ -630,6 +638,7 @@ $borderWight_1px: 1px solid $colorWight;
          background: $colorWightTrans20;
          border: 1px solid $colorWight;
          border-radius: 15px;
+         cursor: pointer;
       }
       input:checked + label{
          border: 4px solid $colorWight;
