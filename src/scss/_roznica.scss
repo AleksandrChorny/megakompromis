@@ -288,8 +288,8 @@ $borderWight_1px: 1px solid $colorWight;
    }
 }
 .catalog-prints{
-   width: 100vw;
-   height: 100vh;
+   width: 100svw;
+   height: 100svh;
    background: $colorBlueTrans20;
    -webkit-backdrop-filter: $blur;
    backdrop-filter: $blur;
@@ -898,13 +898,13 @@ $borderWight_1px: 1px solid $colorWight;
    @media (min-width: 769px){
       display: flex;
 
-      width: 100%;
-      min-height: 100vh;
+      width: 100svw;
+      min-height: 100svh;
       height: auto;
    }
    &__order{
       position: fixed;
-      top: -200vh;
+      top: -140vh;
       left: 0;
       z-index: 6;
       transition: all .3s;
