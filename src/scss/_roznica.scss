@@ -903,11 +903,12 @@ $borderWight_1px: 1px solid $colorWight;
       height: auto;
    }
    &__order{
-      position: fixed;
+      position: absolute;
       top: -140vh;
       left: 0;
       z-index: 6;
       transition: all .3s;
+      overflow: auto;
       
       @media (orientation: landscape) and (max-height: 610px){
          overflow-y: auto;
