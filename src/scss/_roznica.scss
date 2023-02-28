@@ -882,9 +882,9 @@ $borderWight_1px: 1px solid $colorWight;
    font-weight: 700;
 }
 .landing-roznica{
-   width: 100vw;
-   min-height: 100vh;
-   height: auto;
+   width: 100svw;
+   height: 100svh;
+   // height: auto;
    background: var(--bgGradient);
    background-size: 100%, cover;
 
@@ -899,8 +899,8 @@ $borderWight_1px: 1px solid $colorWight;
       display: flex;
 
       width: 100svw;
-      min-height: 100svh;
-      height: auto;
+      height: 100svh;
+      // height: auto;
    }
    &__order{
       position: absolute;
