@@ -46,13 +46,13 @@ body {
 
    background-color: $colorWhite;
    color: $colorBlue;
-   a {
-      color: $colorBlue;
-      transition: all 0.5s;
-      &:hover {
-         color: $colorOrange;
-      }
-   }
+   //a {
+   //   color: $colorBlue;
+   //   transition: all 0.5s;
+   //   &:hover {
+   //      color: $colorOrange;
+   //   }
+   //}
    @media (max-width: 1026px) {
       padding: 0 calc(0px + (8 - 0) * ((100vw - 426px) / (1026 - 426)));
    }

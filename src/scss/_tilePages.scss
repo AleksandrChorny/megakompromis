@@ -56,6 +56,8 @@
       &:hover{
          .tile-pages__content{
             width: 100%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
          }
          h2{
             font-size: 3.5em;
@@ -81,6 +83,8 @@
 
       background: rgba(1, 26, 63, 0.4);
       backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+   
 
       transition: all .3s;
       h2{

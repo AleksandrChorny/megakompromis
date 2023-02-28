@@ -1,6 +1,6 @@
 import * as body from "./body.js";
 import * as getFile from "./includeFile.js";
-//import * as alert from "./alert.js";
+import * as preloader from "./preloader.js";
 
 
 //const body = document.querySelector("body");
@@ -18,15 +18,15 @@ export function close() {
    }
 }
 
-//run search
+//run search panel
 export function run() {
-   //add style left $ top to var
+   //add style left & top to variable css
    const styleOfsetX = search.getBoundingClientRect().x;
    const styleOfsetY = search.getBoundingClientRect().y;
    search.style.cssText = `--searchLeft: ${styleOfsetX}px; --searchTop: ${styleOfsetY}px;`;
 
-   //manipulate classes _action or _passive to run search
-   if (search && !search.closest('._action')) {
+   //on search remove _passive  and add _action tu run search
+   if (search) {
       search.classList.remove('_passive');
       search.classList.add('_action');
       body.noneScrole();
@@ -45,24 +45,33 @@ export function run() {
 }
 
 export function mySearch(inputValue) {
-   //TODO run spinner preloader
    const searchResult = document.querySelector(`.${searchResultsClassName}`);
    const url = "/form/submit/";
    const formData = new FormData();
+   const language = document.documentElement.lang;
+
+   //TODO run spinner preloader
+   const pre = document.createElement('div');
+   pre.classList.add('search__results', '_center');
+   pre.append(preloader.createPreloaderSpinner());
+   searchResult.replaceWith(pre);
+   die();
+   //console.log(language);
    //console.log(formData);
 
    formData.append('formName', 'mySearch');
    formData.append('inputValue', inputValue);
+   //formData.append('language', language);
 
    getFile.getJsonOnPhp(url, formData)
       .then((searchData) => {
          if (searchData) {
             if (searchData == 'fulse') {
-               //TODO close spinner preloader if this nid
+               //TODO close spinner preloader if this nead
                searchResult.append(createNosingNotFound());
                return;
             }
-            //TODO close spinner preloader if this nid
+            //TODO close spinner preloader iif it's necessary
             searchResult.replaceWith(createSearchResults(searchData));
             return;
          }
@@ -75,7 +84,9 @@ export function mySearch(inputValue) {
       const searchDescription = document.createElement('p');
       searchDescription.classList.add('search-card__description');
       searchDescription.textContent = 'Нічого не знайшли';
-
+      if (language == 'ru-UA') {
+         searchDescription.textContent = 'Ничего не найдено';
+      }
 
       searchResult.append(searchDescription);
 
@@ -87,9 +98,12 @@ export function mySearch(inputValue) {
       result.classList.add(`${searchResultsClassName}`);
       searchData.forEach(element => {
          if (element) {
-            console.log(element);
+            //console.log(element);
             const link = document.createElement('a');
             link.setAttribute('href', element.link);
+            if (language == 'ru-UA') {
+               link.setAttribute('href', `/ru${element.link}`);
+            }
 
 
             const card = document.createElement('div');
@@ -109,16 +123,22 @@ export function mySearch(inputValue) {
             const title = document.createElement('h3');
             title.classList.add('search-card__title');
             title.textContent = element.title;
+            if (language == 'ru-UA') {
+               title.textContent = element.title_ru;
+            }
             content.append(title);
 
             const art = document.createElement('p');
             art.classList.add('search-card__art');
-            art.textContent = element.art;
+            art.textContent = `арт.: ${element.id}`;
             content.append(art);
 
             const description = document.createElement('p');
             description.classList.add('search-card__description');
-            description.innerHTML = element.description;
+            description.innerHTML = `${element.name} <br> ${element.name2}`;
+            if (language == 'ru-UA') {
+               description.innerHTML = `${element.name_ru} <br> ${element.name2_ru}`;
+            }
             content.append(description);
 
             result.append(link);

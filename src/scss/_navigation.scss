@@ -9,6 +9,7 @@
    //background-color: rgba($colorWhite, 0.8);
       background: rgba(1, 26, 63, 0.4);
       backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
 
    z-index: 1;
    &::before {
@@ -560,6 +561,8 @@
    height: 100%;
    //background-color: rgb(255, 234, 0);
    background: linear-gradient(90deg, $colorBlue, $colorBlue, #a2c9ff, $colorBlue, $colorBlue, #a2c9ff);
+   //backdrop-filter: blur(12px);
+   //-webkit-backdrop-filter: blur(5px);
 
    animation: flagYellow 4s linear infinite;
    background-size: 200% 200%;
