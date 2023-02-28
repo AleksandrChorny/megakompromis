@@ -224,6 +224,7 @@ $height: 110px;
       z-index: 1000;
       background-color: rgba(64, 62, 59, 0.7);
       backdrop-filter: blur(20px);
+   -webkit-backdrop-filter: blur(20px);
 
       animation: passiveSearch $animateTimePassive;
       animation-fill-mode: forwards;
@@ -597,6 +598,7 @@ $height: 110px;
       height: 38px;
       background-color: transparent;
       backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
    }
    60% {
       position: fixed;
@@ -617,6 +619,7 @@ $height: 110px;
       height: 100vh;
       background-color: rgba(64, 62, 59, 0.7);
       backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
    } 
 }
 
@@ -785,6 +788,7 @@ $height: 110px;
       background-color: transparent;
       backdrop-filter: none;
       backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
    } 
 }
 

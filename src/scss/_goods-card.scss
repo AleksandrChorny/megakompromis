@@ -67,6 +67,8 @@
 
       gap: 7px;
       background: rgba(246, 246, 246, 0.6);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
       box-shadow: -1px -1px 3px 1px rgba(111, 111, 111, 0.25);
       //background-color: rgba($colorWhite, 0.8);
       overflow: hidden;
