@@ -62,12 +62,14 @@ $fz: 10px;
 
 
 //Підключаємо стилі сторніки сайту
-@import "_preloader";
-@import "_preloaderModal";
-@import "_modal";
-@import "_alert";
-@import "_contactUsForm";
-@import "_header";
+@import "_search";
+@import "_cover";
+// @import "_preloader";
+// @import "_preloaderModal";
+// @import "_modal";
+// @import "_alert";
+// @import "_contactUsForm";
+// @import "_header";
 @import "_navigation";
 @import "_tilePages";
 @import "_goods";
