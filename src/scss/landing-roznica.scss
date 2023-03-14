@@ -1,0 +1,12 @@
+//Призначаю шрифти проекту
+$fontFamily: "Montserrat", sans-serif;
+$fz: 10px;
+//обнуляємо стилі браузеру
+@import "_null";
+
+//Підключаю шрифти з файлу 'dist/fonts.scss'
+@import "fonts";
+
+//Підключаємо стилі сторніки сайту
+//@import "_roznica";
+@import "_roznica";
