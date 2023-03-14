@@ -2,8 +2,8 @@ $animateTime: .8s;
 $animateTimePassive: .5s;
 $width: 360px;
 $height: 110px;
-$colorGrey: #6F6F6F;
-
+$colorGray: #6F6F6F;
+$colorWhite: #FFFFFF;
 
 .search {
    width: 250px;
@@ -43,7 +43,7 @@ $colorGrey: #6F6F6F;
          .search__input {
             //height: 2em;
             //min-width: 500px;
-            //color: $colorDarkGray;
+            //color: $colorGray;
             //background: transparent;
             //@media (max-width: 768px) {
             //   min-width: 70vw;
@@ -55,7 +55,7 @@ $colorGrey: #6F6F6F;
             animation-fill-mode: forwards;
          }
          .search__input::placeholder { 
-            color: $colorDarkGray;
+            color: $colorGray;
             text-transform: uppercase;
          }
       }
@@ -114,7 +114,7 @@ $colorGrey: #6F6F6F;
          .search__input {
             //height: 2em;
             //min-width: 500px;
-            //color: $colorDarkGray;
+            //color: $colorGray;
             //background: transparent;
             //@media (max-width: 768px) {
             //   min-width: 70vw;
@@ -126,7 +126,7 @@ $colorGrey: #6F6F6F;
             animation-fill-mode: forwards;
          }
          .search__input::placeholder { 
-            color: $colorWhite;
+            color: $colorGray;
             text-transform: uppercase;
          }
       }
@@ -175,7 +175,7 @@ $colorGrey: #6F6F6F;
       height: 32px;
       padding-left: 2em;
 
-      border: 1px solid $colorGrey;
+      border: 1px solid $colorGray;
       border-radius: 52px;
 
       input[type="search"]::-webkit-search-cancel-button {
@@ -199,21 +199,21 @@ $colorGrey: #6F6F6F;
       min-width: 50px;
       height: 1em;
       text-transform: uppercase;
-      color: $colorGrey;
+      color: $colorGray;
       background: transparent;
       // @media (max-width: 330px) {
       //    width: 100px;
       // }
    }
    &__input::placeholder { 
-      color: $colorGrey;
+      color: $colorGray;
       text-transform: uppercase;
       transition: color $animateTime;
    }
    &__icon {
       height: 21px;
       width: 21px;
-      fill: $colorGrey;
+      fill: $colorGray;
    }
    &__close {
       display: none;
@@ -236,7 +236,7 @@ $colorGrey: #6F6F6F;
          display: block;
          width: 3px;
          height:  20px;
-         background-color: $colorDarkGray;
+         background-color: $colorGray;
          border-radius: 2px;
       }
       &::before{
@@ -297,7 +297,7 @@ $colorGrey: #6F6F6F;
       height: 100%;
       width: 100%;
       margin-left: 1em;
-      color: $colorDarkGray;
+      color: $colorGray;
       text-align: left;
 
       overflow: hidden;
@@ -440,7 +440,7 @@ $colorGrey: #6F6F6F;
    100% {
       height: 2em;
       width: var(--widthSearchInput);
-      color: $colorDarkGray;
+      color: $colorGray;
    }
 }
 
@@ -599,7 +599,7 @@ $colorGrey: #6F6F6F;
       height: 32px;
       padding-left: 2em;
       margin-right: 0;
-      border: 1px solid $colorWhite;
+      border: 1px solid $colorGray;
       border-radius: 52px;
       background: none;
       box-shadow: none;
@@ -610,12 +610,12 @@ $colorGrey: #6F6F6F;
    0% {
       height: 2em;
       min-width: 500px;
-      color: $colorDarkGray;
+      color: $colorGray;
    }
    100% {
       height: 1em;
       min-width: 50px;
-      color: $colorWhite;
+      color: $colorGray;
    }
 }
 

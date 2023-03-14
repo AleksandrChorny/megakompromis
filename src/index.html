@@ -2,27 +2,19 @@
 <html lang="en">
 @@include('html/head.html',{
 "title": "Главная",
-"templateCSS": '"css/style.min.css"'
+"templateCSS": '"css/main.min.css"'
 })
 
 <body>
-   <!--@@include('html/header.html',{})-->
+   @@include('html/leftSideBar.html',{})
    @@include('html/navigation.html',{})
+   @@include('html/header.html',{})
+   @@include('html/cover.html',{})
+   @@include('html/footer.html',{})
    <main>
-      <!--@@include('html/landingRoznica.html',{})-->
-      @@include('html/cover.html',{})
-      @@include('html/tile_6x3.html',{})
-      @@include('html/goods.html',{})
-      @@include('html/pageDescription.html',{}) -->
 
-      <!-- !! @@include('html/test.html',{})-->
    </main>
-   <!-- @@include('html/footer.html',{})
-   @@include('html/alert.html',{})
-   @@include('html/preloaderModal.html',{})
-   @@include('html/modal.html',{}) -->
    <script src="js/app.min.js"></script>
-   <!--@@include('html/chatBotB24.html',{})-->
 </body>
 
 </html>

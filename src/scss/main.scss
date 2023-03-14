@@ -1,0 +1,20 @@
+//Призначаю шрифти проекту
+$fontFamily: "Montserrat", sans-serif;
+$fz: 10px;
+
+//обнуляємо стилі браузеру
+@import "_null";
+body {
+   background-color: #F5F5F5;
+}
+//Підключаю шрифти з файлу 'dist/fonts.scss'
+@import "fonts";
+
+//Підключаємо стилі сторніки сайту
+@import "_leftSideBar";
+@import "_navigation";
+@import "_search";
+@import "_header";
+@import "_cover";
+@import "_footer";
+//@import "_contactUsForm";

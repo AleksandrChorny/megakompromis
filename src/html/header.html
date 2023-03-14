@@ -1,123 +1,72 @@
-<!-- header -->
 <header class="header">
-   <div class="header__top-line wraper">
-      <div class="header__left-elements">
-         <button class="login" type="button" name="login" data-form="../../login.html">
-            <svg>
-               <use xlink:href="@img/icons/icons.svg#enter"></use>
+   <!-- Логотип компанії -->
+   <a class="header__logo" href="/" title="Рекламно-виробнича компанія Мега Компроміс">
+      <svg>
+         <use xlink:href="@img/icons/icons.svg#logo"></use>
+      </svg>
+   </a>
+   <!-- Панель пошуку -->
+   <div class="search header__search">
+      <div class="search__panel">
+         <div class="search__elements">
+            <svg class="search__icon">
+               <use xlink:href="@img/icons/icons.svg#search"></use>
             </svg>
-         </button>
-         <div class="search">
-            <div class="search__panel">
-               <div class="search__elements">
-                  <svg class="search__icon">
-                     <use xlink:href="@img/icons/icons.svg#search"></use>
-                  </svg>
-                  <form action="/">
-                     <input class="search__input" type="search" name="search" placeholder="Пошук" autocomplete="off">
-                  </form>
-               </div>
-               <div class="search__close"></div>
+            <form action="/">
+               <input class="search__input" type="search" name="search" placeholder="Пошук" autocomplete="off">
+            </form>
+         </div>
+         <div class="search__close"></div>
+      </div>
+      <!-- <div class="search__results _center"> -->
+      <div class="search__results">
+
+
+         <!-- Прелодер -->
+         <!-- <div class="preloader-spinner">
+         <!-- <div class="preloader-spinner">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
             </div>
-            <!-- <div class="search__results _center"> -->
-            <div class="search__results">
-
-
-               <!-- Прелодер -->
-               <!-- <div class="preloader-spinner">
-               <!-- <div class="preloader-spinner">
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                  </div>
-               -->
-               <!-- Стартове повідомлення на екрані пошуку -->
-               <!-- <div class="search__result-card search-card _transparency">
-                  <div class="search-card__content _non-margin-left">
-                     <p class="search-card__description _start-message">Для пошуку введіть мінімум три символи</p>
-                  </div>
-               </div>
-               </div>
-
-               <!-- Картка результатів пошуку -->
-               <!-- <a href="#">
-               <!-- <a href="#">
-                  <div class="search__result-card search-card">
-                     <img src="@img/goods/CLASSIC-HOODED-SWEAT_021.jpg" alt="">
-                     <div class="search-card__content">
-                        <h3 class="search-card__title">Заголовок знайденого</h3>
-                        <p class="search-card__art"> Арт.: 097775</p>
-                        <p class="search-card__description">Опис знайденого товару, можливо іще чогось.
-                           Неважливо. Може бути навіть дуже довгий текст. Або дуже дуже довгий текст. йог треба
-                           підрізати
-                        </p>
-                     </div>
-                  </div>
-               </a> -->
-               </a> -->
+         -->
+         <!-- Стартове повідомлення на екрані пошуку -->
+         <!-- <div class="search__result-card search-card _transparency">
+            <div class="search-card__content _non-margin-left">
+               <p class="search-card__description _start-message">Для пошуку введіть мінімум три символи</p>
             </div>
          </div>
+   
+         <!-- Картка результатів пошуку -->
+         <!-- <a href="#">
+            <div class="search__result-card search-card">
+               <img src="@img/goods/CLASSIC-HOODED-SWEAT_021.jpg" alt="">
+               <div class="search-card__content">
+                  <h3 class="search-card__title">Заголовок знайденого</h3>
+                  <p class="search-card__art"> Арт.: 097775</p>
+                  <p class="search-card__description">Опис знайденого товару, можливо іще чогось.
+                     Неважливо. Може бути навіть дуже довгий текст. Або дуже дуже довгий текст. йог треба
+                     підрізати
+                  </p>
+               </div>
+            </div>
+         </a> -->
       </div>
-      <a href="/ru/" title="Перекласти сторінку">
-         <p></p>
-         <svg>
-            <use xlink:href="@img/icons/icons.svg#ork"></use>
-         </svg>
-      </a>
    </div>
-   <div class="header__mid-line wraper">
-      <a class="logo" href="/" title="Рекламно-виробнича компанія Мега Компроміс">
-         <svg>
-            <use xlink:href="@img/icons/icons.svg#logo"></use>
-         </svg>
-      </a>
-      <button class="contacts-button button" type="button" name="contactUs" data-form="../../contactUs.html">Связаться с
-         нами</button>
-   </div>
-   <div class="header__contacts-bar wraper">
-      <div class="header__social-btn social-btn viber">
-         <a href="#">
-            <svg>
-               <use xlink:href="@img/icons/icons.svg#viber"></use>
-            </svg>
-            <p>viber</p>
-         </a>
-      </div>
-      <div class="header__social-btn social-btn telegram">
-         <a href="">
-            <svg>
-               <use xlink:href="@img/icons/icons.svg#telegram"></use>
-            </svg>
-            <p>telegram</p>
-         </a>
-      </div>
-      <div class="contacts call">
-         <svg class="_call_click">
-            <use xlink:href="@img/icons/icons.svg#call"></use>
-         </svg>
-         <div class="contacts__items numbers">
-            <p>+38 044 333 42 15</p>
-            <p>+38 050 436 35 26</p>
-            <p>+38 067 124 32 06</p>
-         </div>
-      </div>
-      <div class="contacts e-mail">
-         <svg class="_e-mail_click">
-            <use xlink:href="@img/icons/icons.svg#e-mail"></use>
-         </svg>
-         <div class="contacts__items mail">
-            <p>info@megakompromis.com.ua</p>
-         </div>
-      </div>
-      @@include('burger.html',{})
-   </div>
+   <!-- Вибір мови сторінки -->
+   <a class="header__language" href="/ru/" title="Перекласти сторінку">
+      <p></p>
+      <svg>
+         <use xlink:href="@img/icons/icons.svg#ork"></use>
+      </svg>
+   </a>
 </header>
