@@ -87,13 +87,14 @@ export function setPrint() {
    function set(event) {
       if (event.target.closest('.tile__item')) {
          //Отримую шлях до макету з дата-елементу кнопки
-         const maketName = event.target.closest('picture').dataset.maket;
+         const imgPrint = event.target.closest('picture').dataset.maket;
+         const imgButton = event.target.closest('picture').dataset.button;
          //Встановлюю новий шлях в зображенні принта товара
-         printWebp.setAttribute('srcset', `/img/landing-roznica-t-shirt/prints/preview_${maketName}.webp`);
-         printPng.setAttribute('src', `/img/landing-roznica-t-shirt/prints/preview_${maketName}.png`);
+         printWebp.setAttribute('srcset', `${imgPrint}.webp`);
+         printPng.setAttribute('src', `${imgPrint}.png`);
          //Встановлюю новий шлях в зображенні кнопки каталогу принтів
-         maketsBtnWebp.setAttribute('srcset', `/img/landing-roznica-t-shirt/prints-btn/print_${maketName}.webp`);
-         maketsBtnPng.setAttribute('src', `/img/landing-roznica-t-shirt/prints-btn/print_${maketName}.png`);
+         maketsBtnWebp.setAttribute('srcset', `${imgButton}.webp`);
+         maketsBtnPng.setAttribute('src', `${imgButton}.png`);
          //Приховую меню макетів принтів
          if (document.querySelector('.landing-roznica__catalog-prints').classList.contains('_visible')) {
             document.querySelector('.landing-roznica__catalog-prints').classList.remove('_visible');
@@ -119,11 +120,12 @@ export function setChengingSettings() {
          || event.target.closest('.settings__front-back  input[name=front-back]')
          || event.target.closest('.settings__model input[name=model]')
       ) {
-         const color = document.querySelector('.settings__color input[name=color]:checked').id;
-         const place = document.querySelector('.settings__front-back input[name=front-back]:checked').id;
+         const peth = document.querySelector('.settings').dataset.peth;
          const model = document.querySelector('.settings__model input[name=model]:checked').id;
-         const webp = `/img/landing-roznica-t-shirt/t-shirts/${model + place + color}.webp`;
-         const png = `/img/landing-roznica-t-shirt/t-shirts/${model + place + color}.png`;
+         const place = document.querySelector('.settings__front-back input[name=front-back]:checked').id;
+         const color = document.querySelector('.settings__color input[name=color]:checked').id;
+         const webp = `${peth + model + place + color}.webp`;
+         const png = `${peth + model + place + color}.png`;
          imageTovarWebp.setAttribute('srcset', webp);
          imageTovarPng.setAttribute('src', png);
       }
