@@ -62,6 +62,7 @@ $fz: 10px;
 
 
 //Підключаємо стилі сторніки сайту
+<<<<<<< HEAD
 //@import "_roznica";
  @import "_preloader";
  @import "_preloaderModal";
@@ -76,4 +77,21 @@ $fz: 10px;
  @import "_goodsColor";
  @import "_pageDescription";
  @import "_footer";
+=======
+@import "_search";
+@import "_cover";
+// @import "_preloader";
+// @import "_preloaderModal";
+// @import "_modal";
+// @import "_alert";
+// @import "_contactUsForm";
+// @import "_header";
+@import "_navigation";
+@import "_tilePages";
+@import "_goods";
+@import "_goods-card";
+@import "_goodsColor";
+@import "_pageDescription";
+@import "_footer";
+>>>>>>> max
 //!! @import "_test";
